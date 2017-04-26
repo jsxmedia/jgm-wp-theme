@@ -71,6 +71,66 @@ function jgm2018_setup() {
 endif;
 add_action( 'after_setup_theme', 'jgm2018_setup' );
 
+
+function jgm2018_fonts_url() {
+	$fonts_url = '';
+
+	/**
+	 * Translators: If there are characters in your language that are not
+	 * supported by Roboto or Noto Serif, translate this to 'off'. Do not 
+         * translate into your own language.
+	 */
+        
+	$roboto = _x( 'on', 'Roboto font: on or off', 'jgm2018' );
+        $noto_serif = _x( 'on', 'Roboto font: on or off', 'jgm2018' );
+        
+        $font_families = array();
+        
+
+	if ( 'off' !== $roboto ) {
+		
+		$font_families[] = 'Roboto:300,500,700,900';
+	}
+        
+        if ( 'off' !== $noto_serif ) {
+		
+		$font_families[] = 'Noto Serif:400,400i,700,700i';
+        }
+        
+        if ( in_array('on', array($roboto, $noto_serif)) ) {
+            	$query_args = array(
+			'family' => urlencode( implode( '|', $font_families ) ),
+			'subset' => urlencode( 'latin,latin-ext' ),
+		);
+
+		$fonts_url = add_query_arg( $query_args, 'https://fonts.googleapis.com/css' );
+        }
+
+	return esc_url_raw( $fonts_url );
+}
+
+/**
+ * Add preconnect for Google Fonts.
+ *
+ * @since JGM2018 1.0
+ *
+ * @param array  $urls           URLs to print for resource hints.
+ * @param string $relation_type  The relation type the URLs are printed.
+ * @return array $urls           URLs to print for resource hints.
+ */
+function jgm2018_resource_hints( $urls, $relation_type ) {
+	if ( wp_style_is( 'jgm2018-fonts', 'queue' ) && 'preconnect' === $relation_type ) {
+		$urls[] = array(
+			'href' => 'https://fonts.gstatic.com',
+			'crossorigin',
+		);
+	}
+
+	return $urls;
+}
+add_filter( 'wp_resource_hints', 'jgm2018_resource_hints', 10, 2 );
+
+
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
  *
@@ -105,6 +165,10 @@ add_action( 'widgets_init', 'jgm2018_widgets_init' );
  * Enqueue scripts and styles.
  */
 function jgm2018_scripts() {
+    
+        /* Enqueue Google Fonts: Roboto, Noto Serif */
+        wp_enqueue_style( 'jgm2018-fonts', jgm2018_fonts_url() );
+        
 	wp_enqueue_style( 'jgm2018-style', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'jgm2018-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
