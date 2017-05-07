@@ -20,8 +20,8 @@ function jgm2018_custom_header_setup() {
 	add_theme_support( 'custom-header', apply_filters( 'jgm2018_custom_header_args', array(
 		'default-image'          => '',
 		'default-text-color'     => '000000',
-		'width'                  => 1000,
-		'height'                 => 250,
+		'width'                  => 3840,
+		'height'                 => 360,
 		'flex-height'            => true,
 		'wp-head-callback'       => 'jgm2018_header_style',
 	) ) );

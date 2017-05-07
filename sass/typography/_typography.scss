@@ -8,7 +8,7 @@ textarea {
 	@include font-size(.9);
 	line-height: $font__line-height-body;
         
-        @include desktop {
+        @include desktopPlus {
             @include font-size(1);
         }
 }

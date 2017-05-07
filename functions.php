@@ -64,6 +64,9 @@ function jgm2018_setup() {
 		'default-color' => 'ffffff',
 		'default-image' => '',
 	) ) );
+        
+        // Add theme support for custom logo.
+        add_theme_support( 'custom-logo' );
 
 	// Add theme support for selective refresh for widgets.
 	add_theme_support( 'customize-selective-refresh-widgets' );
@@ -89,7 +92,7 @@ function jgm2018_fonts_url() {
 
 	if ( 'off' !== $roboto ) {
 		
-		$font_families[] = 'Roboto:300,500,700,900';
+		$font_families[] = 'Roboto:100,300,500,700,900';
 	}
         
         if ( 'off' !== $noto_serif ) {

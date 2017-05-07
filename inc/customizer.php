@@ -18,6 +18,21 @@ function jgm2018_customize_register( $wp_customize ) {
 add_action( 'customize_register', 'jgm2018_customize_register' );
 
 /**
+ * Add custom logo support
+ */
+function jgm2018_custom_logo_setup() {
+    $defaults = array(
+        'height'      => 100,
+        'width'       => 400,
+        'flex-height' => true,
+        'flex-width'  => true,
+        'header-text' => array( 'site-title', 'site-description' ),
+    );
+    add_theme_support( 'custom-logo', $defaults );
+}
+add_action( 'after_setup_theme', 'jgm2018_custom_logo_setup' );
+
+/**
  * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
  */
 function jgm2018_customize_preview_js() {
