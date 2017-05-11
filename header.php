@@ -32,6 +32,7 @@
         <?php endif; ?>
         
 	<header id="masthead" class="site-header" role="banner">
+            <div class="brand-wrapper">
 		<div class="site-branding">
 			<div class="site-logo-area"><?php
                         if ( function_exists( 'the_custom_logo' ) ) {
@@ -53,6 +54,7 @@
 			endif; ?>
                     </div>
 		</div><!-- .site-branding -->
+            </div><!-- .brand-wrapper -->
 
 		<nav id="site-navigation" class="main-navigation" role="navigation">
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'jgm2018' ); ?></button>

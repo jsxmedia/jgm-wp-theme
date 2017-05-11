@@ -3,9 +3,16 @@
     position: relative;
     font-family: $font__sans;
     color: $color__skin-acc2;
+    
+    text-align: right;
+}
+
+.brand-wrapper {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
     background: radial-gradient(ellipse at center, rgba($color__header-light, .82) 0%, rgba($color__header-dark, .82) 100%);
     background-attachment: fixed;
-    text-align: right;
     
     @include small {
         min-height: 8em;
@@ -14,14 +21,9 @@
     @include tablet {
       min-height: 10em;  
     }
-    
-    @include tabletPlus {
-        padding: 1em;
-    }
-    
+
     @include desktopPlus {
-       min-height: 13.5em;
-       padding: 1em 2em;
+       min-height: 12em;
     }
 }
 
@@ -31,14 +33,17 @@
     margin: 0 auto;
     position: relative;
     
+    
     @include tabletPlus {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        padding: 1em;
     }
     
     @include desktopPlus {
         align-items: flex-start;
+        padding: 1em 2em;
     }
 }
 

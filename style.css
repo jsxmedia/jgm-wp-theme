@@ -571,52 +571,50 @@ a:hover, a:active {
 ## Menus
 --------------------------------------------------------------*/
 .main-navigation {
-	position: absolute;
-	bottom: 0;
-	left: 0;
 	display: block;
-	width: 100%;
-	min-height: 2.5em;
-	line-height: 2.5em;
+	font-family: "Roboto", "Myriad Pro", "Geneva", "Arial", sans-serif;
+	font-weight: 400;
+	clear: left;
+}
+
+@media (max-width: 599px) {
+	.main-navigation {
+		position: absolute;
+		top: 1em;
+		right: 0;
+		z-index: 2525;
+	}
 }
 
 .main-navigation ul {
+	background-color: rgba(255, 250, 250, 0.9);
 	display: none;
 	list-style: none;
-	max-width: 960px;
-	margin: 0 auto;
+	margin: 0;
+	padding-top: 1em;
 	padding-left: 0;
 }
 
 .main-navigation ul ul {
-	/* Sub Menu */
-	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-	float: left;
-	position: absolute;
-	top: 1.5em;
-	left: -999em;
+	position: relative;
+	display: none;
 	z-index: 99999;
-	background-color: #ffeb32;
+}
+
+.main-navigation ul ul.toggled-on {
+	display: block;
 }
 
 .main-navigation ul ul ul {
-	left: -999em;
 	top: 0;
 }
 
-.main-navigation ul ul li:hover > ul,
-.main-navigation ul ul li.focus > ul {
-	left: 100%;
+.main-navigation ul ul li {
+	padding-left: 1em;
 }
 
 .main-navigation ul ul a {
-	color: #640030;
 	width: 200px;
-}
-
-.main-navigation ul ul :hover > a,
-.main-navigation ul ul .focus > a {
-	color: #b10055;
 }
 
 .main-navigation ul li:hover > ul,
@@ -626,70 +624,119 @@ a:hover, a:active {
 
 .main-navigation li {
 	position: relative;
-	margin-left: 1em;
 }
 
 .main-navigation a {
-	color: snow;
-	display: block;
+	display: inline-block;
+	width: 100%;
+	padding: .5em 1em .5em 0;
 	text-decoration: none;
 }
 
-.main-navigation a:hover, .main-navigation a:focus {
-	color: #ffeb32;
+.main-navigation a {
+	color: #640030;
 }
 
-@media (max-width: 599px) {
-	.main-navigation {
-		top: 0;
-		padding: 1em;
-	}
-	.main-navigation > *:first-child {
-		float: right;
-	}
+.main-navigation a:hover,
+.main-navigation a:focus {
+	text-decoration: underline;
+}
+
+.main-navigation .menu-item-has-children,
+.main-navigation .page_item_has_children {
+	min-width: 218px;
+}
+
+.main-navigation .menu-item-has-children > a,
+.main-navigation .page_item_has_children > a {
+	padding-right: 2em;
+}
+
+button.dropdown-toggle {
+	position: absolute;
+	z-index: 9999;
+	right: 0;
+	border: none;
+	background: inherit;
+	color: #640030;
+	line-height: 1.5em;
+	padding: .4em 1em .4em .5em;
 }
 
 @media (min-width: 600px) {
-	.main-navigation {
-		background-color: black;
+	button.dropdown-toggle {
+		color: snow;
 	}
 }
 
-/* Small menu. */
-.menu-toggle,
-.main-navigation.toggled ul {
+.menu-toggle {
+	position: relative;
+	float: right;
+	display: block;
+	margin: 1.2em 1.2em 1.2em 0;
+	padding: .6em .8em;
+	font-size: 80%;
+	text-transform: uppercase;
+	color: white;
+	border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Toggle small menu and children on */
+.toggled-on ul,
+.sub-menu.toggled-on {
 	display: block;
 }
 
-@media screen and (min-width: 37.5em) {
+@media (min-width: 600px) {
 	.menu-toggle {
 		display: none;
 	}
+	.main-navigation {
+		background-color: rgba(255, 250, 250, 0.9);
+	}
+	.main-navigation .menu-item-has-children > a,
+	.main-navigation .page_item_has_children > a {
+		padding-right: 2em;
+		background: rgba(255, 255, 255, 0.1);
+	}
 	.main-navigation ul {
+		background-color: black;
+		display: block;
 		display: flex;
+		flex-wrap: wrap;
+	}
+	.main-navigation ul ul {
+		flex-direction: column;
+		background: rgba(255, 255, 255, 0.1);
+		margin-left: 0;
+	}
+	.main-navigation ul ul li {
+		padding-left: 0;
+	}
+	.main-navigation ul ul li a {
+		width: 218px;
+		background: none;
+	}
+	.main-navigation ul li a {
+		padding: .4em 1em;
+	}
+	.main-navigation a {
+		color: snow;
 	}
 }
 
-.site-main .comment-navigation, .site-main
-.posts-navigation, .site-main
-.post-navigation {
-	margin: 0 0 1.5em;
-	overflow: hidden;
-}
-
-.comment-navigation .nav-previous,
-.posts-navigation .nav-previous,
-.post-navigation .nav-previous {
-	float: left;
-	width: 50%;
-}
-
-.comment-navigation .nav-next,
-.posts-navigation .nav-next,
-.post-navigation .nav-next {
-	float: right;
-	text-align: right;
-	width: 50%;
+@media (min-width: 960px) {
+	.main-navigation ul {
+		justify-content: flex-end;
+		padding-top: 0;
+		/* If you want dropdowns to open on hover, uncomment this: */
+		/*
+			li:hover > ul,
+				li:focus > ul {
+				display: block;
+			}
+			*/
+	}
 }
 
 /*--------------------------------------------------------------
@@ -813,33 +860,32 @@ a:hover, a:active {
 	position: relative;
 	font-family: "Roboto", "Myriad Pro", "Geneva", "Arial", sans-serif;
 	color: #ffeb32;
-	background: radial-gradient(ellipse at center, rgba(237, 14, 107, 0.82) 0%, rgba(31, 0, 27, 0.82) 100%);
-	background-attachment: fixed;
 	text-align: right;
 }
 
+.brand-wrapper {
+	display: block;
+	width: 100%;
+	box-sizing: border-box;
+	background: radial-gradient(ellipse at center, rgba(237, 14, 107, 0.82) 0%, rgba(31, 0, 27, 0.82) 100%);
+	background-attachment: fixed;
+}
+
 @media (max-width: 450px) {
-	.site-header {
+	.brand-wrapper {
 		min-height: 8em;
 	}
 }
 
 @media (min-width: 600px) and (max-width: 959px) {
-	.site-header {
+	.brand-wrapper {
 		min-height: 10em;
 	}
 }
 
-@media (min-width: 600px) {
-	.site-header {
-		padding: 1em;
-	}
-}
-
 @media (min-width: 960px) {
-	.site-header {
-		min-height: 13.5em;
-		padding: 1em 2em;
+	.brand-wrapper {
+		min-height: 12em;
 	}
 }
 
@@ -855,12 +901,14 @@ a:hover, a:active {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+		padding: 1em;
 	}
 }
 
 @media (min-width: 960px) {
 	.site-branding {
 		align-items: flex-start;
+		padding: 1em 2em;
 	}
 }
 
