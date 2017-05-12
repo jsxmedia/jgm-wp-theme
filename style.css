@@ -877,6 +877,18 @@ button.dropdown-toggle {
 	margin: 0 auto;
 }
 
+.widget-area {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.site-footer {
+	color: snow;
+	background-color: #270013;
+	padding: 1rem;
+}
+
 /*--------------------------------------------------------------
 ## Header Layout
 --------------------------------------------------------------*/
@@ -1159,7 +1171,12 @@ button.dropdown-toggle {
 --------------------------------------------------------------*/
 .widget {
 	margin: 0 0 1.5em;
+	padding: .5rem;
 	/* Make sure select elements fit in widgets. */
+}
+
+.widget h2 {
+	font-size: 1.25em;
 }
 
 .widget select {

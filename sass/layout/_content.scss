@@ -13,3 +13,15 @@
     max-width: $size__page-width-max;
     margin: 0 auto;
 }
+
+.widget-area {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.site-footer {
+    color: $color__skin-acc1;
+    background-color: darken($color__skin-main, 12%);
+    padding: 1rem;
+}
