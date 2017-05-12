@@ -1,13 +1,13 @@
 a {
-	color: $color__link;
+	color: lighten($color__skin-main, 18%);
 
 	&:visited {
-		color: $color__link-visited;
+		color: lighten($color__skin-main, 12%);
 	}
 	&:hover,
 	&:focus,
 	&:active {
-		color: $color__link-hover;
+		color: lighten($color__skin-main, 25%);
 	}
 	&:focus {
 		outline: thin dotted;
