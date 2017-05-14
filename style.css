@@ -878,9 +878,22 @@ button.dropdown-toggle {
 }
 
 .widget-area {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
+	column-width: 20rem;
+	margin-top: 2rem;
+	padding: 1rem;
+	box-sizing: border-box;
+	overflow: hidden;
+	width: 100%;
+	border: 0.125rem solid #640030;
+	padding: 1.5em;
+}
+
+.widget-area ul, .widget-area ol {
+	margin-left: 0;
+}
+
+.widget-area ul {
+	list-style: Square;
 }
 
 .site-footer {

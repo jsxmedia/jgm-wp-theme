@@ -7,35 +7,43 @@
 
 (function( $ ) {
 	var masthead, menuToggle, siteNavContain, siteNavigation;
+        
+        var $subTray = $("<div>", {id:"site-navigation-submenu", class:"sub-tray"});
+
 
 	function initMainNavigation( container ) {
 
-		// Add dropdown toggle that displays child menu items.
-		var dropdownToggle = $( '<button />', { 'class': 'dropdown-toggle', 'aria-expanded': false })
-			.append( $( '<span />', { 'class': 'dropdown-symbol', text: "+" }) )
-			.append( $( '<span />', { 'class': 'screen-reader-text', text: jgm2018ScreenReaderText.expand }) );
+            // Add dropdown toggle that displays child menu items.
+            var dropdownToggle = $( '<button />', { 'class': 'dropdown-toggle', 'aria-expanded': false })
+                    .append( $( '<span />', { 'class': 'dropdown-symbol', text: "+" }) )
+                    .append( $( '<span />', { 'class': 'screen-reader-text', text: jgm2018ScreenReaderText.expand }) );
 
-		container.find( '.menu-item-has-children > a, .page_item_has_children > a' ).after( dropdownToggle );
+            container.find( '.menu-item-has-children > a, .page_item_has_children > a' ).after( dropdownToggle );
 
-		container.find( '.dropdown-toggle' ).click( function( e ) {
-			var _this = $( this ),
-				screenReaderSpan = _this.find( '.screen-reader-text' );
-                                dropdownSymbol = _this.find( '.dropdown-symbol' );
-                                dropdownSymbol.text( dropdownSymbol.text() === '-' ? '+' : '-' );
+            container.find( '.dropdown-toggle' ).click( function( e ) {
+                    var _this = $( this ),
+                            screenReaderSpan = _this.find( '.screen-reader-text' );
+                            dropdownSymbol = _this.find( '.dropdown-symbol' );
+                            dropdownSymbol.text( dropdownSymbol.text() === '-' ? '+' : '-' );
 
-			e.preventDefault();
-			_this.toggleClass( 'toggled-on' );
-                        
-                        /*_this.click(function () {
-                            _this.toggleClass( 'toggled-on' );
-                        });*/
-                        
-			_this.next( '.children, .sub-menu' ).toggleClass( 'toggled-on' );
+                    e.preventDefault();
+                    _this.toggleClass( 'toggled-on' );
 
-			_this.attr( 'aria-expanded', _this.attr( 'aria-expanded' ) === 'false' ? 'true' : 'false' );
+                    /*_this.click(function () {
+                        _this.toggleClass( 'toggled-on' );
+                    });*/
+                    
+                    
+                    // grab menu items and move them to sub tray.
+                    // Highlight sub-menu title yellow in main menu.
+                    // Slide down submenu, with menu children in it.
 
-			screenReaderSpan.text( screenReaderSpan.text() === jgm2018ScreenReaderText.expand ? jgm2018ScreenReaderText.collapse : jgm2018ScreenReaderText.expand );
-		});
+                    _this.next( '.children, .sub-menu' ).toggleClass( 'toggled-on' );
+
+                    _this.attr( 'aria-expanded', _this.attr( 'aria-expanded' ) === 'false' ? 'true' : 'false' );
+
+                    screenReaderSpan.text( screenReaderSpan.text() === jgm2018ScreenReaderText.expand ? jgm2018ScreenReaderText.collapse : jgm2018ScreenReaderText.expand );
+            });
 	}
 
 	initMainNavigation( $( '.main-navigation' ) );
