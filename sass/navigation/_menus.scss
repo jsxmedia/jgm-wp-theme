@@ -26,7 +26,7 @@
 			display: none;
 			z-index: 99999;
                         
-                        &.toggled-on {
+                        &.toggled-on:not(.disabled) {
                             display: block;
                         }
 
@@ -92,6 +92,16 @@
 	.page_item_has_children > a {
 		padding-right: 2em;
 	}
+        
+    div.menu-tray {
+        display: block;
+        ul {
+            background-color: $color__skin-acc2;
+            li a {
+                color: $color__skin-main;
+            }
+        }
+    }
 }
 
 button.dropdown-toggle {
@@ -142,7 +152,7 @@ button.dropdown-toggle {
 
 /* Toggle small menu and children on */
 .toggled-on ul,
-.sub-menu.toggled-on {
+.sub-menu.toggled-on:not(.disabled) {
 	display: block;
 }
 

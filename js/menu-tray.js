@@ -1,79 +1,140 @@
 /* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Adds menu tray functionality.
+ * Assumes navigation.js is already in play, so perhaps these two should be merged?
  */
 
 ( function($) {
-    
+    console.log("menu-tray.js active");
     var $menuTray = $("<div>", {id:"site-navigation-submenu", class:"menu-tray"});
     var $siteNav = $('#site-navigation');
     var $curpage = $('.current_page_item');
     var $hasChildren = $('.page_item_has_children');
     
+    var trayOpen = false;
+    var $curSubmenuDisplayed = $curpage;
+    
     $('#primary-menu li:hover > ul').css("display", "none");
     
     $menuTray.css("display", "none"); // Hide Menu Tray by Default;
     $menuTray.appendTo($siteNav);
-
-    // If the current page has menu sub-items
-    if($curpage.hasClass('page_item_has_children')){
-        //put them in the menu tray
-        populateTray($curpage.find('ul.children'));
-    }
     
-    // Show or Hide the tray, as appropriate
-    ToggleTrayByMediaQuery();
+    // enable or disble the menu tray, determiend by queried page format
+    toggleMenuTrayByMediaQuery();
     
-    // Repeat above test whenever window is resiezed.
+    // Repeat above test whenever window is resized.
     $(window).resize(function () {
         waitForFinalEvent(function(){
           //alert('Resize...');
-          ToggleTrayByMediaQuery();
+          toggleMenuTrayByMediaQuery();
 
         }, 500, "Should I add a menu tray?");
     });
     
-    function ToggleTrayByMediaQuery() {
+    function toggleMenuTrayByMediaQuery() {
         if($('.site-logo-area').css("float") === "none"){ 
             // show menu-tray if on tabletPlus media query size
-            console.log("true");
-            showTray();
+            console.log("Tablet or larger media query, showing menu tray");
+            enableTray();
+            
         }else {
-            console.log("false");
-            hideTray();
+            console.log("Mobile media query, hiding menu tray.");
+            disableTray();
         }  
     }
     
     
-    function showTray(){
+    function enableTray(){
+        // Remove listeners added by disableTray if they exist
+        //$hasChildren.find( '.dropdown-toggle' ).unbind('click');
         
-        $menuTray.slideDown();
-        populateTray($curpage.find('ul.children'));
+        trayOpen = false; // Reinit tray openin case of page resize
         
+        // disable showing children when toggled on by navigation.js
+        $hasChildren.find('.children').toggleClass("disabled", true);
+  
+        // If the current page has menu sub-items
+        if($curpage.hasClass('page_item_has_children')){
+            //put them in the menu tray
+            $curSubmenuDisplayed = $curpage;
+            //console.log($curpage);
+            
+            initTray($curpage.find('> ul.children'));
+        }
         
-        
-        // Show other item subitems on hover
-        $hasChildren.hover(function(){
-            populateTray($(this).find('ul.children'));
+        $hasChildren.find( '.dropdown-toggle' ).click( function( e ) {
+            // Accounts for click on button text versus button. Ensures $target always refers to button instance.
+            // console.log("Click Target: "+event.target.nodeName+" class= "+event.target.className);
+            var $target = (event.target.nodeName === 'SPAN') ? $(event.target).parent() : $(event.target);
+            
+            // If tray has already contains the submenu for the for the clicked button
+            if($target.parent().attr('class') == $curSubmenuDisplayed.attr('class')){
+                // Toggle visibilty of menu tray
+                // console.log("selected item's submenu already active, toggling visibility");
+                toggleTray();
+            }else {
+                // otherwise reinitilize menu tray
+                // console.log("selected new item, reinit menu tray");
+                initTray($target.siblings('ul.children'));
+
+            }
         });
         
     }
     
-    function hideTray() {
-        $menuTray.slideUp();
- 
-        // Remove above added listner
-        $hasChildren.unbind('mouseenter mouseleave');
-    }
-    
-    function populateTray($submenu) {
-        if($menuTray.hasChildNodes){
-            $menuTray.empty();
-        }
-        $submenu.clone().prependTo('.menu-tray');
+    function disableTray() {
+        // Remove listeners added by enableTray
 
+        $hasChildren.find( '.dropdown-toggle' ).unbind('click');     
+        
+        // enable showing children when toggled on by navigation.js 
+        $hasChildren.find('.children').toggleClass("disabled", false);
+        
+        $menuTray.slideUp();
+        
+    }
+    
+    function initTray($submenu) {
+        /*
+         * Checks if tray is already open. If so, slides it up before populating.
+         */
+        
+        //console.log("Menu tray is open: "+trayOpen);
+        
+        $menuTray.slideUp(function () {
+            trayOpen = false;
+            populateTray($submenu);
+        });
+        
+        
+        function populateTray($submenu) {
+            /*
+             * Empties tray of any contents, then fills it with supplied element and slides it down.
+             * Should only be called by initTray.
+             */
+
+            $menuTray.empty();                          //empty menu tray in case has existing submenu
+            console.log("populating menu tray");
+
+            $curSubmenuDisplayed = $submenu.parent();   //update reference to current submenu
+            $submenu.clone().prependTo('.menu-tray');   //copy current submenu to menu tray
+            toggleTray();                               //slide down the menu tray if hidden
+        }
+    }
+   
+    
+    function toggleTray(complete){
+        /*
+         * Toggle tray visibility without changing contents.
+         */
+        
+        if(trayOpen){
+            trayOpen = false;
+            $menuTray.slideUp(complete);
+        }else{  
+            trayOpen = true;
+            $menuTray.slideDown(complete);
+        }
     }
     
     
-} )( jQuery );
+} )( jQuery );  

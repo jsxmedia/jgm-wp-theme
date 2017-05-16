@@ -609,7 +609,7 @@ a:hover, a:active {
 	z-index: 99999;
 }
 
-.main-navigation ul ul.toggled-on {
+.main-navigation ul ul.toggled-on:not(.disabled) {
 	display: block;
 }
 
@@ -660,6 +660,18 @@ a:hover, a:active {
 	padding-right: 2em;
 }
 
+.main-navigation div.menu-tray {
+	display: block;
+}
+
+.main-navigation div.menu-tray ul {
+	background-color: #ffeb32;
+}
+
+.main-navigation div.menu-tray ul li a {
+	color: #640030;
+}
+
 button.dropdown-toggle {
 	position: absolute;
 	z-index: 9999;
@@ -708,7 +720,7 @@ button.dropdown-toggle {
 
 /* Toggle small menu and children on */
 .toggled-on ul,
-.sub-menu.toggled-on {
+.sub-menu.toggled-on:not(.disabled) {
 	display: block;
 }
 

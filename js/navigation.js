@@ -8,7 +8,7 @@
 (function( $ ) {
 	var masthead, menuToggle, siteNavContain, siteNavigation;
         
-        var $subTray = $("<div>", {id:"site-navigation-submenu", class:"sub-tray"});
+        //var $menutray = $("<div>", {id:"site-navigation-submenu", class:"menu-tray"});
 
 
 	function initMainNavigation( container ) {
