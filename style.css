@@ -650,13 +650,13 @@ a:hover, a:active {
 	text-decoration: underline;
 }
 
-.main-navigation .menu-item-has-children,
-.main-navigation .page_item_has_children {
+.main-navigation .children:not(.disabled) .menu-item-has-children,
+.main-navigation .children:not(.disabled) .page_item_has_children {
 	min-width: 218px;
 }
 
-.main-navigation .menu-item-has-children > a,
-.main-navigation .page_item_has_children > a {
+.main-navigation .children:not(.disabled) .menu-item-has-children > a,
+.main-navigation .children:not(.disabled) .page_item_has_children > a {
 	padding-right: 2em;
 }
 
@@ -667,6 +667,12 @@ a:hover, a:active {
 .main-navigation div.menu-tray ul {
 	padding-top: 0;
 	background-color: #ffeb32;
+	display: flex;
+	justify-content: flex-start;
+}
+
+.main-navigation div.menu-tray ul .disabled {
+	display: none;
 }
 
 .main-navigation div.menu-tray ul li a {
@@ -742,6 +748,7 @@ button.dropdown-toggle {
 		background-color: black;
 		display: block;
 		display: flex;
+		padding-top: 0;
 		flex-wrap: wrap;
 	}
 	.main-navigation ul ul {
@@ -766,7 +773,7 @@ button.dropdown-toggle {
 
 @media (min-width: 960px) {
 	.main-navigation ul {
-		justify-content: flex-end;
+		justify-content: flex-start;
 		padding-top: 0;
 		/* If you want dropdowns to open on hover, uncomment this: */
 		/*

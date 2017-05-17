@@ -20,6 +20,7 @@
 		margin: 0;
 		padding-top: 1em;
 		padding-left: 0;
+                
 
 		ul {
                         position: relative;
@@ -78,20 +79,22 @@
 		text-decoration: underline;
 	}
 
-	.current_page_item > a,
-	.current-menu-item > a,
-	.current_page_ancestor > a,
-	.current-menu-ancestor > a {
-	}
+        .children:not(.disabled){
+            .current_page_item > a,
+            .current-menu-item > a,
+            .current_page_ancestor > a,
+            .current-menu-ancestor > a {
+            }
 
-	.menu-item-has-children,
-	.page_item_has_children {
-		min-width: 218px;
-	}
-	.menu-item-has-children > a,
-	.page_item_has_children > a {
-		padding-right: 2em;
-	}
+            .menu-item-has-children,
+            .page_item_has_children {
+                    min-width: 218px;
+            }
+            .menu-item-has-children > a,
+            .page_item_has_children > a {
+                    padding-right: 2em;
+            }
+        }
         
     div.menu-tray {
         display: block;
@@ -99,10 +102,19 @@
         ul {
             padding-top: 0;
             background-color: $color__skin-acc2;
+            display: flex;
+            justify-content: flex-start;
             
-            li a {
-                line-height: 1rem;
-                color: $color__skin-main;
+            .disabled {
+                display: none;
+            }
+            
+            li{
+                
+                a {
+                    line-height: 1rem;
+                    color: $color__skin-main;
+                }
             }
         }
     }
@@ -178,6 +190,7 @@ button.dropdown-toggle {
                     background-color: $color__skin-dark;
                     display: block;
                     display: flex;
+                    padding-top: 0;
                 
                     flex-wrap: wrap;
 
@@ -216,7 +229,7 @@ button.dropdown-toggle {
 	.main-navigation {
 
 		ul {
-			justify-content: flex-end;
+			justify-content: flex-start;
 			padding-top: 0;
 
 			/* If you want dropdowns to open on hover, uncomment this: */
