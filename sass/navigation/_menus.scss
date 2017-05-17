@@ -95,9 +95,13 @@
         
     div.menu-tray {
         display: block;
+        
         ul {
+            padding-top: 0;
             background-color: $color__skin-acc2;
+            
             li a {
+                line-height: 1rem;
                 color: $color__skin-main;
             }
         }

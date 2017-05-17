@@ -10,6 +10,7 @@
     var $curpage = $('.current_page_item');
     var $hasChildren = $('.page_item_has_children');
     
+    var trayEnabled = false;
     var trayOpen = false;
     var $curSubmenuDisplayed = $curpage;
     
@@ -33,12 +34,16 @@
     function toggleMenuTrayByMediaQuery() {
         if($('.site-logo-area').css("float") === "none"){ 
             // show menu-tray if on tabletPlus media query size
-            console.log("Tablet or larger media query, showing menu tray");
-            enableTray();
+            if(!trayEnabled){
+                console.log("Tablet or larger media query, showing menu tray");
+                enableTray();
+            }
             
         }else {
-            console.log("Mobile media query, hiding menu tray.");
-            disableTray();
+            if(trayEnabled){
+                console.log("Mobile media query, hiding menu tray.");
+                disableTray();
+            }
         }  
     }
     
@@ -48,6 +53,7 @@
         //$hasChildren.find( '.dropdown-toggle' ).unbind('click');
         
         trayOpen = false; // Reinit tray openin case of page resize
+        trayEnabled = true;
         
         // disable showing children when toggled on by navigation.js
         $hasChildren.find('.children').toggleClass("disabled", true);
@@ -63,8 +69,8 @@
         
         $hasChildren.find( '.dropdown-toggle' ).click( function( e ) {
             // Accounts for click on button text versus button. Ensures $target always refers to button instance.
-            // console.log("Click Target: "+event.target.nodeName+" class= "+event.target.className);
-            var $target = (event.target.nodeName === 'SPAN') ? $(event.target).parent() : $(event.target);
+            // console.log("Click Target: "+e.target.nodeName+" class= "+e.target.className);
+            var $target = (e.target.nodeName === 'SPAN') ? $(e.target).parent() : $(e.target);
             
             // If tray has already contains the submenu for the for the clicked button
             if($target.parent().attr('class') == $curSubmenuDisplayed.attr('class')){
@@ -87,9 +93,11 @@
         $hasChildren.find( '.dropdown-toggle' ).unbind('click');     
         
         // enable showing children when toggled on by navigation.js 
-        $hasChildren.find('.children').toggleClass("disabled", false);
+        $hasChildren.find('.children').removeClass("disabled");
         
         $menuTray.slideUp();
+        
+        trayEnabled = false;
         
     }
     

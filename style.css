@@ -665,10 +665,12 @@ a:hover, a:active {
 }
 
 .main-navigation div.menu-tray ul {
+	padding-top: 0;
 	background-color: #ffeb32;
 }
 
 .main-navigation div.menu-tray ul li a {
+	line-height: 1rem;
 	color: #640030;
 }
 
