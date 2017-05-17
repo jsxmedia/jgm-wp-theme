@@ -15,16 +15,25 @@
 
             // Add dropdown toggle that displays child menu items.
             var dropdownToggle = $( '<button />', { 'class': 'dropdown-toggle', 'aria-expanded': false })
-                    .append( $( '<span />', { 'class': 'dropdown-symbol', text: "+" }) )
+                    .append( $( '<span />', { 'class': 'dropdown-symbol', text: "" }) )
                     .append( $( '<span />', { 'class': 'screen-reader-text', text: jgm2018ScreenReaderText.expand }) );
 
             container.find( '.menu-item-has-children > a, .page_item_has_children > a' ).after( dropdownToggle );
 
+            var dropdownSymbol = container.find( '.dropdown-symbol' );
+            dropdownSymbol.append( $( '<span />', { 'class': 'dropdown-symbol-text', text: "+" }) );
+            
             container.find( '.dropdown-toggle' ).click( function( e ) {
                     var _this = $( this ),
-                            screenReaderSpan = _this.find( '.screen-reader-text' );
-                            dropdownSymbol = _this.find( '.dropdown-symbol' );
-                            dropdownSymbol.text( dropdownSymbol.text() === '-' ? '+' : '-' );
+                            screenReaderSpan = _this.find( '.screen-reader-text' )
+                            myDropdownSymbol = _this.find( '.dropdown-symbol-text' );
+                            
+                            
+                console.log(dropdownSymbol.parent().attr('class'));
+                if(!myDropdownSymbol.parent().hasClass("hamburger")){
+                    // Only change symbol if hamburger-adding class no present
+                    myDropdownSymbol.text( myDropdownSymbol.text() === '-' ? '+' : '-' );
+                }
 
                     e.preventDefault();
                     _this.toggleClass( 'toggled-on' );

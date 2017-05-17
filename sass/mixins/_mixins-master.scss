@@ -24,3 +24,28 @@
 @mixin clearfix-after() {
 	clear: both;
 }
+
+// Add Hamburger to element.
+@mixin symbol-core($symbolpath) {
+    content: "";
+    display: block;
+    width: 1em;
+    height: 1em;
+    background: url(#{$symbolpath});
+    background-size: contain;
+    background-position: center;
+}
+
+@mixin symbol-before($symbolpath, $margin:"0") {
+    &::before {
+        @include symbol-core($symbolpath);
+        margin-right: unquote($margin);
+    }
+}
+
+@mixin symbol-after($symbolpath, $margin:"0") {
+    &::after {
+        @include symbol-core($symbolpath);
+        margin-left: unquote($margin);
+    }
+}

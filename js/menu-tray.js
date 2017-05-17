@@ -9,6 +9,8 @@
     var $siteNav = $('#site-navigation');
     var $curpage = $('.current_page_item');
     var $hasChildren = $('.page_item_has_children');
+    var $toggleButtons = $siteNav.find('.dropdown-toggle');
+    var $lastClickedBtn = null;
     
     var trayEnabled = false;
     var trayOpen = false;
@@ -49,11 +51,13 @@
     
     
     function enableTray(){
-        // Remove listeners added by disableTray if they exist
-        //$hasChildren.find( '.dropdown-toggle' ).unbind('click');
         
         trayOpen = false; // Reinit tray openin case of page resize
         trayEnabled = true;
+        
+        $siteNav.find('.dropdown-symbol-text').hide();   // Hide default navigation symbols
+        $toggleButtons.toggleClass('hamburger');         // Add hamburger symbol to dropdown toggle buttons
+        
         
         // disable showing children when toggled on by navigation.js
         $hasChildren.find('.children').toggleClass("disabled", true);
@@ -67,20 +71,26 @@
             initTray($curpage.find('> ul.children'));
         }
         
-        $hasChildren.find( '.dropdown-toggle' ).click( function( e ) {
+        $toggleButtons.bind('click.hamburger', function( e ) {
+            
+            if ($lastClickedBtn != null){
+                $lastClickedBtn.parent().removeClass("menu-selection");
+            }
+            
             // Accounts for click on button text versus button. Ensures $target always refers to button instance.
             // console.log("Click Target: "+e.target.nodeName+" class= "+e.target.className);
-            var $target = (e.target.nodeName === 'SPAN') ? $(e.target).parent() : $(e.target);
+            $lastClickedBtn = (e.target.nodeName === 'SPAN') ? $(e.target).parent() : $(e.target);
+            $lastClickedBtn.parent().addClass("menu-selection");
             
             // If tray has already contains the submenu for the for the clicked button
-            if($target.parent().attr('class') == $curSubmenuDisplayed.attr('class')){
+            if($lastClickedBtn.parent().attr('class') === $curSubmenuDisplayed.attr('class')){
                 // Toggle visibilty of menu tray
                 // console.log("selected item's submenu already active, toggling visibility");
                 toggleTray();
             }else {
                 // otherwise reinitilize menu tray
                 // console.log("selected new item, reinit menu tray");
-                initTray($target.siblings('ul.children'));
+                initTray($lastClickedBtn.siblings('ul.children'));
 
             }
         });
@@ -89,8 +99,14 @@
     
     function disableTray() {
         // Remove listeners added by enableTray
+        $toggleButtons.unbind('click.hamburger');
+        
 
-        $hasChildren.find( '.dropdown-toggle' ).unbind('click');     
+        // Remove hamburger symbol from dropdown toggle buttons
+        $toggleButtons.removeClass('hamburger');         
+        
+        // Restore visibility to default button text 
+        $siteNav.find('.dropdown-symbol-text').show();
         
         // enable showing children when toggled on by navigation.js 
         $hasChildren.find('.children').removeClass("disabled");

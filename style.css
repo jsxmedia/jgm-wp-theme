@@ -650,34 +650,14 @@ a:hover, a:active {
 	text-decoration: underline;
 }
 
-.main-navigation .children:not(.disabled) .menu-item-has-children,
-.main-navigation .children:not(.disabled) .page_item_has_children {
+.main-navigation .menu-item-has-children,
+.main-navigation .page_item_has_children {
 	min-width: 218px;
 }
 
-.main-navigation .children:not(.disabled) .menu-item-has-children > a,
-.main-navigation .children:not(.disabled) .page_item_has_children > a {
+.main-navigation .menu-item-has-children > a,
+.main-navigation .page_item_has_children > a {
 	padding-right: 2em;
-}
-
-.main-navigation div.menu-tray {
-	display: block;
-}
-
-.main-navigation div.menu-tray ul {
-	padding-top: 0;
-	background-color: #ffeb32;
-	display: flex;
-	justify-content: flex-start;
-}
-
-.main-navigation div.menu-tray ul .disabled {
-	display: none;
-}
-
-.main-navigation div.menu-tray ul li a {
-	line-height: 1rem;
-	color: #640030;
 }
 
 button.dropdown-toggle {
@@ -689,6 +669,26 @@ button.dropdown-toggle {
 	color: #640030;
 	line-height: 1.5em;
 	padding: .4em 1em .4em .5em;
+}
+
+button.dropdown-toggle.hamburger {
+	padding: .8em .5em .8em .5em;
+	right: .4em;
+}
+
+button.dropdown-toggle.hamburger .dropdown-symbol {
+	font-size: 1em;
+}
+
+button.dropdown-toggle.hamburger .dropdown-symbol::before {
+	content: "";
+	display: block;
+	width: 1em;
+	height: 1em;
+	background: url(img/menu-icon-white.svg);
+	background-size: contain;
+	background-position: center;
+	margin-right: 0;
 }
 
 @media (min-width: 600px) {
@@ -721,9 +721,10 @@ button.dropdown-toggle {
 	display: block;
 	width: 1em;
 	height: 1em;
-	margin-right: .5em;
-	background: url("img/menu-icon.svg");
+	background: url(img/menu-icon.svg);
 	background-size: contain;
+	background-position: center;
+	margin-right: .5em;
 }
 
 /* Toggle small menu and children on */
@@ -742,7 +743,6 @@ button.dropdown-toggle {
 	.main-navigation .menu-item-has-children > a,
 	.main-navigation .page_item_has_children > a {
 		padding-right: 2em;
-		background: rgba(255, 255, 255, 0.1);
 	}
 	.main-navigation ul {
 		background-color: black;
@@ -753,7 +753,6 @@ button.dropdown-toggle {
 	}
 	.main-navigation ul ul {
 		flex-direction: column;
-		background: rgba(255, 255, 255, 0.1);
 		margin-left: 0;
 	}
 	.main-navigation ul ul li {
@@ -763,11 +762,57 @@ button.dropdown-toggle {
 		width: 218px;
 		background: none;
 	}
+	.main-navigation ul li {
+		border: 0.2rem transparent solid;
+	}
 	.main-navigation ul li a {
 		padding: .4em 1em;
 	}
 	.main-navigation a {
 		color: snow;
+	}
+	.main-navigation .current_page_item > a {
+		color: #ffeb32;
+	}
+	.main-navigation .menu-item-has-children,
+	.main-navigation .page_item_has_children {
+		min-width: 0;
+	}
+	.main-navigation .menu-item-has-children > a,
+	.main-navigation .page_item_has_children > a {
+		padding-right: 2.25em;
+	}
+	.main-navigation .menu-tray .menu-item-has-children > a,
+	.main-navigation .menu-tray .page_item_has_children > a {
+		padding-right: 0;
+	}
+	.main-navigation div.menu-tray {
+		display: block;
+		/* Disable toggle button in menu tray until support for it is added */
+	}
+	.main-navigation div.menu-tray ul {
+		padding-top: 0;
+		background-color: #ffeb32;
+		display: flex;
+		justify-content: flex-start;
+	}
+	.main-navigation div.menu-tray ul .disabled {
+		display: none;
+	}
+	.main-navigation div.menu-tray ul li a {
+		line-height: 1rem;
+		color: #640030;
+	}
+	.main-navigation div.menu-tray button.dropdown-toggle {
+		display: none;
+	}
+	.main-navigation .menu-selection {
+		box-sizing: border-box;
+		background: rgba(255, 255, 255, 0.1);
+		border: 0.2rem #595959 inset;
+	}
+	.main-navigation .menu-selection button.dropdown-toggle {
+		background: transparent;
 	}
 }
 
