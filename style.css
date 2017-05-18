@@ -691,6 +691,12 @@ button.dropdown-toggle.hamburger .dropdown-symbol::before {
 	margin-right: 0;
 }
 
+@media (min-width: 960px) {
+	button.dropdown-toggle.hamburger {
+		padding: 1.067em .5em .8em .5em;
+	}
+}
+
 @media (min-width: 600px) {
 	button.dropdown-toggle {
 		color: snow;
@@ -820,13 +826,6 @@ button.dropdown-toggle.hamburger .dropdown-symbol::before {
 	.main-navigation ul {
 		justify-content: flex-start;
 		padding-top: 0;
-		/* If you want dropdowns to open on hover, uncomment this: */
-		/*
-			li:hover > ul,
-				li:focus > ul {
-				display: block;
-			}
-			*/
 	}
 }
 
@@ -941,25 +940,6 @@ button.dropdown-toggle.hamburger .dropdown-symbol::before {
 .content-area {
 	max-width: 960px;
 	margin: 0 auto;
-}
-
-.widget-area {
-	column-width: 20rem;
-	margin-top: 2rem;
-	padding: 1rem;
-	box-sizing: border-box;
-	overflow: hidden;
-	width: 100%;
-	border: 0.125rem solid #640030;
-	padding: 1.5em;
-}
-
-.widget-area ul, .widget-area ol {
-	margin-left: 0;
-}
-
-.widget-area ul {
-	list-style: Square;
 }
 
 .site-footer {
@@ -1248,18 +1228,71 @@ button.dropdown-toggle.hamburger .dropdown-symbol::before {
 /*--------------------------------------------------------------
 # Widgets
 --------------------------------------------------------------*/
-.widget {
-	margin: 0 0 1.5em;
+.widget-area {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	margin-top: 2rem;
+	padding: 1rem;
+	box-sizing: border-box;
+	overflow: hidden;
+	width: 100%;
+	padding: 1.5em;
+}
+
+.widget-area ul, .widget-area ol {
+	margin-left: 0;
+}
+
+.widget-area .widget {
+	margin-right: 4em;
 	padding: .5rem;
 	/* Make sure select elements fit in widgets. */
 }
 
-.widget h2 {
+.widget-area .widget::last-of-type {
+	margin-right: 0;
+}
+
+.widget-area .widget h2 {
+	color: #ff3194;
+	font-weight: 500;
+	margin: .5em 0 .1em;
 	font-size: 1.25em;
 }
 
-.widget select {
+.widget-area .widget select {
 	max-width: 100%;
+}
+
+.widget-area .widget_nav_menu {
+	color: #ff3194;
+}
+
+.widget-area .widget_nav_menu ul.menu li {
+	list-style-type: none;
+}
+
+.widget-area .widget_nav_menu ul.menu li:hover, .widget-area .widget_nav_menu ul.menu li:focus {
+	list-style-type: square;
+}
+
+.widget-area .widget_nav_menu ul.menu li a:link {
+	font-family: "Roboto", "Myriad Pro", "Geneva", "Arial", sans-serif;
+	text-decoration: none;
+	color: snow;
+}
+
+.widget-area .widget_nav_menu ul.menu li a:visited {
+	color: #ffe4f1;
+}
+
+.widget-area .widget_nav_menu ul.menu li a:hover, .widget-area .widget_nav_menu ul.menu li a:focus {
+	color: #ffeb32;
+}
+
+.widget-area .widget_search {
+	padding-top: 3em;
 }
 
 /*--------------------------------------------------------------

@@ -14,28 +14,6 @@
     margin: 0 auto;
 }
 
-.widget-area {
-    //display: flex;
-    //flex-wrap: wrap;
-    //justify-content: flex-start;
-    column-width: 20rem;
-    margin-top: 2rem;
-    padding: 1rem;
-    box-sizing: border-box;
-    overflow: hidden;
-    width: 100%;
-    border: .125rem solid $color__skin-main;
-    padding: 1.5em;
-    
-    ul, ol {
-        margin-left: 0;
-    }
-    
-    ul {
-        list-style: Square;
-    }
-}
-
 .site-footer {
     color: $color__skin-acc1;
     background-color: darken($color__skin-main, 12%);

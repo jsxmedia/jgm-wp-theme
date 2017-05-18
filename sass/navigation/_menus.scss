@@ -114,6 +114,11 @@ button.dropdown-toggle {
             font-size: 1em;
             @include symbol-before('img/menu-icon-white.svg');
         }
+        
+        @include desktopPlus {
+            padding: 1.067em .5em .8em .5em;
+        }
+    
     }
 
     @include tabletPlus {
@@ -271,13 +276,9 @@ button.dropdown-toggle {
 			justify-content: flex-start;
 			padding-top: 0;
 
-			/* If you want dropdowns to open on hover, uncomment this: */
-			/*
-			li:hover > ul,
-				li:focus > ul {
-				display: block;
-			}
-			*/
+                        li a {
+                            //font-size: 1rem;
+                        }
 		}
 
 	}
