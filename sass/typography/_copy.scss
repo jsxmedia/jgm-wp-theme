@@ -1,5 +1,9 @@
 p {
 	margin-bottom: 1.5em;
+        
+        @include tabletPlus {
+            max-width: 36em;
+        }
 }
 
 dfn, cite, em, i {

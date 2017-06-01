@@ -25,7 +25,7 @@
             
             container.find( '.dropdown-toggle' ).click( function( e ) {
                     var _this = $( this ),
-                            screenReaderSpan = _this.find( '.screen-reader-text' )
+                            screenReaderSpan = _this.find( '.screen-reader-text' ),
                             myDropdownSymbol = _this.find( '.dropdown-symbol-text' );
                             
                             

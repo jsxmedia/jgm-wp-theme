@@ -200,3 +200,10 @@
         font-size: 1.16em;
     }
 }
+
+/*** Skin 2 Overrides ***/
+.page-template-denver-page {
+    .brand-wrapper {
+        background: radial-gradient(ellipse at center, rgba($color__skin2-header-light, .82) 0%, rgba($color__skin2-header-dark, .82) 100%);  
+    }
+}

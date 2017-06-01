@@ -16,7 +16,8 @@
         background-color: rgba($color__skin-acc1, .9);
         display: none;
         list-style: none;
-        margin: 0;
+        margin: 0 auto;
+        max-width: $size__page-width-max;
         padding-top: 1em;
         padding-left: 0;
 
@@ -263,9 +264,18 @@ button.dropdown-toggle {
                 background: transparent;
             }
         }
-
+        
+        .menu-header-menu-container {
+            background-color: $color__skin-dark;
+        }
+        
+        #site-navigation-submenu {
+            background-color: $color__skin-acc2;
+        }
 
     }
+    
+
 
 }
 

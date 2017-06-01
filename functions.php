@@ -7,6 +7,10 @@
  * @package JGM2018
  */
 
+//@ini_set( 'upload_max_size' , '64M' );
+//@ini_set( 'post_max_size', '64M');
+//@ini_set( 'max_execution_time', '300' );
+
 if ( ! function_exists( 'jgm2018_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
@@ -191,6 +195,10 @@ function jgm2018_scripts() {
 	}
         
         wp_enqueue_script( 'jgm2018-menu-tray', get_template_directory_uri() . '/js/menu-tray.js', array('jquery', 'jgm2018-global-functions'), '20170513', true );
+        
+       // if ( is_page_template( './landing-page.php' ) ) {
+            wp_enqueue_script( 'jgm2018-landing-page-gallery', get_template_directory_uri() . '/js/landing-page-gallery.js', array('jquery', 'jgm2018-global-functions'), '20170524', true );
+        //}
 }
 add_action( 'wp_enqueue_scripts', 'jgm2018_scripts' );
 

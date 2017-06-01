@@ -15,10 +15,10 @@ h1 {
 }
 
 h2 {
-    font-size: 2.6em;
+    font-size: 2.25em;
         
     a{
-        font-weight: 300;
+        
         text-decoration: none;
         border-bottom: .05em solid transparent;
         
@@ -29,22 +29,30 @@ h2 {
     }
 }
 
-h3 {
-    font-size: 2.2em;
-    
-    a{
+.entry-title, article h1 {
         font-weight: 300;
-    }
+}
+
+h3 {
+    font-size: 1.75em;
+    font-weight: 500;
+}
+
+h4, h5, h6 {
+    font-color: $color__skin-dark;
 }
 
 h4 {
-    font-size: 2em;
+    font-size: 1.25emem;
+    font-weight: 500;
 }
 
 h5 {
-    font-size: 1.8em;
+    font-size: 1.1em;
+    font-weight: 700;
 }
 
 h6 {
-    font-size: 1.6em;
+    font-size: 1em;
+    font-weight: 700;
 }
