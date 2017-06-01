@@ -4,6 +4,7 @@
     font-family: $font__sans;
     font-weight: 400;
     clear: left;
+    
 
     @include mobile {
         position: absolute;
@@ -162,7 +163,8 @@ button.dropdown-toggle {
 
     .main-navigation {
 
-        background-color: rgba($color__skin-acc1, .9);  
+        //background-color: rgba($color__skin-acc1, .9); 
+        background-color: $color__skin-dark;
         
         .menu-item-has-children > a,
         .page_item_has_children > a {
@@ -263,10 +265,6 @@ button.dropdown-toggle {
             button.dropdown-toggle{
                 background: transparent;
             }
-        }
-        
-        .menu-header-menu-container {
-            background-color: $color__skin-dark;
         }
         
         #site-navigation-submenu {
