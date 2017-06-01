@@ -51,6 +51,9 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 @tuc-bg-med: rgb(128,5,50);
 @tuc-bg-dark: rgb(31,0,27);
 */
+/* Colors for main site skin */
+/* Colors for secondary site skin */
+/* Misc Colors */
 /*--------------------------------------------------------------
 # Normalize
 --------------------------------------------------------------*/
@@ -291,58 +294,115 @@ textarea {
 	}
 }
 
-h1, h2, h3, h4, h5, h6 {
+/*** Apply Skin to Template Pages ***/
+body:not(.page-template-denver-page) h1, body:not(.page-template-denver-page) h2, body:not(.page-template-denver-page) h3, body:not(.page-template-denver-page) h4, body:not(.page-template-denver-page) h5, body:not(.page-template-denver-page) h6 {
 	clear: both;
 	font-family: "Roboto", "Myriad Pro", "Geneva", "Arial", sans-serif;
 	color: #640030;
 }
 
-h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+body:not(.page-template-denver-page) h1 a, body:not(.page-template-denver-page) h2 a, body:not(.page-template-denver-page) h3 a, body:not(.page-template-denver-page) h4 a, body:not(.page-template-denver-page) h5 a, body:not(.page-template-denver-page) h6 a {
 	color: #640030;
 }
 
-h1 {
+body:not(.page-template-denver-page) h1 {
 	font-size: 3em;
 }
 
-h2 {
+body:not(.page-template-denver-page) h2 {
 	font-size: 2.25em;
 }
 
-h2 a {
+body:not(.page-template-denver-page) h2 a {
 	text-decoration: none;
 	border-bottom: .05em solid transparent;
 }
 
-h2 a:hover, h2 a:focus {
+body:not(.page-template-denver-page) h2 a:hover, body:not(.page-template-denver-page) h2 a:focus {
 	border-bottom: .05em solid;
 	color: #970048;
 }
 
-.entry-title, article h1 {
+body:not(.page-template-denver-page) .entry-title, body:not(.page-template-denver-page) article h1 {
 	font-weight: 300;
 }
 
-h3 {
+body:not(.page-template-denver-page) h3 {
 	font-size: 1.75em;
 	font-weight: 500;
 }
 
-h4, h5, h6 {
+body:not(.page-template-denver-page) h4, body:not(.page-template-denver-page) h5, body:not(.page-template-denver-page) h6 {
 	font-color: black;
 }
 
-h4 {
+body:not(.page-template-denver-page) h4 {
 	font-size: 1.25emem;
 	font-weight: 500;
 }
 
-h5 {
+body:not(.page-template-denver-page) h5 {
 	font-size: 1.1em;
 	font-weight: 700;
 }
 
-h6 {
+body:not(.page-template-denver-page) h6 {
+	font-size: 1em;
+	font-weight: 700;
+}
+
+body.page-template-denver-page h1, body.page-template-denver-page h2, body.page-template-denver-page h3, body.page-template-denver-page h4, body.page-template-denver-page h5, body.page-template-denver-page h6 {
+	clear: both;
+	font-family: "Roboto", "Myriad Pro", "Geneva", "Arial", sans-serif;
+	color: #00364d;
+}
+
+body.page-template-denver-page h1 a, body.page-template-denver-page h2 a, body.page-template-denver-page h3 a, body.page-template-denver-page h4 a, body.page-template-denver-page h5 a, body.page-template-denver-page h6 a {
+	color: #00364d;
+}
+
+body.page-template-denver-page h1 {
+	font-size: 3em;
+}
+
+body.page-template-denver-page h2 {
+	font-size: 2.25em;
+}
+
+body.page-template-denver-page h2 a {
+	text-decoration: none;
+	border-bottom: .05em solid transparent;
+}
+
+body.page-template-denver-page h2 a:hover, body.page-template-denver-page h2 a:focus {
+	border-bottom: .05em solid;
+	color: #005a80;
+}
+
+body.page-template-denver-page .entry-title, body.page-template-denver-page article h1 {
+	font-weight: 300;
+}
+
+body.page-template-denver-page h3 {
+	font-size: 1.75em;
+	font-weight: 500;
+}
+
+body.page-template-denver-page h4, body.page-template-denver-page h5, body.page-template-denver-page h6 {
+	font-color: black;
+}
+
+body.page-template-denver-page h4 {
+	font-size: 1.25emem;
+	font-weight: 500;
+}
+
+body.page-template-denver-page h5 {
+	font-size: 1.1em;
+	font-weight: 700;
+}
+
+body.page-template-denver-page h6 {
 	font-size: 1em;
 	font-weight: 700;
 }
@@ -945,7 +1005,9 @@ button.dropdown-toggle.hamburger .dropdown-symbol::before {
 /*--------------------------------------------------------------
 ## Main Content Layout
 --------------------------------------------------------------*/
-.site-content {
+/*** Define Skins ***/
+/*** Apply Skins to Template Pages ***/
+body:not(.page-template-denver-page) .site-content {
 	width: 100%;
 	position: relative;
 	background-color: rgba(255, 250, 250, 0.9);
@@ -953,26 +1015,52 @@ button.dropdown-toggle.hamburger .dropdown-symbol::before {
 }
 
 @media (min-width: 600px) and (max-width: 959px) {
-	.site-content {
+	body:not(.page-template-denver-page) .site-content {
 		padding: 2em;
 	}
 }
 
-.content-area {
+body:not(.page-template-denver-page) .content-area {
 	max-width: 960px;
 	margin: 0 auto;
 }
 
-.site-footer {
+body:not(.page-template-denver-page) .site-footer {
 	color: snow;
 	background-color: #270013;
+	padding: 1rem;
+}
+
+body.page-template-denver-page .site-content {
+	width: 100%;
+	position: relative;
+	background-color: rgba(255, 250, 250, 0.9);
+	padding: 1em;
+}
+
+@media (min-width: 600px) and (max-width: 959px) {
+	body.page-template-denver-page .site-content {
+		padding: 2em;
+	}
+}
+
+body.page-template-denver-page .content-area {
+	max-width: 960px;
+	margin: 0 auto;
+}
+
+body.page-template-denver-page .site-footer {
+	color: snow;
+	background-color: #000b10;
 	padding: 1rem;
 }
 
 /*--------------------------------------------------------------
 ## Header Layout
 --------------------------------------------------------------*/
-.site-header {
+/*** Define Skin ***/
+/*** Apply Skin to Template Pages ***/
+body:not(.page-template-denver-page) .site-header {
 	width: 100%;
 	position: relative;
 	font-family: "Roboto", "Myriad Pro", "Geneva", "Arial", sans-serif;
@@ -980,33 +1068,33 @@ button.dropdown-toggle.hamburger .dropdown-symbol::before {
 	text-align: right;
 }
 
-.brand-wrapper {
+body:not(.page-template-denver-page) .brand-wrapper {
 	display: block;
 	width: 100%;
 	box-sizing: border-box;
-	background: radial-gradient(ellipse at center, rgba(237, 14, 107, 0.82) 0%, rgba(31, 0, 27, 0.82) 100%);
+	background: radial-gradient(ellipse at center, rgba(228, 0, 109, 0.82) 0%, rgba(0, 0, 0, 0.82) 100%);
 	background-attachment: fixed;
 }
 
 @media (max-width: 450px) {
-	.brand-wrapper {
+	body:not(.page-template-denver-page) .brand-wrapper {
 		min-height: 8em;
 	}
 }
 
 @media (min-width: 600px) and (max-width: 959px) {
-	.brand-wrapper {
+	body:not(.page-template-denver-page) .brand-wrapper {
 		min-height: 10em;
 	}
 }
 
 @media (min-width: 960px) {
-	.brand-wrapper {
+	body:not(.page-template-denver-page) .brand-wrapper {
 		min-height: 12em;
 	}
 }
 
-.site-branding {
+body:not(.page-template-denver-page) .site-branding {
 	width: 100%;
 	max-width: 960px;
 	margin: 0 auto;
@@ -1014,7 +1102,7 @@ button.dropdown-toggle.hamburger .dropdown-symbol::before {
 }
 
 @media (min-width: 600px) {
-	.site-branding {
+	body:not(.page-template-denver-page) .site-branding {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
@@ -1023,13 +1111,13 @@ button.dropdown-toggle.hamburger .dropdown-symbol::before {
 }
 
 @media (min-width: 960px) {
-	.site-branding {
+	body:not(.page-template-denver-page) .site-branding {
 		align-items: flex-start;
 		padding: 1em 2em;
 	}
 }
 
-.site-logo-area {
+body:not(.page-template-denver-page) .site-logo-area {
 	display: block;
 	float: left;
 	width: 25%;
@@ -1037,17 +1125,17 @@ button.dropdown-toggle.hamburger .dropdown-symbol::before {
 	min-height: 5.5rem;
 }
 
-.site-logo-area a {
+body:not(.page-template-denver-page) .site-logo-area a {
 	display: block;
 }
 
-.site-logo-area a img {
+body:not(.page-template-denver-page) .site-logo-area a img {
 	display: block;
 	width: 100%;
 }
 
 @media (max-width: 599px) {
-	.site-logo-area {
+	body:not(.page-template-denver-page) .site-logo-area {
 		padding: 1em;
 		width: 100%;
 		display: flex;
@@ -1055,18 +1143,18 @@ button.dropdown-toggle.hamburger .dropdown-symbol::before {
 		justify-content: space-between;
 		align-items: center;
 		/*&::after {
-            width: 75%;
-            position: relative;
-            content:"JG&M Expo";
-            font-weight: 700;
-            display: block;
-            text-align: center;
-            font-size: 3em;
-            line-height: 1em;
-            color: $color__skin-dark;
-        }*/
+                width: 75%;
+                position: relative;
+                content:"JG&M Expo";
+                font-weight: 700;
+                display: block;
+                text-align: center;
+                font-size: 3em;
+                line-height: 1em;
+                color: $color__dark;
+            }*/
 	}
-	.site-logo-area a {
+	body:not(.page-template-denver-page) .site-logo-area a {
 		width: 25%;
 		min-width: 4em;
 		box-sizing: border-box;
@@ -1074,38 +1162,39 @@ button.dropdown-toggle.hamburger .dropdown-symbol::before {
 }
 
 @media (max-width: 450px) {
-	.site-logo-area::after {
+	body:not(.page-template-denver-page) .site-logo-area::after {
 		font-size: 2em;
 	}
 }
 
 @media (min-width: 600px) and (max-width: 959px) {
-	.site-logo-area {
+	body:not(.page-template-denver-page) .site-logo-area {
 		float: none;
 		max-width: 9em;
 	}
 }
 
 @media (min-width: 960px) {
-	.site-logo-area {
+	body:not(.page-template-denver-page) .site-logo-area {
 		float: none;
 		width: 30%;
 	}
 }
 
-.site-branding-text {
+body:not(.page-template-denver-page) .site-branding-text {
 	display: flex;
 	flex-direction: column;
 	text-align: right;
 	font-size: .9em;
+	text-shadow: 2px 2px black;
 }
 
-.site-branding-text p.site-title {
+body:not(.page-template-denver-page) .site-branding-text p.site-title {
 	font-size: 3em;
 }
 
 @media (max-width: 599px) {
-	.site-branding-text {
+	body:not(.page-template-denver-page) .site-branding-text {
 		width: 100%;
 		padding: 2.5em;
 		text-align: center;
@@ -1114,13 +1203,13 @@ button.dropdown-toggle.hamburger .dropdown-symbol::before {
 }
 
 @media (max-width: 450px) {
-	.site-branding-text {
+	body:not(.page-template-denver-page) .site-branding-text {
 		font-size: .6em;
 	}
 }
 
 @media (min-width: 600px) and (max-width: 959px) {
-	.site-branding-text {
+	body:not(.page-template-denver-page) .site-branding-text {
 		font-size: 1em;
 		text-align: center;
 		width: 75%;
@@ -1128,13 +1217,13 @@ button.dropdown-toggle.hamburger .dropdown-symbol::before {
 }
 
 @media (min-width: 600px) and (max-width: 700px) {
-	.site-branding-text {
+	body:not(.page-template-denver-page) .site-branding-text {
 		font-size: .8em;
 	}
 }
 
 @media (min-width: 600px) {
-	.site-branding-text {
+	body:not(.page-template-denver-page) .site-branding-text {
 		float: none;
 		justify-content: center;
 		flex-direction: column;
@@ -1142,13 +1231,13 @@ button.dropdown-toggle.hamburger .dropdown-symbol::before {
 }
 
 @media (min-width: 960px) {
-	.site-branding-text {
+	body:not(.page-template-denver-page) .site-branding-text {
 		font-size: 1.067em;
 		flex-direction: column-reverse;
 	}
 }
 
-.site-title {
+body:not(.page-template-denver-page) .site-title {
 	display: block;
 	font-weight: 300;
 	line-height: 1em;
@@ -1157,55 +1246,282 @@ button.dropdown-toggle.hamburger .dropdown-symbol::before {
 }
 
 @media (max-width: 450px) {
-	.site-title {
+	body:not(.page-template-denver-page) .site-title {
 		font-weight: 900;
 		margin-bottom: .25em;
 	}
 }
 
 @media (min-width: 960px) {
-	.site-title {
+	body:not(.page-template-denver-page) .site-title {
 		font-weight: 900;
 	}
 }
 
-.site-title a {
+body:not(.page-template-denver-page) .site-title a {
 	color: #ffeb32;
 	text-decoration: none;
 }
 
-.site-title a:hover, .site-title a:focus {
+body:not(.page-template-denver-page) .site-title a:hover, body:not(.page-template-denver-page) .site-title a:focus {
 	text-decoration: underline;
 }
 
-.site-description {
+body:not(.page-template-denver-page) .site-description {
 	margin: 0;
 	padding: 0;
 	width: 100%;
 }
 
 @media (max-width: 450px) {
-	.site-description {
+	body:not(.page-template-denver-page) .site-description {
 		font-size: 2.2em;
 		font-weight: 300;
 	}
 }
 
 @media (min-width: 600px) and (max-width: 959px) {
-	.site-description {
+	body:not(.page-template-denver-page) .site-description {
 		font-size: 1.125em;
 	}
 }
 
 @media (min-width: 960px) {
-	.site-description {
+	body:not(.page-template-denver-page) .site-description {
 		font-size: 1.16em;
 	}
 }
 
-/*** Skin 2 Overrides ***/
-.page-template-denver-page .brand-wrapper {
-	background: radial-gradient(ellipse at center, rgba(237, 14, 107, 0.82) 0%, rgba(31, 0, 27, 0.82) 100%);
+body.page-template-denver-page .site-header {
+	width: 100%;
+	position: relative;
+	font-family: "Roboto", "Myriad Pro", "Geneva", "Arial", sans-serif;
+	color: #ffeb32;
+	text-align: right;
+}
+
+body.page-template-denver-page .brand-wrapper {
+	display: block;
+	width: 100%;
+	box-sizing: border-box;
+	background: radial-gradient(ellipse at center, rgba(0, 144, 205, 0.82) 0%, rgba(0, 0, 0, 0.82) 100%);
+	background-attachment: fixed;
+}
+
+@media (max-width: 450px) {
+	body.page-template-denver-page .brand-wrapper {
+		min-height: 8em;
+	}
+}
+
+@media (min-width: 600px) and (max-width: 959px) {
+	body.page-template-denver-page .brand-wrapper {
+		min-height: 10em;
+	}
+}
+
+@media (min-width: 960px) {
+	body.page-template-denver-page .brand-wrapper {
+		min-height: 12em;
+	}
+}
+
+body.page-template-denver-page .site-branding {
+	width: 100%;
+	max-width: 960px;
+	margin: 0 auto;
+	position: relative;
+}
+
+@media (min-width: 600px) {
+	body.page-template-denver-page .site-branding {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 1em;
+	}
+}
+
+@media (min-width: 960px) {
+	body.page-template-denver-page .site-branding {
+		align-items: flex-start;
+		padding: 1em 2em;
+	}
+}
+
+body.page-template-denver-page .site-logo-area {
+	display: block;
+	float: left;
+	width: 25%;
+	min-width: 4em;
+	min-height: 5.5rem;
+}
+
+body.page-template-denver-page .site-logo-area a {
+	display: block;
+}
+
+body.page-template-denver-page .site-logo-area a img {
+	display: block;
+	width: 100%;
+}
+
+@media (max-width: 599px) {
+	body.page-template-denver-page .site-logo-area {
+		padding: 1em;
+		width: 100%;
+		display: flex;
+		background-color: rgba(255, 250, 250, 0.9);
+		justify-content: space-between;
+		align-items: center;
+		/*&::after {
+                width: 75%;
+                position: relative;
+                content:"JG&M Expo";
+                font-weight: 700;
+                display: block;
+                text-align: center;
+                font-size: 3em;
+                line-height: 1em;
+                color: $color__dark;
+            }*/
+	}
+	body.page-template-denver-page .site-logo-area a {
+		width: 25%;
+		min-width: 4em;
+		box-sizing: border-box;
+	}
+}
+
+@media (max-width: 450px) {
+	body.page-template-denver-page .site-logo-area::after {
+		font-size: 2em;
+	}
+}
+
+@media (min-width: 600px) and (max-width: 959px) {
+	body.page-template-denver-page .site-logo-area {
+		float: none;
+		max-width: 9em;
+	}
+}
+
+@media (min-width: 960px) {
+	body.page-template-denver-page .site-logo-area {
+		float: none;
+		width: 30%;
+	}
+}
+
+body.page-template-denver-page .site-branding-text {
+	display: flex;
+	flex-direction: column;
+	text-align: right;
+	font-size: .9em;
+	text-shadow: 2px 2px black;
+}
+
+body.page-template-denver-page .site-branding-text p.site-title {
+	font-size: 3em;
+}
+
+@media (max-width: 599px) {
+	body.page-template-denver-page .site-branding-text {
+		width: 100%;
+		padding: 2.5em;
+		text-align: center;
+		box-sizing: border-box;
+	}
+}
+
+@media (max-width: 450px) {
+	body.page-template-denver-page .site-branding-text {
+		font-size: .6em;
+	}
+}
+
+@media (min-width: 600px) and (max-width: 959px) {
+	body.page-template-denver-page .site-branding-text {
+		font-size: 1em;
+		text-align: center;
+		width: 75%;
+	}
+}
+
+@media (min-width: 600px) and (max-width: 700px) {
+	body.page-template-denver-page .site-branding-text {
+		font-size: .8em;
+	}
+}
+
+@media (min-width: 600px) {
+	body.page-template-denver-page .site-branding-text {
+		float: none;
+		justify-content: center;
+		flex-direction: column;
+	}
+}
+
+@media (min-width: 960px) {
+	body.page-template-denver-page .site-branding-text {
+		font-size: 1.067em;
+		flex-direction: column-reverse;
+	}
+}
+
+body.page-template-denver-page .site-title {
+	display: block;
+	font-weight: 300;
+	line-height: 1em;
+	margin: 0;
+	padding: 0;
+}
+
+@media (max-width: 450px) {
+	body.page-template-denver-page .site-title {
+		font-weight: 900;
+		margin-bottom: .25em;
+	}
+}
+
+@media (min-width: 960px) {
+	body.page-template-denver-page .site-title {
+		font-weight: 900;
+	}
+}
+
+body.page-template-denver-page .site-title a {
+	color: #ffeb32;
+	text-decoration: none;
+}
+
+body.page-template-denver-page .site-title a:hover, body.page-template-denver-page .site-title a:focus {
+	text-decoration: underline;
+}
+
+body.page-template-denver-page .site-description {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+
+@media (max-width: 450px) {
+	body.page-template-denver-page .site-description {
+		font-size: 2.2em;
+		font-weight: 300;
+	}
+}
+
+@media (min-width: 600px) and (max-width: 959px) {
+	body.page-template-denver-page .site-description {
+		font-size: 1.125em;
+	}
+}
+
+@media (min-width: 960px) {
+	body.page-template-denver-page .site-description {
+		font-size: 1.16em;
+	}
 }
 
 /*--------------------------------------------------------------
@@ -1423,7 +1739,9 @@ body.page-template-landing-page nav ul li a:hover, body.page-template-landing-pa
 /*--------------------------------------------------------------
 # Widgets
 --------------------------------------------------------------*/
-.widget-area {
+/*** Define Widget Skin ***/
+/*** Apply Skin to Template Pages ***/
+body:not(.page-template-denver-page) .widget-area {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: flex-start;
@@ -1435,58 +1753,125 @@ body.page-template-landing-page nav ul li a:hover, body.page-template-landing-pa
 	padding: 1.5em;
 }
 
-.widget-area ul, .widget-area ol {
+body:not(.page-template-denver-page) .widget-area ul, body:not(.page-template-denver-page) .widget-area ol {
 	margin-left: 0;
 }
 
-.widget-area .widget {
+body:not(.page-template-denver-page) .widget-area .widget {
 	margin-right: 4em;
 	padding: .5rem;
 	/* Make sure select elements fit in widgets. */
 }
 
-.widget-area .widget::last-of-type {
+body:not(.page-template-denver-page) .widget-area .widget::last-of-type {
 	margin-right: 0;
 }
 
-.widget-area .widget h2 {
+body:not(.page-template-denver-page) .widget-area .widget h2 {
 	color: #ff3194;
 	font-weight: 500;
 	margin: .5em 0 .1em;
 	font-size: 1.25em;
 }
 
-.widget-area .widget select {
+body:not(.page-template-denver-page) .widget-area .widget select {
 	max-width: 100%;
 }
 
-.widget-area .widget_nav_menu {
+body:not(.page-template-denver-page) .widget-area .widget_nav_menu {
 	color: #ff3194;
 }
 
-.widget-area .widget_nav_menu ul.menu li {
+body:not(.page-template-denver-page) .widget-area .widget_nav_menu ul.menu li {
 	list-style-type: none;
 }
 
-.widget-area .widget_nav_menu ul.menu li:hover, .widget-area .widget_nav_menu ul.menu li:focus {
+body:not(.page-template-denver-page) .widget-area .widget_nav_menu ul.menu li:hover, body:not(.page-template-denver-page) .widget-area .widget_nav_menu ul.menu li:focus {
 	list-style-type: square;
 }
 
-.widget-area .widget_nav_menu ul.menu li a:link {
+body:not(.page-template-denver-page) .widget-area .widget_nav_menu ul.menu li a:link {
 	font-family: "Roboto", "Myriad Pro", "Geneva", "Arial", sans-serif;
 	text-decoration: none;
 	color: snow;
 }
 
-.widget-area .widget_nav_menu ul.menu li a:visited {
+body:not(.page-template-denver-page) .widget-area .widget_nav_menu ul.menu li a:visited {
 	color: #ffe4f1;
 }
 
-.widget-area .widget_nav_menu ul.menu li a:hover, .widget-area .widget_nav_menu ul.menu li a:focus {
+body:not(.page-template-denver-page) .widget-area .widget_nav_menu ul.menu li a:hover, body:not(.page-template-denver-page) .widget-area .widget_nav_menu ul.menu li a:focus {
 	color: #ffeb32;
 }
 
-.widget-area .widget_search {
+body:not(.page-template-denver-page) .widget-area .widget_search {
+	padding-top: 3em;
+}
+
+body.page-template-denver-page .widget-area {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	margin-top: 2rem;
+	padding: 1rem;
+	box-sizing: border-box;
+	overflow: hidden;
+	width: 100%;
+	padding: 1.5em;
+}
+
+body.page-template-denver-page .widget-area ul, body.page-template-denver-page .widget-area ol {
+	margin-left: 0;
+}
+
+body.page-template-denver-page .widget-area .widget {
+	margin-right: 4em;
+	padding: .5rem;
+	/* Make sure select elements fit in widgets. */
+}
+
+body.page-template-denver-page .widget-area .widget::last-of-type {
+	margin-right: 0;
+}
+
+body.page-template-denver-page .widget-area .widget h2 {
+	color: #1abbff;
+	font-weight: 500;
+	margin: .5em 0 .1em;
+	font-size: 1.25em;
+}
+
+body.page-template-denver-page .widget-area .widget select {
+	max-width: 100%;
+}
+
+body.page-template-denver-page .widget-area .widget_nav_menu {
+	color: #1abbff;
+}
+
+body.page-template-denver-page .widget-area .widget_nav_menu ul.menu li {
+	list-style-type: none;
+}
+
+body.page-template-denver-page .widget-area .widget_nav_menu ul.menu li:hover, body.page-template-denver-page .widget-area .widget_nav_menu ul.menu li:focus {
+	list-style-type: square;
+}
+
+body.page-template-denver-page .widget-area .widget_nav_menu ul.menu li a:link {
+	font-family: "Roboto", "Myriad Pro", "Geneva", "Arial", sans-serif;
+	text-decoration: none;
+	color: snow;
+}
+
+body.page-template-denver-page .widget-area .widget_nav_menu ul.menu li a:visited {
+	color: #cdf0ff;
+}
+
+body.page-template-denver-page .widget-area .widget_nav_menu ul.menu li a:hover, body.page-template-denver-page .widget-area .widget_nav_menu ul.menu li a:focus {
+	color: #ffeb32;
+}
+
+body.page-template-denver-page .widget-area .widget_search {
 	padding-top: 3em;
 }
 

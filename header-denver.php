@@ -41,9 +41,9 @@
                     <div class="site-branding-text">
                         <?php
 			if ( is_front_page() && is_home() ) : ?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><span class="super-title screen-reader-text"><?php bloginfo( 'name' ); ?></span> <span class="sub-title">Tucson Show 2018</span></a></h1>
+                            <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><span class="super-title screen-reader-text"><?php bloginfo( 'name' ); ?></span> <span class="sub-title">Denver Show 2017</span></a></h1>
 			<?php else : ?>
-                                <p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><span class="super-title screen-reader-text"><?php bloginfo( 'name' ); ?></span> <span class="sub-title">Tucson Show 2018</span></a></p>
+                            <p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><span class="super-title screen-reader-text"><?php bloginfo( 'name' ); ?></span> <span class="sub-title">Denver Show 2017</span></a></p>
 			<?php
 			endif;
 

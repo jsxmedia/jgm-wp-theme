@@ -1,209 +1,217 @@
-.site-header {
-    width: 100%;
-    position: relative;
-    font-family: $font__sans;
-    color: $color__skin-acc2;
-    
-    text-align: right;
-}
+/*** Define Skin ***/
+@mixin header-skin ($color__main, $color__acc1, $color__acc2, $color__dark){
+    .site-header {
+        width: 100%;
+        position: relative;
+        font-family: $font__sans;
+        color: $color__acc2;
 
-.brand-wrapper {
-    display: block;
-    width: 100%;
-    box-sizing: border-box;
-    background: radial-gradient(ellipse at center, rgba($color__header-light, .82) 0%, rgba($color__header-dark, .82) 100%);
-    background-attachment: fixed;
-    
-    @include small {
-        min-height: 8em;
-    }
-    
-    @include tablet {
-      min-height: 10em;  
+        text-align: right;
     }
 
-    @include desktopPlus {
-       min-height: 12em;
-    }
-}
-
-.site-branding {
-    width: 100%;
-    max-width: $size__page-width-max;
-    margin: 0 auto;
-    position: relative;
-    
-    
-    @include tabletPlus {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 1em;
-    }
-    
-    @include desktopPlus {
-        align-items: flex-start;
-        padding: 1em 2em;
-    }
-}
-
-.site-logo-area {
-    display: block;
-    float: left;
-    width: 25%;
-    min-width: 4em;
-    min-height: 5.5rem;
-    
-    a {
+    .brand-wrapper {
         display: block;
-        
-        img {
-            display: block;
-             width: 100%;
+        width: 100%;
+        box-sizing: border-box;
+        background: radial-gradient(ellipse at center, rgba(lighten($color__main, 25%), .82) 0%, rgba(darken($color__main, 25%), .82) 100%);
+        background-attachment: fixed;
+
+        @include small {
+            min-height: 8em;
+        }
+
+        @include tablet {
+          min-height: 10em;  
+        }
+
+        @include desktopPlus {
+           min-height: 12em;
         }
     }
-    
-    @include mobile {
-        padding: 1em;
+
+    .site-branding {
         width: 100%;
-        display: flex;
-        background-color: rgba($color__skin-acc1, .9);
-        justify-content: space-between;
-        align-items: center;
-        
+        max-width: $size__page-width-max;
+        margin: 0 auto;
+        position: relative;
+
+
+        @include tabletPlus {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1em;
+        }
+
+        @include desktopPlus {
+            align-items: flex-start;
+            padding: 1em 2em;
+        }
+    }
+
+    .site-logo-area {
+        display: block;
+        float: left;
+        width: 25%;
+        min-width: 4em;
+        min-height: 5.5rem;
+
         a {
-            width: 25%;
-            min-width: 4em;
+            display: block;
+
+            img {
+                display: block;
+                 width: 100%;
+            }
+        }
+
+        @include mobile {
+            padding: 1em;
+            width: 100%;
+            display: flex;
+            background-color: rgba($color__acc1, .9);
+            justify-content: space-between;
+            align-items: center;
+
+            a {
+                width: 25%;
+                min-width: 4em;
+                box-sizing: border-box;
+            }
+
+            /*&::after {
+                width: 75%;
+                position: relative;
+                content:"JG&M Expo";
+                font-weight: 700;
+                display: block;
+                text-align: center;
+                font-size: 3em;
+                line-height: 1em;
+                color: $color__dark;
+            }*/
+        }
+
+        @include small {
+            &::after {
+                font-size: 2em;
+            }
+        }
+
+        @include tablet {
+            float: none;
+            max-width: 9em;
+        }
+
+        @include desktopPlus {
+            float: none;
+            width: 30%;
+        }
+
+    }
+
+    .site-branding-text {
+        display: flex;
+        flex-direction: column;
+        text-align: right;
+        font-size: .9em;
+        text-shadow: 2px 2px $color__dark;
+
+        p.site-title {
+            font-size: $font-size__h1;
+        }
+
+        @include mobile {
+            width: 100%;
+            padding: 2.5em;
+            text-align: center;
             box-sizing: border-box;
         }
-        
-        /*&::after {
-            width: 75%;
-            position: relative;
-            content:"JG&M Expo";
-            font-weight: 700;
-            display: block;
+
+        @include small {
+            font-size: .6em;
+        }
+
+        @include tablet {
+            font-size: 1em;
             text-align: center;
-            font-size: 3em;
-            line-height: 1em;
-            color: $color__skin-dark;
-        }*/
-    }
-    
-    @include small {
-        &::after {
-            font-size: 2em;
+            width: 75%;
         }
-    }
-    
-    @include tablet {
-        float: none;
-        max-width: 9em;
-    }
-    
-    @include desktopPlus {
-        float: none;
-        width: 30%;
-    }
-    
-}
 
-.site-branding-text {
-    display: flex;
-    flex-direction: column;
-    text-align: right;
-    font-size: .9em;
-    
-    p.site-title {
-        font-size: $font-size__h1;
-    }
-    
-    @include mobile {
-        width: 100%;
-        padding: 2.5em;
-        text-align: center;
-        box-sizing: border-box;
-    }
-    
-    @include small {
-        font-size: .6em;
-    }
-        
-    @include tablet {
-        font-size: 1em;
-        text-align: center;
-        width: 75%;
-    }
-    
-    @media (min-width: #{$tablet-width}) and (max-width: #{$tablet-width + 100px}) {
-        font-size: .8em;
-    }
-    
-    @include tabletPlus {
-        float: none;
-        justify-content: center;
-        flex-direction: column;
-    }
-    
-    @include desktopPlus {
-        font-size: 1.067em;
-        flex-direction: column-reverse;
-    }
-
-}
-
-.site-title{
-    display: block;
-    font-weight: 300;
-    line-height: 1em;
-    margin: 0;
-    padding: 0;
-    
-    
-    @include small {
-        font-weight: 900;
-        margin-bottom: .25em;
-    }
-
-    @include desktopPlus {
-        font-weight: 900;
-        
-    }
-    
-    a {
-        color: $color__skin-acc2;
-        text-decoration: none;
-        
-        &:hover,
-        &:focus {
-            text-decoration: underline;
+        @media (min-width: #{$tablet-width}) and (max-width: #{$tablet-width + 100px}) {
+            font-size: .8em;
         }
-                
-    }
-}
 
-.site-description {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    
-    @include small {
-        font-size: 2.2em;
+        @include tabletPlus {
+            float: none;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        @include desktopPlus {
+            font-size: 1.067em;
+            flex-direction: column-reverse;
+        }
+
+    }
+
+    .site-title{
+        display: block;
         font-weight: 300;
+        line-height: 1em;
+        margin: 0;
+        padding: 0;
+
+
+        @include small {
+            font-weight: 900;
+            margin-bottom: .25em;
+        }
+
+        @include desktopPlus {
+            font-weight: 900;
+
+        }
+
+        a {
+            color: $color__acc2;
+            text-decoration: none;
+
+            &:hover,
+            &:focus {
+                text-decoration: underline;
+            }
+
+        }
     }
-    
-    @include tablet {
-        font-size: 1.125em;
-    }
-    
-    @include desktopPlus {
-        font-size: 1.16em;
-    }
+
+    .site-description {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+
+        @include small {
+            font-size: 2.2em;
+            font-weight: 300;
+        }
+
+        @include tablet {
+            font-size: 1.125em;
+        }
+
+        @include desktopPlus {
+            font-size: 1.16em;
+        }
+    }   
 }
 
-/*** Skin 2 Overrides ***/
-.page-template-denver-page {
-    .brand-wrapper {
-        background: radial-gradient(ellipse at center, rgba($color__skin2-header-light, .82) 0%, rgba($color__skin2-header-dark, .82) 100%);  
+/*** Apply Skin to Template Pages ***/
+body{
+    &:not(.page-template-denver-page) {
+        @include header-skin($color__skin-main, $color__skin-acc1, $color__skin-acc2, $color__skin-dark);
+    }
+    
+    &.page-template-denver-page {
+        @include header-skin($color__skin2-main, $color__skin2-acc1, $color__skin2-acc2, $color__skin2-dark);
     }
 }

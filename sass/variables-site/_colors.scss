@@ -9,22 +9,19 @@
 @tuc-bg-dark: rgb(31,0,27);
 */
 
+/* Colors for main site skin */
 $color__skin-main: rgb(100,0,48);
 $color__skin-acc1: rgb(255,250,250);
 $color__skin-acc2: rgb(255,235,50);
 $color__skin-dark: rgb(0,0,0);
 
-$color__header-light: rgb(237,14,107);
-$color__header-dark: rgb(31,0,27);
-
-$color__skin2-main: rgb(100,0,48);
+/* Colors for secondary site skin */
+$color__skin2-main: darken(rgb(0,90,128), 10%);
 $color__skin2-acc1: rgb(255,250,250);
 $color__skin2-acc2: rgb(255,235,50);
 $color__skin2-dark: rgb(0,0,0);
 
-$color__skin2-header-light: rgb(237,14,107);
-$color__skin2-header-dark: rgb(31,0,27);
-
+/* Misc Colors */
 $color__background-body: #fff;
 $color__background-screen: #f1f1f1;
 $color__background-hr: #ccc;

@@ -1,58 +1,71 @@
 $font-size__h1: 3em;
 
-h1, h2, h3, h4, h5, h6 {
-	clear: both;
-        font-family: $font__sans;
-        color: $color__skin-main;
-        
+@mixin header-skin($color__main, $color__acc1, $color__acc2, $color__dark) {
+    h1, h2, h3, h4, h5, h6 {
+            clear: both;
+            font-family: $font__sans;
+            color: $color__main;
+
+            a{
+                color: $color__main;
+            }
+    }
+
+    h1 {
+        font-size: $font-size__h1;
+    }
+
+    h2 {
+        font-size: 2.25em;
+
         a{
-            color: $color__skin-main;
-        }
-}
 
-h1 {
-    font-size: $font-size__h1;
-}
+            text-decoration: none;
+            border-bottom: .05em solid transparent;
 
-h2 {
-    font-size: 2.25em;
-        
-    a{
-        
-        text-decoration: none;
-        border-bottom: .05em solid transparent;
-        
-        &:hover, &:focus {
-            border-bottom: .05em solid;
-            color: lighten($color__skin-main, 10%);
+            &:hover, &:focus {
+                border-bottom: .05em solid;
+                color: lighten($color__main, 10%);
+            }
         }
     }
+
+    .entry-title, article h1 {
+            font-weight: 300;
+    }
+
+    h3 {
+        font-size: 1.75em;
+        font-weight: 500;
+    }
+
+    h4, h5, h6 {
+        font-color: $color__dark;
+    }
+
+    h4 {
+        font-size: 1.25emem;
+        font-weight: 500;
+    }
+
+    h5 {
+        font-size: 1.1em;
+        font-weight: 700;
+    }
+
+    h6 {
+        font-size: 1em;
+        font-weight: 700;
+    } 
 }
 
-.entry-title, article h1 {
-        font-weight: 300;
-}
-
-h3 {
-    font-size: 1.75em;
-    font-weight: 500;
-}
-
-h4, h5, h6 {
-    font-color: $color__skin-dark;
-}
-
-h4 {
-    font-size: 1.25emem;
-    font-weight: 500;
-}
-
-h5 {
-    font-size: 1.1em;
-    font-weight: 700;
-}
-
-h6 {
-    font-size: 1em;
-    font-weight: 700;
+/*** Apply Skin to Template Pages ***/
+body{
+    &:not(.page-template-denver-page) {
+        @include header-skin($color__skin-main, $color__skin-acc1, $color__skin-acc2, $color__skin-dark);
+    }
+    
+    &.page-template-denver-page {
+        @include header-skin($color__skin2-main, $color__skin2-acc1, $color__skin2-acc2, $color__skin2-dark);
+    }
 }

@@ -1,82 +1,96 @@
-.widget-area {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    //column-width: 20rem;
-    margin-top: 2rem;
-    padding: 1rem;
-    box-sizing: border-box;
-    overflow: hidden;
-    width: 100%;
-    //border: .125rem solid $color__skin-main;
-    padding: 1.5em;
-    
-    ul, ol {
-        margin-left: 0;
-    }
-    
-    ul {
-       // list-style: square;*/
-    }
-    
-    .widget {
-	margin-right: 4em;
-        
-        &::last-of-type{
-            margin-right: 0;
-        }
-        
-        //outline: 1px solid black;
-        padding: .5rem;
-        
-        h2 {
-            color: lighten($color__skin-main, 40%);
-            font-weight: 500;
-            margin: .5em 0 .1em;
-            font-size: 1.25em;
+/*** Define Widget Skin ***/
+@mixin widget-skin($color__main, $color__acc1, $color__acc2, $color__dark){
+    .widget-area {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        //column-width: 20rem;
+        margin-top: 2rem;
+        padding: 1rem;
+        box-sizing: border-box;
+        overflow: hidden;
+        width: 100%;
+        //border: .125rem solid $color__main;
+        padding: 1.5em;
+
+        ul, ol {
+            margin-left: 0;
         }
 
-	/* Make sure select elements fit in widgets. */
-	select {
-		max-width: 100%;
-	}
-    }
-    
-    .widget_nav_menu {
-        color: lighten($color__skin-main, 40%);
-        
-        ul.menu {
-            
-            
-            li {
-                list-style-type: none;
-                
-                &:hover, &:focus {
-                    list-style-type: square;
-                }
-                
-                a {
-                    &:link {
-                            font-family: $font__sans;
-                            text-decoration: none;
-                            color: $color__skin-acc1;
-                    }
+        ul {
+           // list-style: square;*/
+        }
 
-                    &:visited {
-                            color: lighten($color__skin-main, 75%);
-                    }
+        .widget {
+            margin-right: 4em;
+
+            &::last-of-type{
+                margin-right: 0;
+            }
+
+            //outline: 1px solid black;
+            padding: .5rem;
+
+            h2 {
+                color: lighten($color__main, 40%);
+                font-weight: 500;
+                margin: .5em 0 .1em;
+                font-size: 1.25em;
+            }
+
+            /* Make sure select elements fit in widgets. */
+            select {
+                    max-width: 100%;
+            }
+        }
+
+        .widget_nav_menu {
+            color: lighten($color__main, 40%);
+
+            ul.menu {
+
+
+                li {
+                    list-style-type: none;
 
                     &:hover, &:focus {
-                            color: $color__skin-acc2;
+                        list-style-type: square;
+                    }
+
+                    a {
+                        &:link {
+                                font-family: $font__sans;
+                                text-decoration: none;
+                                color: $color__acc1;
+                        }
+
+                        &:visited {
+                                color: lighten($color__main, 75%);
+                        }
+
+                        &:hover, &:focus {
+                                color: $color__acc2;
+                        }
                     }
                 }
+
             }
-                
+        }
+
+        .widget_search {
+            padding-top: 3em;
+
         }
     }
+}
+
+/*** Apply Skin to Template Pages ***/
+body{
+    &:not(.page-template-denver-page) {
+        @include widget-skin($color__skin-main, $color__skin-acc1, $color__skin-acc2, $color__skin-dark);
+    }
     
-    .widget_search {
-        padding-top: 3em;
-        
+    &.page-template-denver-page {
+        @include widget-skin($color__skin2-main, $color__skin2-acc1, $color__skin2-acc2, $color__skin2-dark);
     }
 }

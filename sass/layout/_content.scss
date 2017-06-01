@@ -1,21 +1,43 @@
-.site-content {
-    width: 100%;
-    position: relative;
-    background-color: rgba($color__skin-acc1, .9);
-    padding: 1em;
+/*** Define Skins ***/
+
+@mixin content-skin($color__main, $color__acc1) {
+    .site-content {
+        width: 100%;
+        position: relative;
+        background-color: rgba($color__acc1, .9);
+        padding: 1em;
+
+        @include tablet {
+            padding: 2em;
+        }
+    }
+
+    .content-area {
+        max-width: $size__page-width-max;
+        margin: 0 auto;
+    }   
+}
+
+@mixin site-footer-skin($color__main, $color__acc1) {
     
-    @include tablet {
-        padding: 2em;
+    .site-footer{
+        color: $color__acc1;
+        background-color: darken($color__main, 12%);
+        padding: 1rem;
     }
 }
 
-.content-area {
-    max-width: $size__page-width-max;
-    margin: 0 auto;
-}
 
-.site-footer {
-    color: $color__skin-acc1;
-    background-color: darken($color__skin-main, 12%);
-    padding: 1rem;
+
+/*** Apply Skins to Template Pages ***/
+body{
+    &:not(.page-template-denver-page) {
+        @include content-skin($color__skin-main, $color__skin-acc1);
+        @include site-footer-skin($color__skin-main, $color__skin-acc1);
+    }
+    
+    &.page-template-denver-page {
+        @include content-skin($color__skin2-main, $color__skin2-acc1);
+        @include site-footer-skin($color__skin2-main, $color__skin2-acc1);
+    }
 }
