@@ -44,14 +44,19 @@
             }
         }
 
-        .widget_nav_menu {
-            color: lighten($color__main, 40%);
-
+        .widget_nav_menu, .widget_text {
+            
             ul.menu {
-
-
+                color: lighten($color__main, 40%);
+                padding-left: 1em;
+                             
                 li {
+                    
                     list-style-type: none;
+                    
+                    .sub-menu {
+                        padding-left: 1em;
+                    }
 
                     &:hover, &:focus {
                         list-style-type: square;
@@ -73,7 +78,11 @@
                         }
                     }
                 }
-
+            }
+            
+            ul.contact {
+                padding-left: 0;
+                
             }
         }
 

@@ -1775,30 +1775,39 @@ body:not(.page-template-denver-page) .widget-area .widget select {
 	max-width: 100%;
 }
 
-body:not(.page-template-denver-page) .widget-area .widget_nav_menu {
+body:not(.page-template-denver-page) .widget-area .widget_nav_menu ul.menu, body:not(.page-template-denver-page) .widget-area .widget_text ul.menu {
 	color: #ff3194;
+	padding-left: 1em;
 }
 
-body:not(.page-template-denver-page) .widget-area .widget_nav_menu ul.menu li {
+body:not(.page-template-denver-page) .widget-area .widget_nav_menu ul.menu li, body:not(.page-template-denver-page) .widget-area .widget_text ul.menu li {
 	list-style-type: none;
 }
 
-body:not(.page-template-denver-page) .widget-area .widget_nav_menu ul.menu li:hover, body:not(.page-template-denver-page) .widget-area .widget_nav_menu ul.menu li:focus {
+body:not(.page-template-denver-page) .widget-area .widget_nav_menu ul.menu li .sub-menu, body:not(.page-template-denver-page) .widget-area .widget_text ul.menu li .sub-menu {
+	padding-left: 1em;
+}
+
+body:not(.page-template-denver-page) .widget-area .widget_nav_menu ul.menu li:hover, body:not(.page-template-denver-page) .widget-area .widget_nav_menu ul.menu li:focus, body:not(.page-template-denver-page) .widget-area .widget_text ul.menu li:hover, body:not(.page-template-denver-page) .widget-area .widget_text ul.menu li:focus {
 	list-style-type: square;
 }
 
-body:not(.page-template-denver-page) .widget-area .widget_nav_menu ul.menu li a:link {
+body:not(.page-template-denver-page) .widget-area .widget_nav_menu ul.menu li a:link, body:not(.page-template-denver-page) .widget-area .widget_text ul.menu li a:link {
 	font-family: "Roboto", "Myriad Pro", "Geneva", "Arial", sans-serif;
 	text-decoration: none;
 	color: snow;
 }
 
-body:not(.page-template-denver-page) .widget-area .widget_nav_menu ul.menu li a:visited {
+body:not(.page-template-denver-page) .widget-area .widget_nav_menu ul.menu li a:visited, body:not(.page-template-denver-page) .widget-area .widget_text ul.menu li a:visited {
 	color: #ffe4f1;
 }
 
-body:not(.page-template-denver-page) .widget-area .widget_nav_menu ul.menu li a:hover, body:not(.page-template-denver-page) .widget-area .widget_nav_menu ul.menu li a:focus {
+body:not(.page-template-denver-page) .widget-area .widget_nav_menu ul.menu li a:hover, body:not(.page-template-denver-page) .widget-area .widget_nav_menu ul.menu li a:focus, body:not(.page-template-denver-page) .widget-area .widget_text ul.menu li a:hover, body:not(.page-template-denver-page) .widget-area .widget_text ul.menu li a:focus {
 	color: #ffeb32;
+}
+
+body:not(.page-template-denver-page) .widget-area .widget_nav_menu ul.contact, body:not(.page-template-denver-page) .widget-area .widget_text ul.contact {
+	padding-left: 0;
 }
 
 body:not(.page-template-denver-page) .widget-area .widget_search {
@@ -1842,30 +1851,39 @@ body.page-template-denver-page .widget-area .widget select {
 	max-width: 100%;
 }
 
-body.page-template-denver-page .widget-area .widget_nav_menu {
+body.page-template-denver-page .widget-area .widget_nav_menu ul.menu, body.page-template-denver-page .widget-area .widget_text ul.menu {
 	color: #1abbff;
+	padding-left: 1em;
 }
 
-body.page-template-denver-page .widget-area .widget_nav_menu ul.menu li {
+body.page-template-denver-page .widget-area .widget_nav_menu ul.menu li, body.page-template-denver-page .widget-area .widget_text ul.menu li {
 	list-style-type: none;
 }
 
-body.page-template-denver-page .widget-area .widget_nav_menu ul.menu li:hover, body.page-template-denver-page .widget-area .widget_nav_menu ul.menu li:focus {
+body.page-template-denver-page .widget-area .widget_nav_menu ul.menu li .sub-menu, body.page-template-denver-page .widget-area .widget_text ul.menu li .sub-menu {
+	padding-left: 1em;
+}
+
+body.page-template-denver-page .widget-area .widget_nav_menu ul.menu li:hover, body.page-template-denver-page .widget-area .widget_nav_menu ul.menu li:focus, body.page-template-denver-page .widget-area .widget_text ul.menu li:hover, body.page-template-denver-page .widget-area .widget_text ul.menu li:focus {
 	list-style-type: square;
 }
 
-body.page-template-denver-page .widget-area .widget_nav_menu ul.menu li a:link {
+body.page-template-denver-page .widget-area .widget_nav_menu ul.menu li a:link, body.page-template-denver-page .widget-area .widget_text ul.menu li a:link {
 	font-family: "Roboto", "Myriad Pro", "Geneva", "Arial", sans-serif;
 	text-decoration: none;
 	color: snow;
 }
 
-body.page-template-denver-page .widget-area .widget_nav_menu ul.menu li a:visited {
+body.page-template-denver-page .widget-area .widget_nav_menu ul.menu li a:visited, body.page-template-denver-page .widget-area .widget_text ul.menu li a:visited {
 	color: #cdf0ff;
 }
 
-body.page-template-denver-page .widget-area .widget_nav_menu ul.menu li a:hover, body.page-template-denver-page .widget-area .widget_nav_menu ul.menu li a:focus {
+body.page-template-denver-page .widget-area .widget_nav_menu ul.menu li a:hover, body.page-template-denver-page .widget-area .widget_nav_menu ul.menu li a:focus, body.page-template-denver-page .widget-area .widget_text ul.menu li a:hover, body.page-template-denver-page .widget-area .widget_text ul.menu li a:focus {
 	color: #ffeb32;
+}
+
+body.page-template-denver-page .widget-area .widget_nav_menu ul.contact, body.page-template-denver-page .widget-area .widget_text ul.contact {
+	padding-left: 0;
 }
 
 body.page-template-denver-page .widget-area .widget_search {
