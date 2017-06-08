@@ -50,6 +50,7 @@ function jgm2018_setup() {
 	register_nav_menus( array(
 		'menu-1' => esc_html__( 'Tucson Primary', 'jgm2018-tucson-menu' ),
                 'menu-2' => esc_html__( 'Denver Primary', 'jgm2018-denver-menu' ),
+                'menu-3' => esc_html__( 'Home Page Menu', 'jgm2018-home-menu' ),
 	) );
 
 	/*

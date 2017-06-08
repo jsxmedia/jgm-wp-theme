@@ -27,11 +27,23 @@
     }
 }
 
+@mixin home-footer-skin($color__main, $color__acc1, $aplha__tint) {
+    
+    .site-footer{
+        color: $color__main;
+
+        padding: 1rem;
+    }
+}
 
 
 /*** Apply Skins to Template Pages ***/
 body{
-    &:not(.page-template-denver-page) {
+    &.page-template-page-home {
+        @include home-footer-skin($color__skin-main, $color__skin-acc1, $alpha__skin-tint);
+    }
+    
+    &.page-template-default {
         @include content-skin($color__skin-main, $color__skin-acc1);
         @include site-footer-skin($color__skin-main, $color__skin-acc1);
     }

@@ -1,0 +1,80 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jun 6, 2017, 6:33:03 PM
+    Author     : Jim Smith
+*/
+
+body.page-template-page-home {
+    .site {
+        position: fixed;
+        background-color: rgba($color__skin-acc1, $alpha__skin-tint);
+        height: 100%;
+        width: 100%;
+        
+        overflow-y: auto;
+ 
+        
+        #main {
+            position: relative;
+            
+            h1.entry-title {
+                margin: 0;
+                padding: 0;
+                font-size: 2em;
+
+                @include screen-reader-text;
+            }
+
+            .hentry, .entry-content {
+                margin: 0;
+            }
+
+            .entry-content {
+                
+                p { // Hide Short Code
+                    display: none;
+                }
+
+                @include landscape {
+                    display: flex;
+                }
+
+            }
+
+            .crellyslider-slider {
+                background-color: $color__skin-dark;
+                width: 100%;
+                
+                li > div {
+                    position: absolute;
+                    top: auto !important;
+                    right: auto !important;
+                    bottom: 0 !important;
+                    left: 0 !important;
+                    
+                    font-family: $font__sans !important;
+                    color: $color__skin-acc1 !important;
+                    font-size: 2em !important;
+                    padding: 1em !important;
+                    text-shadow: 1px 1xp $color__skin-dark !important;
+                    background-color: rgba($color__skin-dark, .25) !important;
+                }
+            }
+            
+            @include landscape {
+                article {
+                    display: block;
+                    width: 70%;
+                }
+                
+                width: 100%;
+                display: flex;
+            }
+        }
+        
+    }
+}

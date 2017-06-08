@@ -283,7 +283,7 @@ textarea {
 	line-height: 1.5;
 }
 
-@media (min-width: 960px) {
+@media screen and (min-device-width: 960px) {
 	body,
 	button,
 	input,
@@ -411,7 +411,7 @@ p {
 	margin-bottom: 1.5em;
 }
 
-@media (min-width: 600px) {
+@media screen and (min-device-width: 600px) {
 	p {
 		max-width: 36em;
 	}
@@ -652,15 +652,105 @@ a:hover, a:active {
 /*--------------------------------------------------------------
 ## Menus
 --------------------------------------------------------------*/
-.main-navigation {
+/*** Define Skin ***/
+/*** Apply Skin to Template Pages ***/
+body.page-template-page-home .main-navigation {
+	z-index: 2501;
+}
+
+body.page-template-page-home .main-navigation .menu {
+	display: flex;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+
+body.page-template-page-home .main-navigation .menu-item {
+	display: block;
+	margin: 0;
+	padding: 0;
+}
+
+body.page-template-page-home .main-navigation .menu-item a {
+	display: block;
+	font-family: "Roboto", "Myriad Pro", "Geneva", "Arial", sans-serif;
+	font-weight: 500;
+	border-radius: .25em;
+	text-decoration: none;
+	text-align: center;
+	padding: .5em 1em;
+	color: snow;
+	border: 0.15em outset #640030;
+	background-color: #640030;
+}
+
+body.page-template-page-home .main-navigation .menu-item a:hover, body.page-template-page-home .main-navigation .menu-item a:focus {
+	color: #ffeb32;
+	background-color: #7e003c;
+	border: 0.15em outset #7e003c;
+}
+
+body.page-template-page-home .main-navigation .menu-item a:active {
+	background-color: #4b0024;
+	border: 0.15em inset #4b0024;
+}
+
+@media screen and (min-device-width: 600px) {
+	body.page-template-page-home .main-navigation .menu-item a {
+		font-size: 2em;
+	}
+}
+
+@media all and (orientation: portrait) {
+	body.page-template-page-home .main-navigation {
+		margin-top: 1em;
+	}
+	body.page-template-page-home .main-navigation .menu {
+		justify-content: space-around;
+	}
+}
+
+@media all and (orientation: landscape) {
+	body.page-template-page-home .main-navigation {
+		width: 30%;
+		box-sizing: border-box;
+		padding: 1em;
+		overflow: hidden;
+		min-height: 100%;
+	}
+	body.page-template-page-home .main-navigation > div {
+		height: 100%;
+	}
+	body.page-template-page-home .main-navigation .menu {
+		height: 100%;
+		min-height: 100%;
+		flex-direction: column;
+		justify-content: space-around;
+		align-content: space-around;
+		align-items: center;
+	}
+	body.page-template-page-home .main-navigation .menu-item a {
+		white-space: nowrap;
+		font-size: 1em;
+		min-height: 4em;
+		line-height: 4em;
+	}
+}
+
+body.page-template-default {
+	/* Toggle small menu and children on */
+}
+
+body.page-template-default .main-navigation {
 	display: block;
 	font-family: "Roboto", "Myriad Pro", "Geneva", "Arial", sans-serif;
 	font-weight: 400;
 	clear: left;
 }
 
-@media (max-width: 599px) {
-	.main-navigation {
+@media screen and (max-device-width: 599px) {
+	body.page-template-default .main-navigation {
 		position: absolute;
 		top: 1em;
 		right: 0;
@@ -668,7 +758,7 @@ a:hover, a:active {
 	}
 }
 
-.main-navigation ul {
+body.page-template-default .main-navigation ul {
 	background-color: rgba(255, 250, 250, 0.9);
 	display: none;
 	list-style: none;
@@ -678,64 +768,64 @@ a:hover, a:active {
 	padding-left: 0;
 }
 
-.main-navigation ul ul {
+body.page-template-default .main-navigation ul ul {
 	position: relative;
 	display: none;
 	z-index: 99999;
 }
 
-.main-navigation ul ul.toggled-on:not(.disabled) {
+body.page-template-default .main-navigation ul ul.toggled-on:not(.disabled) {
 	display: block;
 }
 
-.main-navigation ul ul ul {
+body.page-template-default .main-navigation ul ul ul {
 	top: 0;
 }
 
-.main-navigation ul ul li {
+body.page-template-default .main-navigation ul ul li {
 	padding-left: 1em;
 }
 
-.main-navigation ul ul a {
+body.page-template-default .main-navigation ul ul a {
 	width: 200px;
 }
 
-.main-navigation ul li:hover > ul,
-.main-navigation ul li.focus > ul {
+body.page-template-default .main-navigation ul li:hover > ul,
+body.page-template-default .main-navigation ul li.focus > ul {
 	left: auto;
 }
 
-.main-navigation li {
+body.page-template-default .main-navigation li {
 	position: relative;
 }
 
-.main-navigation a {
+body.page-template-default .main-navigation a {
 	display: inline-block;
 	width: 100%;
 	padding: .5em 1em .5em 0;
 	text-decoration: none;
 }
 
-.main-navigation a {
+body.page-template-default .main-navigation a {
 	color: #640030;
 }
 
-.main-navigation a:hover,
-.main-navigation a:focus {
+body.page-template-default .main-navigation a:hover,
+body.page-template-default .main-navigation a:focus {
 	text-decoration: underline;
 }
 
-.main-navigation .menu-item-has-children,
-.main-navigation .page_item_has_children {
+body.page-template-default .main-navigation .menu-item-has-children,
+body.page-template-default .main-navigation .page_item_has_children {
 	min-width: 218px;
 }
 
-.main-navigation .menu-item-has-children > a,
-.main-navigation .page_item_has_children > a {
+body.page-template-default .main-navigation .menu-item-has-children > a,
+body.page-template-default .main-navigation .page_item_has_children > a {
 	padding-right: 2em;
 }
 
-button.dropdown-toggle {
+body.page-template-default button.dropdown-toggle {
 	position: absolute;
 	z-index: 9999;
 	right: 0;
@@ -746,16 +836,16 @@ button.dropdown-toggle {
 	padding: .4em 1em .4em .5em;
 }
 
-button.dropdown-toggle.hamburger {
+body.page-template-default button.dropdown-toggle.hamburger {
 	padding: .8em .5em .8em .5em;
 	right: .4em;
 }
 
-button.dropdown-toggle.hamburger .dropdown-symbol {
+body.page-template-default button.dropdown-toggle.hamburger .dropdown-symbol {
 	font-size: 1em;
 }
 
-button.dropdown-toggle.hamburger .dropdown-symbol::before {
+body.page-template-default button.dropdown-toggle.hamburger .dropdown-symbol::before {
 	content: "";
 	display: block;
 	width: 1em;
@@ -766,19 +856,19 @@ button.dropdown-toggle.hamburger .dropdown-symbol::before {
 	margin-right: 0;
 }
 
-@media (min-width: 960px) {
-	button.dropdown-toggle.hamburger {
+@media screen and (min-device-width: 960px) {
+	body.page-template-default button.dropdown-toggle.hamburger {
 		padding: 1.067em .5em .8em .5em;
 	}
 }
 
-@media (min-width: 600px) {
-	button.dropdown-toggle {
+@media screen and (min-device-width: 600px) {
+	body.page-template-default button.dropdown-toggle {
 		color: snow;
 	}
 }
 
-.menu-toggle {
+body.page-template-default .menu-toggle {
 	position: relative;
 	float: right;
 	margin-right: 1rem;
@@ -791,13 +881,13 @@ button.dropdown-toggle.hamburger .dropdown-symbol::before {
 	border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-@media (max-width: 450px) {
-	.menu-toggle {
+@media (max-device-width: 450px) {
+	body.page-template-default .menu-toggle {
 		font-size: 1.2em;
 	}
 }
 
-.menu-toggle::before {
+body.page-template-default .menu-toggle::before {
 	content: "";
 	display: block;
 	width: 1em;
@@ -808,100 +898,357 @@ button.dropdown-toggle.hamburger .dropdown-symbol::before {
 	margin-right: .5em;
 }
 
-/* Toggle small menu and children on */
-.toggled-on ul,
-.sub-menu.toggled-on:not(.disabled) {
+body.page-template-default .toggled-on ul,
+body.page-template-default .sub-menu.toggled-on:not(.disabled) {
 	display: block;
 }
 
-@media (min-width: 600px) {
-	.menu-toggle {
+@media screen and (min-device-width: 600px) {
+	body.page-template-default .menu-toggle {
 		display: none;
 	}
-	.main-navigation {
+	body.page-template-default .main-navigation {
 		background-color: black;
 	}
-	.main-navigation .menu-item-has-children > a,
-	.main-navigation .page_item_has_children > a {
+	body.page-template-default .main-navigation .menu-item-has-children > a,
+	body.page-template-default .main-navigation .page_item_has_children > a {
 		padding-right: 2em;
 	}
-	.main-navigation ul {
+	body.page-template-default .main-navigation ul {
 		background-color: black;
 		display: block;
 		display: flex;
 		padding-top: 0;
 		flex-wrap: wrap;
 	}
-	.main-navigation ul ul {
+	body.page-template-default .main-navigation ul ul {
 		flex-direction: column;
 		margin-left: 0;
 	}
-	.main-navigation ul ul li {
+	body.page-template-default .main-navigation ul ul li {
 		padding-left: 0;
 	}
-	.main-navigation ul ul li a {
+	body.page-template-default .main-navigation ul ul li a {
 		width: 218px;
 		background: none;
 	}
-	.main-navigation ul li {
+	body.page-template-default .main-navigation ul li {
 		border: 0.2rem transparent solid;
 	}
-	.main-navigation ul li a {
+	body.page-template-default .main-navigation ul li a {
 		padding: .4em 1em;
 	}
-	.main-navigation a {
+	body.page-template-default .main-navigation a {
 		color: snow;
 	}
-	.main-navigation .current_page_item > a {
+	body.page-template-default .main-navigation .current_page_item > a {
 		color: #ffeb32;
 	}
-	.main-navigation .menu-item-has-children,
-	.main-navigation .page_item_has_children {
+	body.page-template-default .main-navigation .menu-item-has-children,
+	body.page-template-default .main-navigation .page_item_has_children {
 		min-width: 0;
 	}
-	.main-navigation .menu-item-has-children > a,
-	.main-navigation .page_item_has_children > a {
+	body.page-template-default .main-navigation .menu-item-has-children > a,
+	body.page-template-default .main-navigation .page_item_has_children > a {
 		padding-right: 2.25em;
 	}
-	.main-navigation .menu-tray .menu-item-has-children > a,
-	.main-navigation .menu-tray .page_item_has_children > a {
+	body.page-template-default .main-navigation .menu-tray .menu-item-has-children > a,
+	body.page-template-default .main-navigation .menu-tray .page_item_has_children > a {
 		padding-right: 0;
 	}
-	.main-navigation div.menu-tray {
+	body.page-template-default .main-navigation div.menu-tray {
 		display: block;
 		/* Disable toggle button in menu tray until support for it is added */
 	}
-	.main-navigation div.menu-tray ul {
+	body.page-template-default .main-navigation div.menu-tray ul {
 		padding-top: 0;
 		background-color: #ffeb32;
 		display: flex;
 		justify-content: flex-start;
 	}
-	.main-navigation div.menu-tray ul .disabled {
+	body.page-template-default .main-navigation div.menu-tray ul .disabled {
 		display: none;
 	}
-	.main-navigation div.menu-tray ul li a {
+	body.page-template-default .main-navigation div.menu-tray ul li a {
 		line-height: 1rem;
 		color: #640030;
 	}
-	.main-navigation div.menu-tray button.dropdown-toggle {
+	body.page-template-default .main-navigation div.menu-tray button.dropdown-toggle {
 		display: none;
 	}
-	.main-navigation .menu-selection {
+	body.page-template-default .main-navigation .menu-selection {
 		box-sizing: border-box;
 		background: rgba(255, 255, 255, 0.1);
 		border: 0.2rem #595959 inset;
 	}
-	.main-navigation .menu-selection button.dropdown-toggle {
+	body.page-template-default .main-navigation .menu-selection button.dropdown-toggle {
 		background: transparent;
 	}
-	.main-navigation #site-navigation-submenu {
+	body.page-template-default .main-navigation #site-navigation-submenu {
 		background-color: #ffeb32;
 	}
 }
 
-@media (min-width: 960px) {
-	.main-navigation ul {
+@media screen and (min-device-width: 960px) {
+	body.page-template-default .main-navigation ul {
+		justify-content: flex-start;
+		padding-top: 0;
+	}
+}
+
+body.page-template-denver-page {
+	/* Toggle small menu and children on */
+}
+
+body.page-template-denver-page .main-navigation {
+	display: block;
+	font-family: "Roboto", "Myriad Pro", "Geneva", "Arial", sans-serif;
+	font-weight: 400;
+	clear: left;
+}
+
+@media screen and (max-device-width: 599px) {
+	body.page-template-denver-page .main-navigation {
+		position: absolute;
+		top: 1em;
+		right: 0;
+		z-index: 2525;
+	}
+}
+
+body.page-template-denver-page .main-navigation ul {
+	background-color: rgba(255, 250, 250, 0.9);
+	display: none;
+	list-style: none;
+	margin: 0 auto;
+	max-width: 960px;
+	padding-top: 1em;
+	padding-left: 0;
+}
+
+body.page-template-denver-page .main-navigation ul ul {
+	position: relative;
+	display: none;
+	z-index: 99999;
+}
+
+body.page-template-denver-page .main-navigation ul ul.toggled-on:not(.disabled) {
+	display: block;
+}
+
+body.page-template-denver-page .main-navigation ul ul ul {
+	top: 0;
+}
+
+body.page-template-denver-page .main-navigation ul ul li {
+	padding-left: 1em;
+}
+
+body.page-template-denver-page .main-navigation ul ul a {
+	width: 200px;
+}
+
+body.page-template-denver-page .main-navigation ul li:hover > ul,
+body.page-template-denver-page .main-navigation ul li.focus > ul {
+	left: auto;
+}
+
+body.page-template-denver-page .main-navigation li {
+	position: relative;
+}
+
+body.page-template-denver-page .main-navigation a {
+	display: inline-block;
+	width: 100%;
+	padding: .5em 1em .5em 0;
+	text-decoration: none;
+}
+
+body.page-template-denver-page .main-navigation a {
+	color: #00364d;
+}
+
+body.page-template-denver-page .main-navigation a:hover,
+body.page-template-denver-page .main-navigation a:focus {
+	text-decoration: underline;
+}
+
+body.page-template-denver-page .main-navigation .menu-item-has-children,
+body.page-template-denver-page .main-navigation .page_item_has_children {
+	min-width: 218px;
+}
+
+body.page-template-denver-page .main-navigation .menu-item-has-children > a,
+body.page-template-denver-page .main-navigation .page_item_has_children > a {
+	padding-right: 2em;
+}
+
+body.page-template-denver-page button.dropdown-toggle {
+	position: absolute;
+	z-index: 9999;
+	right: 0;
+	border: none;
+	background: inherit;
+	color: #00364d;
+	line-height: 1.5em;
+	padding: .4em 1em .4em .5em;
+}
+
+body.page-template-denver-page button.dropdown-toggle.hamburger {
+	padding: .8em .5em .8em .5em;
+	right: .4em;
+}
+
+body.page-template-denver-page button.dropdown-toggle.hamburger .dropdown-symbol {
+	font-size: 1em;
+}
+
+body.page-template-denver-page button.dropdown-toggle.hamburger .dropdown-symbol::before {
+	content: "";
+	display: block;
+	width: 1em;
+	height: 1em;
+	background: url(img/menu-icon-white.svg);
+	background-size: contain;
+	background-position: center;
+	margin-right: 0;
+}
+
+@media screen and (min-device-width: 960px) {
+	body.page-template-denver-page button.dropdown-toggle.hamburger {
+		padding: 1.067em .5em .8em .5em;
+	}
+}
+
+@media screen and (min-device-width: 600px) {
+	body.page-template-denver-page button.dropdown-toggle {
+		color: snow;
+	}
+}
+
+body.page-template-denver-page .menu-toggle {
+	position: relative;
+	float: right;
+	margin-right: 1rem;
+	display: flex;
+	box-sizing: border-box;
+	padding: .6rem .8rem;
+	font-size: 1.8em;
+	font-family: "Roboto", "Myriad Pro", "Geneva", "Arial", sans-serif;
+	color: black;
+	border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+@media (max-device-width: 450px) {
+	body.page-template-denver-page .menu-toggle {
+		font-size: 1.2em;
+	}
+}
+
+body.page-template-denver-page .menu-toggle::before {
+	content: "";
+	display: block;
+	width: 1em;
+	height: 1em;
+	background: url(img/menu-icon.svg);
+	background-size: contain;
+	background-position: center;
+	margin-right: .5em;
+}
+
+body.page-template-denver-page .toggled-on ul,
+body.page-template-denver-page .sub-menu.toggled-on:not(.disabled) {
+	display: block;
+}
+
+@media screen and (min-device-width: 600px) {
+	body.page-template-denver-page .menu-toggle {
+		display: none;
+	}
+	body.page-template-denver-page .main-navigation {
+		background-color: black;
+	}
+	body.page-template-denver-page .main-navigation .menu-item-has-children > a,
+	body.page-template-denver-page .main-navigation .page_item_has_children > a {
+		padding-right: 2em;
+	}
+	body.page-template-denver-page .main-navigation ul {
+		background-color: black;
+		display: block;
+		display: flex;
+		padding-top: 0;
+		flex-wrap: wrap;
+	}
+	body.page-template-denver-page .main-navigation ul ul {
+		flex-direction: column;
+		margin-left: 0;
+	}
+	body.page-template-denver-page .main-navigation ul ul li {
+		padding-left: 0;
+	}
+	body.page-template-denver-page .main-navigation ul ul li a {
+		width: 218px;
+		background: none;
+	}
+	body.page-template-denver-page .main-navigation ul li {
+		border: 0.2rem transparent solid;
+	}
+	body.page-template-denver-page .main-navigation ul li a {
+		padding: .4em 1em;
+	}
+	body.page-template-denver-page .main-navigation a {
+		color: snow;
+	}
+	body.page-template-denver-page .main-navigation .current_page_item > a {
+		color: #ffeb32;
+	}
+	body.page-template-denver-page .main-navigation .menu-item-has-children,
+	body.page-template-denver-page .main-navigation .page_item_has_children {
+		min-width: 0;
+	}
+	body.page-template-denver-page .main-navigation .menu-item-has-children > a,
+	body.page-template-denver-page .main-navigation .page_item_has_children > a {
+		padding-right: 2.25em;
+	}
+	body.page-template-denver-page .main-navigation .menu-tray .menu-item-has-children > a,
+	body.page-template-denver-page .main-navigation .menu-tray .page_item_has_children > a {
+		padding-right: 0;
+	}
+	body.page-template-denver-page .main-navigation div.menu-tray {
+		display: block;
+		/* Disable toggle button in menu tray until support for it is added */
+	}
+	body.page-template-denver-page .main-navigation div.menu-tray ul {
+		padding-top: 0;
+		background-color: #ffeb32;
+		display: flex;
+		justify-content: flex-start;
+	}
+	body.page-template-denver-page .main-navigation div.menu-tray ul .disabled {
+		display: none;
+	}
+	body.page-template-denver-page .main-navigation div.menu-tray ul li a {
+		line-height: 1rem;
+		color: #00364d;
+	}
+	body.page-template-denver-page .main-navigation div.menu-tray button.dropdown-toggle {
+		display: none;
+	}
+	body.page-template-denver-page .main-navigation .menu-selection {
+		box-sizing: border-box;
+		background: rgba(255, 255, 255, 0.1);
+		border: 0.2rem #595959 inset;
+	}
+	body.page-template-denver-page .main-navigation .menu-selection button.dropdown-toggle {
+		background: transparent;
+	}
+	body.page-template-denver-page .main-navigation #site-navigation-submenu {
+		background-color: #ffeb32;
+	}
+}
+
+@media screen and (min-device-width: 960px) {
+	body.page-template-denver-page .main-navigation ul {
 		justify-content: flex-start;
 		padding-top: 0;
 	}
@@ -911,6 +1258,7 @@ button.dropdown-toggle.hamburger .dropdown-symbol::before {
 # Accessibility
 --------------------------------------------------------------*/
 /* Text meant only for screen readers. */
+
 .screen-reader-text {
 	clip: rect(1px, 1px, 1px, 1px);
 	position: absolute !important;
@@ -918,6 +1266,7 @@ button.dropdown-toggle.hamburger .dropdown-symbol::before {
 	width: 1px;
 	overflow: hidden;
 }
+
 
 .screen-reader-text:focus {
 	background-color: #f1f1f1;
@@ -1004,25 +1353,30 @@ button.dropdown-toggle.hamburger .dropdown-symbol::before {
 --------------------------------------------------------------*/
 /*** Define Skins ***/
 /*** Apply Skins to Template Pages ***/
-body:not(.page-template-denver-page) .site-content {
+body.page-template-page-home .site-footer {
+	color: #640030;
+	padding: 1rem;
+}
+
+body.page-template-default .site-content {
 	width: 100%;
 	position: relative;
 	background-color: rgba(255, 250, 250, 0.9);
 	padding: 1em;
 }
 
-@media (min-width: 600px) and (max-width: 959px) {
-	body:not(.page-template-denver-page) .site-content {
+@media screen and (min-device-width: 600px) and (max-device-width: 959px) {
+	body.page-template-default .site-content {
 		padding: 2em;
 	}
 }
 
-body:not(.page-template-denver-page) .content-area {
+body.page-template-default .content-area {
 	max-width: 960px;
 	margin: 0 auto;
 }
 
-body:not(.page-template-denver-page) .site-footer {
+body.page-template-default .site-footer {
 	color: snow;
 	background-color: #270013;
 	padding: 1rem;
@@ -1035,7 +1389,7 @@ body.page-template-denver-page .site-content {
 	padding: 1em;
 }
 
-@media (min-width: 600px) and (max-width: 959px) {
+@media screen and (min-device-width: 600px) and (max-device-width: 959px) {
 	body.page-template-denver-page .site-content {
 		padding: 2em;
 	}
@@ -1057,7 +1411,122 @@ body.page-template-denver-page .site-footer {
 --------------------------------------------------------------*/
 /*** Define Skin ***/
 /*** Apply Skin to Template Pages ***/
-body:not(.page-template-denver-page) .site-header {
+body.page-template-page-home .site-header {
+	width: 100%;
+	position: relative;
+	font-family: "Roboto", "Myriad Pro", "Geneva", "Arial", sans-serif;
+	color: #7e003c;
+	font-size: .8em;
+	font-weight: 400;
+	padding: .5em 1em;
+}
+
+@media screen and (min-device-width: 600px) and (max-device-width: 959px) {
+	body.page-template-page-home .site-header {
+		font-size: 1.65em;
+	}
+}
+
+@media screen and (min-device-width: 960px) {
+	body.page-template-page-home .site-header {
+		font-size: 2em;
+	}
+}
+
+body.page-template-page-home .site-header .site-branding {
+	position: relative;
+	max-height: 10em;
+	overflow: hidden;
+	display: flex;
+}
+
+body.page-template-page-home .site-header .site-branding .site-logo-area {
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	min-height: 100%;
+	width: 30%;
+	max-width: 10rem;
+}
+
+@media screen and (min-device-width: 600px) and (max-device-width: 959px) {
+	body.page-template-page-home .site-header .site-branding .site-logo-area {
+		max-width: 8rem;
+	}
+}
+
+body.page-template-page-home .site-header .site-branding .site-logo-area a {
+	display: block;
+}
+
+body.page-template-page-home .site-header .site-branding .site-logo-area a img {
+	display: block;
+	width: 100%;
+	align-self: center;
+}
+
+body.page-template-page-home .site-header .site-branding .site-branding-text {
+	flex-grow: 1;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	padding: .25em 2em;
+	text-shadow: 1px 1px rgba(0, 0, 0, 0.82);
+}
+
+body.page-template-page-home .site-header .site-branding .site-branding-text .site-title {
+	display: block;
+	margin: 0;
+}
+
+body.page-template-page-home .site-header .site-branding .site-branding-text .site-title {
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+}
+
+body.page-template-page-home .site-header .site-branding .site-branding-text .site-title:focus {
+	background-color: #f1f1f1;
+	border-radius: 3px;
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	clip: auto !important;
+	color: #21759b;
+	display: block;
+	font-size: 17.5px;
+	font-size: 1.09375rem;
+	font-weight: bold;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000;
+	/* Above WP toolbar. */
+}
+
+body.page-template-page-home .site-header .site-branding .site-branding-text .site-title a {
+	font-weight: 300;
+	color: #640030;
+	text-decoration: none;
+}
+
+body.page-template-page-home .site-header .site-branding .site-branding-text .site-title a:hover, body.page-template-page-home .site-header .site-branding .site-branding-text .site-title a:focus {
+	text-decoration: underline;
+}
+
+body.page-template-page-home .site-header .site-branding .site-branding-text .site-description {
+	margin: 0;
+}
+
+body.page-template-default .site-header {
 	width: 100%;
 	position: relative;
 	font-family: "Roboto", "Myriad Pro", "Geneva", "Arial", sans-serif;
@@ -1065,7 +1534,7 @@ body:not(.page-template-denver-page) .site-header {
 	text-align: right;
 }
 
-body:not(.page-template-denver-page) .brand-wrapper {
+body.page-template-default .brand-wrapper {
 	display: block;
 	width: 100%;
 	box-sizing: border-box;
@@ -1073,33 +1542,33 @@ body:not(.page-template-denver-page) .brand-wrapper {
 	background-attachment: fixed;
 }
 
-@media (max-width: 450px) {
-	body:not(.page-template-denver-page) .brand-wrapper {
+@media (max-device-width: 450px) {
+	body.page-template-default .brand-wrapper {
 		min-height: 8em;
 	}
 }
 
-@media (min-width: 600px) and (max-width: 959px) {
-	body:not(.page-template-denver-page) .brand-wrapper {
+@media screen and (min-device-width: 600px) and (max-device-width: 959px) {
+	body.page-template-default .brand-wrapper {
 		min-height: 10em;
 	}
 }
 
-@media (min-width: 960px) {
-	body:not(.page-template-denver-page) .brand-wrapper {
+@media screen and (min-device-width: 960px) {
+	body.page-template-default .brand-wrapper {
 		min-height: 12em;
 	}
 }
 
-body:not(.page-template-denver-page) .site-branding {
+body.page-template-default .site-branding {
 	width: 100%;
 	max-width: 960px;
 	margin: 0 auto;
 	position: relative;
 }
 
-@media (min-width: 600px) {
-	body:not(.page-template-denver-page) .site-branding {
+@media screen and (min-device-width: 600px) {
+	body.page-template-default .site-branding {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
@@ -1107,14 +1576,14 @@ body:not(.page-template-denver-page) .site-branding {
 	}
 }
 
-@media (min-width: 960px) {
-	body:not(.page-template-denver-page) .site-branding {
+@media screen and (min-device-width: 960px) {
+	body.page-template-default .site-branding {
 		align-items: flex-start;
 		padding: 1em 2em;
 	}
 }
 
-body:not(.page-template-denver-page) .site-logo-area {
+body.page-template-default .site-logo-area {
 	display: block;
 	float: left;
 	width: 25%;
@@ -1122,17 +1591,17 @@ body:not(.page-template-denver-page) .site-logo-area {
 	min-height: 5.5rem;
 }
 
-body:not(.page-template-denver-page) .site-logo-area a {
+body.page-template-default .site-logo-area a {
 	display: block;
 }
 
-body:not(.page-template-denver-page) .site-logo-area a img {
+body.page-template-default .site-logo-area a img {
 	display: block;
 	width: 100%;
 }
 
-@media (max-width: 599px) {
-	body:not(.page-template-denver-page) .site-logo-area {
+@media screen and (max-device-width: 599px) {
+	body.page-template-default .site-logo-area {
 		padding: 1em;
 		width: 100%;
 		display: flex;
@@ -1151,34 +1620,34 @@ body:not(.page-template-denver-page) .site-logo-area a img {
                 color: $color__dark;
             }*/
 	}
-	body:not(.page-template-denver-page) .site-logo-area a {
+	body.page-template-default .site-logo-area a {
 		width: 25%;
 		min-width: 4em;
 		box-sizing: border-box;
 	}
 }
 
-@media (max-width: 450px) {
-	body:not(.page-template-denver-page) .site-logo-area::after {
+@media (max-device-width: 450px) {
+	body.page-template-default .site-logo-area::after {
 		font-size: 2em;
 	}
 }
 
-@media (min-width: 600px) and (max-width: 959px) {
-	body:not(.page-template-denver-page) .site-logo-area {
+@media screen and (min-device-width: 600px) and (max-device-width: 959px) {
+	body.page-template-default .site-logo-area {
 		float: none;
 		max-width: 9em;
 	}
 }
 
-@media (min-width: 960px) {
-	body:not(.page-template-denver-page) .site-logo-area {
+@media screen and (min-device-width: 960px) {
+	body.page-template-default .site-logo-area {
 		float: none;
 		width: 30%;
 	}
 }
 
-body:not(.page-template-denver-page) .site-branding-text {
+body.page-template-default .site-branding-text {
 	display: flex;
 	flex-direction: column;
 	text-align: right;
@@ -1186,12 +1655,12 @@ body:not(.page-template-denver-page) .site-branding-text {
 	text-shadow: 2px 2px black;
 }
 
-body:not(.page-template-denver-page) .site-branding-text p.site-title {
+body.page-template-default .site-branding-text p.site-title {
 	font-size: 3em;
 }
 
-@media (max-width: 599px) {
-	body:not(.page-template-denver-page) .site-branding-text {
+@media screen and (max-device-width: 599px) {
+	body.page-template-default .site-branding-text {
 		width: 100%;
 		padding: 2.5em;
 		text-align: center;
@@ -1199,14 +1668,14 @@ body:not(.page-template-denver-page) .site-branding-text p.site-title {
 	}
 }
 
-@media (max-width: 450px) {
-	body:not(.page-template-denver-page) .site-branding-text {
+@media (max-device-width: 450px) {
+	body.page-template-default .site-branding-text {
 		font-size: .6em;
 	}
 }
 
-@media (min-width: 600px) and (max-width: 959px) {
-	body:not(.page-template-denver-page) .site-branding-text {
+@media screen and (min-device-width: 600px) and (max-device-width: 959px) {
+	body.page-template-default .site-branding-text {
 		font-size: 1em;
 		text-align: center;
 		width: 75%;
@@ -1214,27 +1683,27 @@ body:not(.page-template-denver-page) .site-branding-text p.site-title {
 }
 
 @media (min-width: 600px) and (max-width: 700px) {
-	body:not(.page-template-denver-page) .site-branding-text {
+	body.page-template-default .site-branding-text {
 		font-size: .8em;
 	}
 }
 
-@media (min-width: 600px) {
-	body:not(.page-template-denver-page) .site-branding-text {
+@media screen and (min-device-width: 600px) {
+	body.page-template-default .site-branding-text {
 		float: none;
 		justify-content: center;
 		flex-direction: column;
 	}
 }
 
-@media (min-width: 960px) {
-	body:not(.page-template-denver-page) .site-branding-text {
+@media screen and (min-device-width: 960px) {
+	body.page-template-default .site-branding-text {
 		font-size: 1.067em;
 		flex-direction: column-reverse;
 	}
 }
 
-body:not(.page-template-denver-page) .site-title {
+body.page-template-default .site-title {
 	display: block;
 	font-weight: 300;
 	line-height: 1em;
@@ -1242,49 +1711,49 @@ body:not(.page-template-denver-page) .site-title {
 	padding: 0;
 }
 
-@media (max-width: 450px) {
-	body:not(.page-template-denver-page) .site-title {
+@media (max-device-width: 450px) {
+	body.page-template-default .site-title {
 		font-weight: 900;
 		margin-bottom: .25em;
 	}
 }
 
-@media (min-width: 960px) {
-	body:not(.page-template-denver-page) .site-title {
+@media screen and (min-device-width: 960px) {
+	body.page-template-default .site-title {
 		font-weight: 900;
 	}
 }
 
-body:not(.page-template-denver-page) .site-title a {
+body.page-template-default .site-title a {
 	color: #ffeb32;
 	text-decoration: none;
 }
 
-body:not(.page-template-denver-page) .site-title a:hover, body:not(.page-template-denver-page) .site-title a:focus {
+body.page-template-default .site-title a:hover, body.page-template-default .site-title a:focus {
 	text-decoration: underline;
 }
 
-body:not(.page-template-denver-page) .site-description {
+body.page-template-default .site-description {
 	margin: 0;
 	padding: 0;
 	width: 100%;
 }
 
-@media (max-width: 450px) {
-	body:not(.page-template-denver-page) .site-description {
+@media (max-device-width: 450px) {
+	body.page-template-default .site-description {
 		font-size: 2.2em;
 		font-weight: 300;
 	}
 }
 
-@media (min-width: 600px) and (max-width: 959px) {
-	body:not(.page-template-denver-page) .site-description {
+@media screen and (min-device-width: 600px) and (max-device-width: 959px) {
+	body.page-template-default .site-description {
 		font-size: 1.125em;
 	}
 }
 
-@media (min-width: 960px) {
-	body:not(.page-template-denver-page) .site-description {
+@media screen and (min-device-width: 960px) {
+	body.page-template-default .site-description {
 		font-size: 1.16em;
 	}
 }
@@ -1305,19 +1774,19 @@ body.page-template-denver-page .brand-wrapper {
 	background-attachment: fixed;
 }
 
-@media (max-width: 450px) {
+@media (max-device-width: 450px) {
 	body.page-template-denver-page .brand-wrapper {
 		min-height: 8em;
 	}
 }
 
-@media (min-width: 600px) and (max-width: 959px) {
+@media screen and (min-device-width: 600px) and (max-device-width: 959px) {
 	body.page-template-denver-page .brand-wrapper {
 		min-height: 10em;
 	}
 }
 
-@media (min-width: 960px) {
+@media screen and (min-device-width: 960px) {
 	body.page-template-denver-page .brand-wrapper {
 		min-height: 12em;
 	}
@@ -1330,7 +1799,7 @@ body.page-template-denver-page .site-branding {
 	position: relative;
 }
 
-@media (min-width: 600px) {
+@media screen and (min-device-width: 600px) {
 	body.page-template-denver-page .site-branding {
 		display: flex;
 		justify-content: space-between;
@@ -1339,7 +1808,7 @@ body.page-template-denver-page .site-branding {
 	}
 }
 
-@media (min-width: 960px) {
+@media screen and (min-device-width: 960px) {
 	body.page-template-denver-page .site-branding {
 		align-items: flex-start;
 		padding: 1em 2em;
@@ -1363,7 +1832,7 @@ body.page-template-denver-page .site-logo-area a img {
 	width: 100%;
 }
 
-@media (max-width: 599px) {
+@media screen and (max-device-width: 599px) {
 	body.page-template-denver-page .site-logo-area {
 		padding: 1em;
 		width: 100%;
@@ -1390,20 +1859,20 @@ body.page-template-denver-page .site-logo-area a img {
 	}
 }
 
-@media (max-width: 450px) {
+@media (max-device-width: 450px) {
 	body.page-template-denver-page .site-logo-area::after {
 		font-size: 2em;
 	}
 }
 
-@media (min-width: 600px) and (max-width: 959px) {
+@media screen and (min-device-width: 600px) and (max-device-width: 959px) {
 	body.page-template-denver-page .site-logo-area {
 		float: none;
 		max-width: 9em;
 	}
 }
 
-@media (min-width: 960px) {
+@media screen and (min-device-width: 960px) {
 	body.page-template-denver-page .site-logo-area {
 		float: none;
 		width: 30%;
@@ -1422,7 +1891,7 @@ body.page-template-denver-page .site-branding-text p.site-title {
 	font-size: 3em;
 }
 
-@media (max-width: 599px) {
+@media screen and (max-device-width: 599px) {
 	body.page-template-denver-page .site-branding-text {
 		width: 100%;
 		padding: 2.5em;
@@ -1431,13 +1900,13 @@ body.page-template-denver-page .site-branding-text p.site-title {
 	}
 }
 
-@media (max-width: 450px) {
+@media (max-device-width: 450px) {
 	body.page-template-denver-page .site-branding-text {
 		font-size: .6em;
 	}
 }
 
-@media (min-width: 600px) and (max-width: 959px) {
+@media screen and (min-device-width: 600px) and (max-device-width: 959px) {
 	body.page-template-denver-page .site-branding-text {
 		font-size: 1em;
 		text-align: center;
@@ -1451,7 +1920,7 @@ body.page-template-denver-page .site-branding-text p.site-title {
 	}
 }
 
-@media (min-width: 600px) {
+@media screen and (min-device-width: 600px) {
 	body.page-template-denver-page .site-branding-text {
 		float: none;
 		justify-content: center;
@@ -1459,7 +1928,7 @@ body.page-template-denver-page .site-branding-text p.site-title {
 	}
 }
 
-@media (min-width: 960px) {
+@media screen and (min-device-width: 960px) {
 	body.page-template-denver-page .site-branding-text {
 		font-size: 1.067em;
 		flex-direction: column-reverse;
@@ -1474,14 +1943,14 @@ body.page-template-denver-page .site-title {
 	padding: 0;
 }
 
-@media (max-width: 450px) {
+@media (max-device-width: 450px) {
 	body.page-template-denver-page .site-title {
 		font-weight: 900;
 		margin-bottom: .25em;
 	}
 }
 
-@media (min-width: 960px) {
+@media screen and (min-device-width: 960px) {
 	body.page-template-denver-page .site-title {
 		font-weight: 900;
 	}
@@ -1502,20 +1971,20 @@ body.page-template-denver-page .site-description {
 	width: 100%;
 }
 
-@media (max-width: 450px) {
+@media (max-device-width: 450px) {
 	body.page-template-denver-page .site-description {
 		font-size: 2.2em;
 		font-weight: 300;
 	}
 }
 
-@media (min-width: 600px) and (max-width: 959px) {
+@media screen and (min-device-width: 600px) and (max-device-width: 959px) {
 	body.page-template-denver-page .site-description {
 		font-size: 1.125em;
 	}
 }
 
-@media (min-width: 960px) {
+@media screen and (min-device-width: 960px) {
 	body.page-template-denver-page .site-description {
 		font-size: 1.16em;
 	}
@@ -1591,7 +2060,7 @@ body.page-template-landing-page #wrapper .brand-wrapper {
 	background: transparent;
 }
 
-@media (min-width: 600px) {
+@media screen and (min-device-width: 600px) {
 	body.page-template-landing-page #wrapper {
 		display: flex;
 		flex-direction: column;
@@ -1645,13 +2114,13 @@ body.page-template-landing-page .site-branding .site-branding-text .site-title {
 	font-size: 2em;
 }
 
-@media (min-width: 600px) {
+@media screen and (min-device-width: 600px) {
 	body.page-template-landing-page .site-branding .site-branding-text .site-title {
 		font-size: 2.8em;
 	}
 }
 
-@media (min-width: 960px) {
+@media screen and (min-device-width: 960px) {
 	body.page-template-landing-page .site-branding .site-branding-text .site-title {
 		font-size: 3.125em;
 	}
@@ -1665,7 +2134,7 @@ body.page-template-landing-page nav {
 	padding: 1rem;
 }
 
-@media (min-width: 600px) {
+@media screen and (min-device-width: 600px) {
 	body.page-template-landing-page nav {
 		display: flex;
 		justify-content: space-around;
@@ -1678,7 +2147,7 @@ body.page-template-landing-page nav section {
 	margin: 0 auto 2rem;
 }
 
-@media (min-width: 600px) {
+@media screen and (min-device-width: 600px) {
 	body.page-template-landing-page nav section:nth-child(odd) {
 		margin-right: 2rem;
 	}
@@ -1720,6 +2189,106 @@ body.page-template-landing-page nav ul li a:link {
 body.page-template-landing-page nav ul li a:hover, body.page-template-landing-page nav ul li a:focus {
 	text-decoration: underline;
 	text-decoration: square;
+}
+
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jun 6, 2017, 6:33:03 PM
+    Author     : Jim Smith
+*/
+body.page-template-page-home .site {
+	position: fixed;
+	background-color: rgba(255, 250, 250, 0.82);
+	height: 100%;
+	width: 100%;
+	overflow-y: auto;
+}
+
+body.page-template-page-home .site #main {
+	position: relative;
+}
+
+body.page-template-page-home .site #main h1.entry-title {
+	margin: 0;
+	padding: 0;
+	font-size: 2em;
+}
+
+body.page-template-page-home .site #main h1.entry-title {
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+}
+
+body.page-template-page-home .site #main h1.entry-title:focus {
+	background-color: #f1f1f1;
+	border-radius: 3px;
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	clip: auto !important;
+	color: #21759b;
+	display: block;
+	font-size: 17.5px;
+	font-size: 1.09375rem;
+	font-weight: bold;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000;
+	/* Above WP toolbar. */
+}
+
+body.page-template-page-home .site #main .hentry, body.page-template-page-home .site #main .entry-content {
+	margin: 0;
+}
+
+body.page-template-page-home .site #main .entry-content p {
+	display: none;
+}
+
+@media all and (orientation: landscape) {
+	body.page-template-page-home .site #main .entry-content {
+		display: flex;
+	}
+}
+
+body.page-template-page-home .site #main .crellyslider-slider {
+	background-color: black;
+	width: 100%;
+}
+
+body.page-template-page-home .site #main .crellyslider-slider li > div {
+	position: absolute;
+	top: auto !important;
+	right: auto !important;
+	bottom: 0 !important;
+	left: 0 !important;
+	font-family: "Roboto", "Myriad Pro", "Geneva", "Arial", sans-serif !important;
+	color: snow !important;
+	font-size: 2em !important;
+	padding: 1em !important;
+	text-shadow: 1px 1xp black !important;
+	background-color: rgba(0, 0, 0, 0.25) !important;
+}
+
+@media all and (orientation: landscape) {
+	body.page-template-page-home .site #main {
+		width: 100%;
+		display: flex;
+	}
+	body.page-template-page-home .site #main article {
+		display: block;
+		width: 70%;
+	}
 }
 
 /*--------------------------------------------------------------

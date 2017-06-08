@@ -205,9 +205,109 @@
     }   
 }
 
+@mixin home-header-skin ($color__main, $color__acc1, $color__acc2, $color__dark){
+    .site-header {
+        width: 100%;
+        position: relative;
+        font-family: $font__sans;
+        color: lighten($color__main, 5%);
+        
+        font-size: .8em;
+        font-weight: 400;
+        padding: .5em 1em;
+
+        
+        @include tablet {
+            font-size: 1.65em;
+            
+        }
+
+        @include desktopPlus {
+            font-size: 2em;
+        }
+            
+        .site-branding {
+            position: relative;
+            max-height: 10em;
+            overflow: hidden;
+            display: flex;
+            
+            //outline: 1px solid green;
+            
+            .site-logo-area {
+                overflow: hidden;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                
+                min-height: 100%;             
+                width: 30%;                
+                max-width: 10rem;
+                
+                @include tablet {
+                    max-width: 8rem;
+                }
+                
+                a {
+                    display: block;
+                    
+                    img {
+                        display: block;
+                        width: 100%;
+                        align-self: center;
+                    }
+                }
+            }
+
+            .site-branding-text {
+                flex-grow: 1;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+
+                text-align: center;
+                
+                padding: .25em 2em;
+                text-shadow: 1px 1px rgba($color__dark, .82);
+
+                .site-title {
+                    display: block;
+                    margin: 0;
+                    
+                    @include screen-reader-text;
+                    
+                    a {
+                        font-weight: 300;
+                        
+                        color: $color__main;
+                        text-decoration: none;
+
+                        &:hover,
+                        &:focus {
+                            text-decoration: underline;
+                        }
+
+                    }
+                }
+                
+                .site-description {
+                    margin: 0;
+ 
+                }
+            }
+        }
+    }
+}
+
 /*** Apply Skin to Template Pages ***/
 body{
-    &:not(.page-template-denver-page) {
+    &.page-template-page-home {
+        @include home-header-skin($color__skin-main, $color__skin-acc1, $color__skin-acc2, $color__skin-dark);
+    }
+    
+    &.page-template-default {
         @include header-skin($color__skin-main, $color__skin-acc1, $color__skin-acc2, $color__skin-dark);
     }
     
