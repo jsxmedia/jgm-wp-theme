@@ -48,6 +48,8 @@ body.page-template-page-home {
             .crellyslider-slider {
                 background-color: $color__skin-dark;
                 width: 100%;
+                max-width: 1080px;
+                margin-left: auto;
                 
                 li > div {
                     position: absolute;
@@ -69,6 +71,7 @@ body.page-template-page-home {
                 article {
                     display: block;
                     width: 70%;
+                    
                 }
                 
                 width: 100%;

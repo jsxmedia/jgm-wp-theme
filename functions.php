@@ -178,6 +178,9 @@ function jgm2018_scripts() {
         /* Enqueue Google Fonts: Roboto, Noto Serif */
         wp_enqueue_style( 'jgm2018-fonts', jgm2018_fonts_url() );
         
+        // Wish I could use the fonts function for this, but the url base is slightly different.
+        wp_enqueue_style( 'jgm2018-icon-font', '//fonts.googleapis.com/icon?family=Material+Icons' ); 
+        
 	wp_enqueue_style( 'jgm2018-style', get_stylesheet_uri() );
 
         wp_enqueue_script( 'jgm2018-global-functions', get_template_directory_uri() . '/js/global-functions.js', array('jquery'), '20170513', true );

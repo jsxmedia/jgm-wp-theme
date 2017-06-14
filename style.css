@@ -283,7 +283,7 @@ textarea {
 	line-height: 1.5;
 }
 
-@media screen and (min-device-width: 960px) {
+@media screen and (min-width: 960px) {
 	body,
 	button,
 	input,
@@ -411,7 +411,7 @@ p {
 	margin-bottom: 1.5em;
 }
 
-@media screen and (min-device-width: 600px) {
+@media screen and (min-width: 600px) {
 	p {
 		max-width: 36em;
 	}
@@ -696,7 +696,7 @@ body.page-template-page-home .main-navigation .menu-item a:active {
 	border: 0.15em inset #4b0024;
 }
 
-@media screen and (min-device-width: 600px) {
+@media screen and (min-width: 600px) {
 	body.page-template-page-home .main-navigation .menu-item a {
 		font-size: 2em;
 	}
@@ -749,7 +749,7 @@ body.page-template-default .main-navigation {
 	clear: left;
 }
 
-@media screen and (max-device-width: 599px) {
+@media screen and (max-width: 599px) {
 	body.page-template-default .main-navigation {
 		position: absolute;
 		top: 1em;
@@ -856,13 +856,13 @@ body.page-template-default button.dropdown-toggle.hamburger .dropdown-symbol::be
 	margin-right: 0;
 }
 
-@media screen and (min-device-width: 960px) {
+@media screen and (min-width: 960px) {
 	body.page-template-default button.dropdown-toggle.hamburger {
 		padding: 1.067em .5em .8em .5em;
 	}
 }
 
-@media screen and (min-device-width: 600px) {
+@media screen and (min-width: 600px) {
 	body.page-template-default button.dropdown-toggle {
 		color: snow;
 	}
@@ -881,7 +881,7 @@ body.page-template-default .menu-toggle {
 	border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-@media (max-device-width: 450px) {
+@media (max-width: 450px) {
 	body.page-template-default .menu-toggle {
 		font-size: 1.2em;
 	}
@@ -903,7 +903,7 @@ body.page-template-default .sub-menu.toggled-on:not(.disabled) {
 	display: block;
 }
 
-@media screen and (min-device-width: 600px) {
+@media screen and (min-width: 600px) {
 	body.page-template-default .menu-toggle {
 		display: none;
 	}
@@ -989,7 +989,7 @@ body.page-template-default .sub-menu.toggled-on:not(.disabled) {
 	}
 }
 
-@media screen and (min-device-width: 960px) {
+@media screen and (min-width: 960px) {
 	body.page-template-default .main-navigation ul {
 		justify-content: flex-start;
 		padding-top: 0;
@@ -1007,7 +1007,7 @@ body.page-template-denver-page .main-navigation {
 	clear: left;
 }
 
-@media screen and (max-device-width: 599px) {
+@media screen and (max-width: 599px) {
 	body.page-template-denver-page .main-navigation {
 		position: absolute;
 		top: 1em;
@@ -1114,13 +1114,13 @@ body.page-template-denver-page button.dropdown-toggle.hamburger .dropdown-symbol
 	margin-right: 0;
 }
 
-@media screen and (min-device-width: 960px) {
+@media screen and (min-width: 960px) {
 	body.page-template-denver-page button.dropdown-toggle.hamburger {
 		padding: 1.067em .5em .8em .5em;
 	}
 }
 
-@media screen and (min-device-width: 600px) {
+@media screen and (min-width: 600px) {
 	body.page-template-denver-page button.dropdown-toggle {
 		color: snow;
 	}
@@ -1139,7 +1139,7 @@ body.page-template-denver-page .menu-toggle {
 	border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-@media (max-device-width: 450px) {
+@media (max-width: 450px) {
 	body.page-template-denver-page .menu-toggle {
 		font-size: 1.2em;
 	}
@@ -1161,7 +1161,7 @@ body.page-template-denver-page .sub-menu.toggled-on:not(.disabled) {
 	display: block;
 }
 
-@media screen and (min-device-width: 600px) {
+@media screen and (min-width: 600px) {
 	body.page-template-denver-page .menu-toggle {
 		display: none;
 	}
@@ -1247,7 +1247,7 @@ body.page-template-denver-page .sub-menu.toggled-on:not(.disabled) {
 	}
 }
 
-@media screen and (min-device-width: 960px) {
+@media screen and (min-width: 960px) {
 	body.page-template-denver-page .main-navigation ul {
 		justify-content: flex-start;
 		padding-top: 0;
@@ -1365,7 +1365,7 @@ body.page-template-default .site-content {
 	padding: 1em;
 }
 
-@media screen and (min-device-width: 600px) and (max-device-width: 959px) {
+@media screen and (min-width: 600px) and (max-width: 959px) {
 	body.page-template-default .site-content {
 		padding: 2em;
 	}
@@ -1389,7 +1389,7 @@ body.page-template-denver-page .site-content {
 	padding: 1em;
 }
 
-@media screen and (min-device-width: 600px) and (max-device-width: 959px) {
+@media screen and (min-width: 600px) and (max-width: 959px) {
 	body.page-template-denver-page .site-content {
 		padding: 2em;
 	}
@@ -1421,13 +1421,13 @@ body.page-template-page-home .site-header {
 	padding: .5em 1em;
 }
 
-@media screen and (min-device-width: 600px) and (max-device-width: 959px) {
+@media screen and (min-width: 600px) and (max-width: 959px) {
 	body.page-template-page-home .site-header {
 		font-size: 1.65em;
 	}
 }
 
-@media screen and (min-device-width: 960px) {
+@media screen and (min-width: 960px) {
 	body.page-template-page-home .site-header {
 		font-size: 2em;
 	}
@@ -1451,7 +1451,7 @@ body.page-template-page-home .site-header .site-branding .site-logo-area {
 	max-width: 10rem;
 }
 
-@media screen and (min-device-width: 600px) and (max-device-width: 959px) {
+@media screen and (min-width: 600px) and (max-width: 959px) {
 	body.page-template-page-home .site-header .site-branding .site-logo-area {
 		max-width: 8rem;
 	}
@@ -1542,19 +1542,19 @@ body.page-template-default .brand-wrapper {
 	background-attachment: fixed;
 }
 
-@media (max-device-width: 450px) {
+@media (max-width: 450px) {
 	body.page-template-default .brand-wrapper {
 		min-height: 8em;
 	}
 }
 
-@media screen and (min-device-width: 600px) and (max-device-width: 959px) {
+@media screen and (min-width: 600px) and (max-width: 959px) {
 	body.page-template-default .brand-wrapper {
 		min-height: 10em;
 	}
 }
 
-@media screen and (min-device-width: 960px) {
+@media screen and (min-width: 960px) {
 	body.page-template-default .brand-wrapper {
 		min-height: 12em;
 	}
@@ -1567,7 +1567,7 @@ body.page-template-default .site-branding {
 	position: relative;
 }
 
-@media screen and (min-device-width: 600px) {
+@media screen and (min-width: 600px) {
 	body.page-template-default .site-branding {
 		display: flex;
 		justify-content: space-between;
@@ -1576,7 +1576,7 @@ body.page-template-default .site-branding {
 	}
 }
 
-@media screen and (min-device-width: 960px) {
+@media screen and (min-width: 960px) {
 	body.page-template-default .site-branding {
 		align-items: flex-start;
 		padding: 1em 2em;
@@ -1600,7 +1600,7 @@ body.page-template-default .site-logo-area a img {
 	width: 100%;
 }
 
-@media screen and (max-device-width: 599px) {
+@media screen and (max-width: 599px) {
 	body.page-template-default .site-logo-area {
 		padding: 1em;
 		width: 100%;
@@ -1627,20 +1627,20 @@ body.page-template-default .site-logo-area a img {
 	}
 }
 
-@media (max-device-width: 450px) {
+@media (max-width: 450px) {
 	body.page-template-default .site-logo-area::after {
 		font-size: 2em;
 	}
 }
 
-@media screen and (min-device-width: 600px) and (max-device-width: 959px) {
+@media screen and (min-width: 600px) and (max-width: 959px) {
 	body.page-template-default .site-logo-area {
 		float: none;
 		max-width: 9em;
 	}
 }
 
-@media screen and (min-device-width: 960px) {
+@media screen and (min-width: 960px) {
 	body.page-template-default .site-logo-area {
 		float: none;
 		width: 30%;
@@ -1659,7 +1659,7 @@ body.page-template-default .site-branding-text p.site-title {
 	font-size: 3em;
 }
 
-@media screen and (max-device-width: 599px) {
+@media screen and (max-width: 599px) {
 	body.page-template-default .site-branding-text {
 		width: 100%;
 		padding: 2.5em;
@@ -1668,13 +1668,13 @@ body.page-template-default .site-branding-text p.site-title {
 	}
 }
 
-@media (max-device-width: 450px) {
+@media (max-width: 450px) {
 	body.page-template-default .site-branding-text {
 		font-size: .6em;
 	}
 }
 
-@media screen and (min-device-width: 600px) and (max-device-width: 959px) {
+@media screen and (min-width: 600px) and (max-width: 959px) {
 	body.page-template-default .site-branding-text {
 		font-size: 1em;
 		text-align: center;
@@ -1688,7 +1688,7 @@ body.page-template-default .site-branding-text p.site-title {
 	}
 }
 
-@media screen and (min-device-width: 600px) {
+@media screen and (min-width: 600px) {
 	body.page-template-default .site-branding-text {
 		float: none;
 		justify-content: center;
@@ -1696,7 +1696,7 @@ body.page-template-default .site-branding-text p.site-title {
 	}
 }
 
-@media screen and (min-device-width: 960px) {
+@media screen and (min-width: 960px) {
 	body.page-template-default .site-branding-text {
 		font-size: 1.067em;
 		flex-direction: column-reverse;
@@ -1711,14 +1711,14 @@ body.page-template-default .site-title {
 	padding: 0;
 }
 
-@media (max-device-width: 450px) {
+@media (max-width: 450px) {
 	body.page-template-default .site-title {
 		font-weight: 900;
 		margin-bottom: .25em;
 	}
 }
 
-@media screen and (min-device-width: 960px) {
+@media screen and (min-width: 960px) {
 	body.page-template-default .site-title {
 		font-weight: 900;
 	}
@@ -1739,20 +1739,20 @@ body.page-template-default .site-description {
 	width: 100%;
 }
 
-@media (max-device-width: 450px) {
+@media (max-width: 450px) {
 	body.page-template-default .site-description {
 		font-size: 2.2em;
 		font-weight: 300;
 	}
 }
 
-@media screen and (min-device-width: 600px) and (max-device-width: 959px) {
+@media screen and (min-width: 600px) and (max-width: 959px) {
 	body.page-template-default .site-description {
 		font-size: 1.125em;
 	}
 }
 
-@media screen and (min-device-width: 960px) {
+@media screen and (min-width: 960px) {
 	body.page-template-default .site-description {
 		font-size: 1.16em;
 	}
@@ -1774,19 +1774,19 @@ body.page-template-denver-page .brand-wrapper {
 	background-attachment: fixed;
 }
 
-@media (max-device-width: 450px) {
+@media (max-width: 450px) {
 	body.page-template-denver-page .brand-wrapper {
 		min-height: 8em;
 	}
 }
 
-@media screen and (min-device-width: 600px) and (max-device-width: 959px) {
+@media screen and (min-width: 600px) and (max-width: 959px) {
 	body.page-template-denver-page .brand-wrapper {
 		min-height: 10em;
 	}
 }
 
-@media screen and (min-device-width: 960px) {
+@media screen and (min-width: 960px) {
 	body.page-template-denver-page .brand-wrapper {
 		min-height: 12em;
 	}
@@ -1799,7 +1799,7 @@ body.page-template-denver-page .site-branding {
 	position: relative;
 }
 
-@media screen and (min-device-width: 600px) {
+@media screen and (min-width: 600px) {
 	body.page-template-denver-page .site-branding {
 		display: flex;
 		justify-content: space-between;
@@ -1808,7 +1808,7 @@ body.page-template-denver-page .site-branding {
 	}
 }
 
-@media screen and (min-device-width: 960px) {
+@media screen and (min-width: 960px) {
 	body.page-template-denver-page .site-branding {
 		align-items: flex-start;
 		padding: 1em 2em;
@@ -1832,7 +1832,7 @@ body.page-template-denver-page .site-logo-area a img {
 	width: 100%;
 }
 
-@media screen and (max-device-width: 599px) {
+@media screen and (max-width: 599px) {
 	body.page-template-denver-page .site-logo-area {
 		padding: 1em;
 		width: 100%;
@@ -1859,20 +1859,20 @@ body.page-template-denver-page .site-logo-area a img {
 	}
 }
 
-@media (max-device-width: 450px) {
+@media (max-width: 450px) {
 	body.page-template-denver-page .site-logo-area::after {
 		font-size: 2em;
 	}
 }
 
-@media screen and (min-device-width: 600px) and (max-device-width: 959px) {
+@media screen and (min-width: 600px) and (max-width: 959px) {
 	body.page-template-denver-page .site-logo-area {
 		float: none;
 		max-width: 9em;
 	}
 }
 
-@media screen and (min-device-width: 960px) {
+@media screen and (min-width: 960px) {
 	body.page-template-denver-page .site-logo-area {
 		float: none;
 		width: 30%;
@@ -1891,7 +1891,7 @@ body.page-template-denver-page .site-branding-text p.site-title {
 	font-size: 3em;
 }
 
-@media screen and (max-device-width: 599px) {
+@media screen and (max-width: 599px) {
 	body.page-template-denver-page .site-branding-text {
 		width: 100%;
 		padding: 2.5em;
@@ -1900,13 +1900,13 @@ body.page-template-denver-page .site-branding-text p.site-title {
 	}
 }
 
-@media (max-device-width: 450px) {
+@media (max-width: 450px) {
 	body.page-template-denver-page .site-branding-text {
 		font-size: .6em;
 	}
 }
 
-@media screen and (min-device-width: 600px) and (max-device-width: 959px) {
+@media screen and (min-width: 600px) and (max-width: 959px) {
 	body.page-template-denver-page .site-branding-text {
 		font-size: 1em;
 		text-align: center;
@@ -1920,7 +1920,7 @@ body.page-template-denver-page .site-branding-text p.site-title {
 	}
 }
 
-@media screen and (min-device-width: 600px) {
+@media screen and (min-width: 600px) {
 	body.page-template-denver-page .site-branding-text {
 		float: none;
 		justify-content: center;
@@ -1928,7 +1928,7 @@ body.page-template-denver-page .site-branding-text p.site-title {
 	}
 }
 
-@media screen and (min-device-width: 960px) {
+@media screen and (min-width: 960px) {
 	body.page-template-denver-page .site-branding-text {
 		font-size: 1.067em;
 		flex-direction: column-reverse;
@@ -1943,14 +1943,14 @@ body.page-template-denver-page .site-title {
 	padding: 0;
 }
 
-@media (max-device-width: 450px) {
+@media (max-width: 450px) {
 	body.page-template-denver-page .site-title {
 		font-weight: 900;
 		margin-bottom: .25em;
 	}
 }
 
-@media screen and (min-device-width: 960px) {
+@media screen and (min-width: 960px) {
 	body.page-template-denver-page .site-title {
 		font-weight: 900;
 	}
@@ -1971,20 +1971,20 @@ body.page-template-denver-page .site-description {
 	width: 100%;
 }
 
-@media (max-device-width: 450px) {
+@media (max-width: 450px) {
 	body.page-template-denver-page .site-description {
 		font-size: 2.2em;
 		font-weight: 300;
 	}
 }
 
-@media screen and (min-device-width: 600px) and (max-device-width: 959px) {
+@media screen and (min-width: 600px) and (max-width: 959px) {
 	body.page-template-denver-page .site-description {
 		font-size: 1.125em;
 	}
 }
 
-@media screen and (min-device-width: 960px) {
+@media screen and (min-width: 960px) {
 	body.page-template-denver-page .site-description {
 		font-size: 1.16em;
 	}
@@ -2060,7 +2060,7 @@ body.page-template-landing-page #wrapper .brand-wrapper {
 	background: transparent;
 }
 
-@media screen and (min-device-width: 600px) {
+@media screen and (min-width: 600px) {
 	body.page-template-landing-page #wrapper {
 		display: flex;
 		flex-direction: column;
@@ -2114,13 +2114,13 @@ body.page-template-landing-page .site-branding .site-branding-text .site-title {
 	font-size: 2em;
 }
 
-@media screen and (min-device-width: 600px) {
+@media screen and (min-width: 600px) {
 	body.page-template-landing-page .site-branding .site-branding-text .site-title {
 		font-size: 2.8em;
 	}
 }
 
-@media screen and (min-device-width: 960px) {
+@media screen and (min-width: 960px) {
 	body.page-template-landing-page .site-branding .site-branding-text .site-title {
 		font-size: 3.125em;
 	}
@@ -2134,7 +2134,7 @@ body.page-template-landing-page nav {
 	padding: 1rem;
 }
 
-@media screen and (min-device-width: 600px) {
+@media screen and (min-width: 600px) {
 	body.page-template-landing-page nav {
 		display: flex;
 		justify-content: space-around;
@@ -2147,7 +2147,7 @@ body.page-template-landing-page nav section {
 	margin: 0 auto 2rem;
 }
 
-@media screen and (min-device-width: 600px) {
+@media screen and (min-width: 600px) {
 	body.page-template-landing-page nav section:nth-child(odd) {
 		margin-right: 2rem;
 	}
@@ -2264,6 +2264,8 @@ body.page-template-page-home .site #main .entry-content p {
 body.page-template-page-home .site #main .crellyslider-slider {
 	background-color: black;
 	width: 100%;
+	max-width: 1080px;
+	margin-left: auto;
 }
 
 body.page-template-page-home .site #main .crellyslider-slider li > div {
