@@ -26,7 +26,7 @@
 }
 
 // Add Hamburger to element.
-@mixin symbol-core($symbolpath) {
+@mixin img-symbol-core($symbolpath) {
     content: "";
     display: block;
     width: 1em;
@@ -36,16 +36,38 @@
     background-position: center;
 }
 
-@mixin symbol-before($symbolpath, $margin:"0") {
+@mixin img-symbol-before($symbolpath, $margin:"0") {
     &::before {
-        @include symbol-core($symbolpath);
+        @include img-symbol-core($symbolpath);
         margin-right: unquote($margin);
     }
 }
 
-@mixin symbol-after($symbolpath, $margin:"0") {
+@mixin img-symbol-after($symbolpath, $margin:"0") {
     &::after {
-        @include symbol-core($symbolpath);
+        @include img-symbol-core($symbolpath);
+        margin-left: unquote($margin);
+    }
+}
+
+@mixin symbol-core($symbolText) {
+    font-family: 'Material Icons';
+    content: "#{$symbolText}";
+    display: block;
+    width: 1em;
+    height: 1em;
+}
+
+@mixin symbol-before($symbolText, $margin:"0") {
+    &::before {
+        @include symbol-core($symbolText);
+        margin-right: unquote($margin);
+    }
+}
+
+@mixin symbol-after($symbolText, $margin:"0") {
+    &::after {
+        @include symbol-core($symbolText);
         margin-left: unquote($margin);
     }
 }

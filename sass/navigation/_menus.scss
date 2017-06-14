@@ -112,15 +112,15 @@
         padding: .4em 1em .4em .5em;
 
         &.hamburger {
-            padding: .8em .5em .8em .5em;
+            padding: .5em .5em .8em .5em;
             right: .4em;
             .dropdown-symbol {
                 font-size: 1em;
-                @include symbol-before('img/menu-icon-white.svg');
+                @include symbol-before('\e5d2');
             }
 
             @include desktopPlus {
-                padding: 1.067em .5em .8em .5em;
+                padding: .8em .5em .8em .5em;
             }
 
         }
@@ -149,7 +149,7 @@
                 font-size: 1.2em;
             }
 
-            @include symbol-before('img/menu-icon.svg', ".5em");
+            @include symbol-before('\e5d2', ".5em");
     }
 
     /* Toggle small menu and children on */

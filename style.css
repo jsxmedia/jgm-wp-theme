@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*!
 Theme Name: JGM2018
 Theme URI: http://underscores.me/
@@ -837,7 +838,7 @@ body.page-template-default button.dropdown-toggle {
 }
 
 body.page-template-default button.dropdown-toggle.hamburger {
-	padding: .8em .5em .8em .5em;
+	padding: .5em .5em .8em .5em;
 	right: .4em;
 }
 
@@ -846,19 +847,17 @@ body.page-template-default button.dropdown-toggle.hamburger .dropdown-symbol {
 }
 
 body.page-template-default button.dropdown-toggle.hamburger .dropdown-symbol::before {
-	content: "";
+	font-family: 'Material Icons';
+	content: "";
 	display: block;
 	width: 1em;
 	height: 1em;
-	background: url(img/menu-icon-white.svg);
-	background-size: contain;
-	background-position: center;
 	margin-right: 0;
 }
 
 @media screen and (min-width: 960px) {
 	body.page-template-default button.dropdown-toggle.hamburger {
-		padding: 1.067em .5em .8em .5em;
+		padding: .8em .5em .8em .5em;
 	}
 }
 
@@ -888,13 +887,11 @@ body.page-template-default .menu-toggle {
 }
 
 body.page-template-default .menu-toggle::before {
-	content: "";
+	font-family: 'Material Icons';
+	content: "";
 	display: block;
 	width: 1em;
 	height: 1em;
-	background: url(img/menu-icon.svg);
-	background-size: contain;
-	background-position: center;
 	margin-right: .5em;
 }
 
@@ -1095,7 +1092,7 @@ body.page-template-denver-page button.dropdown-toggle {
 }
 
 body.page-template-denver-page button.dropdown-toggle.hamburger {
-	padding: .8em .5em .8em .5em;
+	padding: .5em .5em .8em .5em;
 	right: .4em;
 }
 
@@ -1104,19 +1101,17 @@ body.page-template-denver-page button.dropdown-toggle.hamburger .dropdown-symbol
 }
 
 body.page-template-denver-page button.dropdown-toggle.hamburger .dropdown-symbol::before {
-	content: "";
+	font-family: 'Material Icons';
+	content: "";
 	display: block;
 	width: 1em;
 	height: 1em;
-	background: url(img/menu-icon-white.svg);
-	background-size: contain;
-	background-position: center;
 	margin-right: 0;
 }
 
 @media screen and (min-width: 960px) {
 	body.page-template-denver-page button.dropdown-toggle.hamburger {
-		padding: 1.067em .5em .8em .5em;
+		padding: .8em .5em .8em .5em;
 	}
 }
 
@@ -1146,13 +1141,11 @@ body.page-template-denver-page .menu-toggle {
 }
 
 body.page-template-denver-page .menu-toggle::before {
-	content: "";
+	font-family: 'Material Icons';
+	content: "";
 	display: block;
 	width: 1em;
 	height: 1em;
-	background: url(img/menu-icon.svg);
-	background-size: contain;
-	background-position: center;
 	margin-right: .5em;
 }
 
