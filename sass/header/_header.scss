@@ -21,11 +21,11 @@
         }
 
         @include tablet {
-          min-height: 10em;  
+          min-height: 8em;  
         }
 
         @include desktopPlus {
-           min-height: 12em;
+           min-height: 10em;
         }
     }
 
@@ -35,18 +35,57 @@
         margin: 0 auto;
         position: relative;
 
+        p.show-date {
+            font-weight: 500;
+            font-size: 2.5em;
+            text-align: center;
+            margin: .25em 0 0;
+            padding-bottom: .5em;
+            text-shadow: 2px 2px $color__dark;
+        }
 
         @include tabletPlus {
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 1em;
+            flex-wrap: wrap; // push date down
+        }
+        
+        @include tablet {
+
+            p.show-date {
+                flex-basis: 30%;
+               // text-align: right;
+                max-width: 10rem;
+                display: block;
+                padding: 0;
+                font-size: .9em;
+                //outline: 1px solid red;
+                white-space: nowrap;
+                //transform: rotate(90deg);
+            }
         }
 
         @include desktopPlus {
+            
             align-items: flex-start;
+            
             padding: 1em 2em;
+            
+            p.show-date {
+                font-size: 1.5em;
+                font-weight: 300;
+                padding: 0;
+                flex-basis: 100%;
+                margin-left: 0;
+                flex-basis: 100%;
+                margin-top: -2em;
+                text-align: right;
+              //position: absolute;
+            }
         }
+        
     }
 
     .site-logo-area {
@@ -100,7 +139,7 @@
 
         @include tablet {
             float: none;
-            max-width: 9em;
+            max-width: 10rem;
         }
 
         @include desktopPlus {
@@ -123,7 +162,7 @@
 
         @include mobile {
             width: 100%;
-            padding: 2.5em;
+            padding: 2.5em 2.5em 0;
             text-align: center;
             box-sizing: border-box;
         }

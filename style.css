@@ -311,7 +311,7 @@ body:not(.page-template-denver-page) h1 {
 }
 
 body:not(.page-template-denver-page) h2 {
-	font-size: 2.25em;
+	font-size: 1.75em;
 }
 
 body:not(.page-template-denver-page) h2 a {
@@ -329,7 +329,7 @@ body:not(.page-template-denver-page) .entry-title, body:not(.page-template-denve
 }
 
 body:not(.page-template-denver-page) h3 {
-	font-size: 1.75em;
+	font-size: 1.25em;
 	font-weight: 500;
 }
 
@@ -367,7 +367,7 @@ body.page-template-denver-page h1 {
 }
 
 body.page-template-denver-page h2 {
-	font-size: 2.25em;
+	font-size: 1.75em;
 }
 
 body.page-template-denver-page h2 a {
@@ -385,7 +385,7 @@ body.page-template-denver-page .entry-title, body.page-template-denver-page arti
 }
 
 body.page-template-denver-page h3 {
-	font-size: 1.75em;
+	font-size: 1.25em;
 	font-weight: 500;
 }
 
@@ -1543,13 +1543,13 @@ body.page-template-default .brand-wrapper {
 
 @media screen and (min-width: 600px) and (max-width: 959px) {
 	body.page-template-default .brand-wrapper {
-		min-height: 10em;
+		min-height: 8em;
 	}
 }
 
 @media screen and (min-width: 960px) {
 	body.page-template-default .brand-wrapper {
-		min-height: 12em;
+		min-height: 10em;
 	}
 }
 
@@ -1560,12 +1560,33 @@ body.page-template-default .site-branding {
 	position: relative;
 }
 
+body.page-template-default .site-branding p.show-date {
+	font-weight: 500;
+	font-size: 2.5em;
+	text-align: center;
+	margin: .25em 0 0;
+	padding-bottom: .5em;
+	text-shadow: 2px 2px black;
+}
+
 @media screen and (min-width: 600px) {
 	body.page-template-default .site-branding {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
 		padding: 1em;
+		flex-wrap: wrap;
+	}
+}
+
+@media screen and (min-width: 600px) and (max-width: 959px) {
+	body.page-template-default .site-branding p.show-date {
+		flex-basis: 30%;
+		max-width: 10rem;
+		display: block;
+		padding: 0;
+		font-size: .9em;
+		white-space: nowrap;
 	}
 }
 
@@ -1573,6 +1594,16 @@ body.page-template-default .site-branding {
 	body.page-template-default .site-branding {
 		align-items: flex-start;
 		padding: 1em 2em;
+	}
+	body.page-template-default .site-branding p.show-date {
+		font-size: 1.5em;
+		font-weight: 300;
+		padding: 0;
+		flex-basis: 100%;
+		margin-left: 0;
+		flex-basis: 100%;
+		margin-top: -2em;
+		text-align: right;
 	}
 }
 
@@ -1629,7 +1660,7 @@ body.page-template-default .site-logo-area a img {
 @media screen and (min-width: 600px) and (max-width: 959px) {
 	body.page-template-default .site-logo-area {
 		float: none;
-		max-width: 9em;
+		max-width: 10rem;
 	}
 }
 
@@ -1655,7 +1686,7 @@ body.page-template-default .site-branding-text p.site-title {
 @media screen and (max-width: 599px) {
 	body.page-template-default .site-branding-text {
 		width: 100%;
-		padding: 2.5em;
+		padding: 2.5em 2.5em 0;
 		text-align: center;
 		box-sizing: border-box;
 	}
@@ -1775,13 +1806,13 @@ body.page-template-denver-page .brand-wrapper {
 
 @media screen and (min-width: 600px) and (max-width: 959px) {
 	body.page-template-denver-page .brand-wrapper {
-		min-height: 10em;
+		min-height: 8em;
 	}
 }
 
 @media screen and (min-width: 960px) {
 	body.page-template-denver-page .brand-wrapper {
-		min-height: 12em;
+		min-height: 10em;
 	}
 }
 
@@ -1792,12 +1823,33 @@ body.page-template-denver-page .site-branding {
 	position: relative;
 }
 
+body.page-template-denver-page .site-branding p.show-date {
+	font-weight: 500;
+	font-size: 2.5em;
+	text-align: center;
+	margin: .25em 0 0;
+	padding-bottom: .5em;
+	text-shadow: 2px 2px black;
+}
+
 @media screen and (min-width: 600px) {
 	body.page-template-denver-page .site-branding {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
 		padding: 1em;
+		flex-wrap: wrap;
+	}
+}
+
+@media screen and (min-width: 600px) and (max-width: 959px) {
+	body.page-template-denver-page .site-branding p.show-date {
+		flex-basis: 30%;
+		max-width: 10rem;
+		display: block;
+		padding: 0;
+		font-size: .9em;
+		white-space: nowrap;
 	}
 }
 
@@ -1805,6 +1857,16 @@ body.page-template-denver-page .site-branding {
 	body.page-template-denver-page .site-branding {
 		align-items: flex-start;
 		padding: 1em 2em;
+	}
+	body.page-template-denver-page .site-branding p.show-date {
+		font-size: 1.5em;
+		font-weight: 300;
+		padding: 0;
+		flex-basis: 100%;
+		margin-left: 0;
+		flex-basis: 100%;
+		margin-top: -2em;
+		text-align: right;
 	}
 }
 
@@ -1861,7 +1923,7 @@ body.page-template-denver-page .site-logo-area a img {
 @media screen and (min-width: 600px) and (max-width: 959px) {
 	body.page-template-denver-page .site-logo-area {
 		float: none;
-		max-width: 9em;
+		max-width: 10rem;
 	}
 }
 
@@ -1887,7 +1949,7 @@ body.page-template-denver-page .site-branding-text p.site-title {
 @media screen and (max-width: 599px) {
 	body.page-template-denver-page .site-branding-text {
 		width: 100%;
-		padding: 2.5em;
+		padding: 2.5em 2.5em 0;
 		text-align: center;
 		box-sizing: border-box;
 	}
