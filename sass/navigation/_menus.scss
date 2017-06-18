@@ -23,33 +23,46 @@
             max-width: $size__page-width-max;
             padding-top: 1em;
             padding-left: 0;
-
-
-            ul {
+            
+            ul.sub-menu {
                 position: relative;
                 display: none;
                 z-index: 99999;
+                padding-top: 0;
+                
 
                 &.toggled-on:not(.disabled) {
                     display: block;
+                    
+   
                 }
 
                 ul {
                     top: 0;
                 }
 
-                li {
-
+                li.menu-item {
+                    font-size: .9em;
+                    font-weight: 400;
                     padding-left: 1em;
+                    //padding-right: .5em;
+                    
+                    
+
 
                     &:hover > ul,
                     &.focus > ul {
                         //left: 100%;
                     }
                 }
+                
 
                 a {
-
+                    @include symbol-after ('\e5d9', ".25em"); // sub-drectory-icon
+                    &::after {
+                        font-size: 1em;
+                    }
+                    
                     width: 200px;
                 }
             }
@@ -109,20 +122,25 @@
         background: inherit;
         color: $color__main;
         line-height: 1.5em;
-        padding: .4em 1em .4em .5em;
-
+        //padding: .4em 1em .4em .5em;
+        //margin-left: .6em;
+        
         &.hamburger {
             padding: .5em .5em .8em .5em;
             right: .4em;
             .dropdown-symbol {
                 font-size: 1em;
-                @include symbol-before('\e5d2');
+                @include symbol-before('\e5d2'); // hamburger / menu icon
             }
 
             @include desktopPlus {
                 padding: .8em .5em .8em .5em;
             }
 
+        }
+        
+        .dropdown-symbol-text {
+            @include material-icons;
         }
 
         @include tabletPlus {
@@ -272,11 +290,7 @@
             #site-navigation-submenu {
                 background-color: $color__acc2;
             }
-
         }
-
-
-
     }
 
     @include desktopPlus {

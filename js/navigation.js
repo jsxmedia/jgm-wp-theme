@@ -21,7 +21,7 @@
             container.find( '.menu-item-has-children > a, .page_item_has_children > a' ).after( dropdownToggle );
 
             var dropdownSymbol = container.find( '.dropdown-symbol' );
-            dropdownSymbol.append( $( '<span />', { 'class': 'dropdown-symbol-text', text: "+" }) );
+            dropdownSymbol.append( $( '<span />', { 'class': 'dropdown-symbol-text', text: 'chevron_right' }) );
             
             container.find( '.dropdown-toggle' ).click( function( e ) {
                     var _this = $( this ),
@@ -32,7 +32,7 @@
                 console.log(dropdownSymbol.parent().attr('class'));
                 if(!myDropdownSymbol.parent().hasClass("hamburger")){
                     // Only change symbol if hamburger-adding class no present
-                    myDropdownSymbol.text( myDropdownSymbol.text() === '-' ? '+' : '-' );
+                    myDropdownSymbol.text( myDropdownSymbol.text() === 'expand_more' ? 'chevron_right' : 'expand_more' );
                 }
 
                     e.preventDefault();

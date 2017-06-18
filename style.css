@@ -769,26 +769,60 @@ body.page-template-default .main-navigation ul {
 	padding-left: 0;
 }
 
-body.page-template-default .main-navigation ul ul {
+body.page-template-default .main-navigation ul ul.sub-menu {
 	position: relative;
 	display: none;
 	z-index: 99999;
+	padding-top: 0;
 }
 
-body.page-template-default .main-navigation ul ul.toggled-on:not(.disabled) {
+body.page-template-default .main-navigation ul ul.sub-menu.toggled-on:not(.disabled) {
 	display: block;
 }
 
-body.page-template-default .main-navigation ul ul ul {
+body.page-template-default .main-navigation ul ul.sub-menu ul {
 	top: 0;
 }
 
-body.page-template-default .main-navigation ul ul li {
+body.page-template-default .main-navigation ul ul.sub-menu li.menu-item {
+	font-size: .9em;
+	font-weight: 400;
 	padding-left: 1em;
 }
 
-body.page-template-default .main-navigation ul ul a {
+body.page-template-default .main-navigation ul ul.sub-menu a {
 	width: 200px;
+}
+
+body.page-template-default .main-navigation ul ul.sub-menu a::after {
+	font-family: 'Material Icons';
+	font-weight: normal;
+	font-style: normal;
+	font-size: 24px;
+	/* Preferred icon size */
+	display: inline-block;
+	line-height: 1;
+	text-transform: none;
+	letter-spacing: normal;
+	word-wrap: normal;
+	white-space: nowrap;
+	direction: ltr;
+	/* Support for all WebKit browsers. */
+	-webkit-font-smoothing: antialiased;
+	/* Support for Safari and Chrome. */
+	text-rendering: optimizeLegibility;
+	/* Support for Firefox. */
+	-moz-osx-font-smoothing: grayscale;
+	/* Support for IE. */
+	font-feature-settings: 'liga';
+	content: "";
+	width: 1em;
+	height: 1em;
+	margin-left: .25em;
+}
+
+body.page-template-default .main-navigation ul ul.sub-menu a::after {
+	font-size: 1em;
 }
 
 body.page-template-default .main-navigation ul li:hover > ul,
@@ -834,7 +868,6 @@ body.page-template-default button.dropdown-toggle {
 	background: inherit;
 	color: #640030;
 	line-height: 1.5em;
-	padding: .4em 1em .4em .5em;
 }
 
 body.page-template-default button.dropdown-toggle.hamburger {
@@ -848,8 +881,26 @@ body.page-template-default button.dropdown-toggle.hamburger .dropdown-symbol {
 
 body.page-template-default button.dropdown-toggle.hamburger .dropdown-symbol::before {
 	font-family: 'Material Icons';
+	font-weight: normal;
+	font-style: normal;
+	font-size: 24px;
+	/* Preferred icon size */
+	display: inline-block;
+	line-height: 1;
+	text-transform: none;
+	letter-spacing: normal;
+	word-wrap: normal;
+	white-space: nowrap;
+	direction: ltr;
+	/* Support for all WebKit browsers. */
+	-webkit-font-smoothing: antialiased;
+	/* Support for Safari and Chrome. */
+	text-rendering: optimizeLegibility;
+	/* Support for Firefox. */
+	-moz-osx-font-smoothing: grayscale;
+	/* Support for IE. */
+	font-feature-settings: 'liga';
 	content: "";
-	display: block;
 	width: 1em;
 	height: 1em;
 	margin-right: 0;
@@ -859,6 +910,29 @@ body.page-template-default button.dropdown-toggle.hamburger .dropdown-symbol::be
 	body.page-template-default button.dropdown-toggle.hamburger {
 		padding: .8em .5em .8em .5em;
 	}
+}
+
+body.page-template-default button.dropdown-toggle .dropdown-symbol-text {
+	font-family: 'Material Icons';
+	font-weight: normal;
+	font-style: normal;
+	font-size: 24px;
+	/* Preferred icon size */
+	display: inline-block;
+	line-height: 1;
+	text-transform: none;
+	letter-spacing: normal;
+	word-wrap: normal;
+	white-space: nowrap;
+	direction: ltr;
+	/* Support for all WebKit browsers. */
+	-webkit-font-smoothing: antialiased;
+	/* Support for Safari and Chrome. */
+	text-rendering: optimizeLegibility;
+	/* Support for Firefox. */
+	-moz-osx-font-smoothing: grayscale;
+	/* Support for IE. */
+	font-feature-settings: 'liga';
 }
 
 @media screen and (min-width: 600px) {
@@ -888,8 +962,26 @@ body.page-template-default .menu-toggle {
 
 body.page-template-default .menu-toggle::before {
 	font-family: 'Material Icons';
+	font-weight: normal;
+	font-style: normal;
+	font-size: 24px;
+	/* Preferred icon size */
+	display: inline-block;
+	line-height: 1;
+	text-transform: none;
+	letter-spacing: normal;
+	word-wrap: normal;
+	white-space: nowrap;
+	direction: ltr;
+	/* Support for all WebKit browsers. */
+	-webkit-font-smoothing: antialiased;
+	/* Support for Safari and Chrome. */
+	text-rendering: optimizeLegibility;
+	/* Support for Firefox. */
+	-moz-osx-font-smoothing: grayscale;
+	/* Support for IE. */
+	font-feature-settings: 'liga';
 	content: "";
-	display: block;
 	width: 1em;
 	height: 1em;
 	margin-right: .5em;
@@ -1023,26 +1115,60 @@ body.page-template-denver-page .main-navigation ul {
 	padding-left: 0;
 }
 
-body.page-template-denver-page .main-navigation ul ul {
+body.page-template-denver-page .main-navigation ul ul.sub-menu {
 	position: relative;
 	display: none;
 	z-index: 99999;
+	padding-top: 0;
 }
 
-body.page-template-denver-page .main-navigation ul ul.toggled-on:not(.disabled) {
+body.page-template-denver-page .main-navigation ul ul.sub-menu.toggled-on:not(.disabled) {
 	display: block;
 }
 
-body.page-template-denver-page .main-navigation ul ul ul {
+body.page-template-denver-page .main-navigation ul ul.sub-menu ul {
 	top: 0;
 }
 
-body.page-template-denver-page .main-navigation ul ul li {
+body.page-template-denver-page .main-navigation ul ul.sub-menu li.menu-item {
+	font-size: .9em;
+	font-weight: 400;
 	padding-left: 1em;
 }
 
-body.page-template-denver-page .main-navigation ul ul a {
+body.page-template-denver-page .main-navigation ul ul.sub-menu a {
 	width: 200px;
+}
+
+body.page-template-denver-page .main-navigation ul ul.sub-menu a::after {
+	font-family: 'Material Icons';
+	font-weight: normal;
+	font-style: normal;
+	font-size: 24px;
+	/* Preferred icon size */
+	display: inline-block;
+	line-height: 1;
+	text-transform: none;
+	letter-spacing: normal;
+	word-wrap: normal;
+	white-space: nowrap;
+	direction: ltr;
+	/* Support for all WebKit browsers. */
+	-webkit-font-smoothing: antialiased;
+	/* Support for Safari and Chrome. */
+	text-rendering: optimizeLegibility;
+	/* Support for Firefox. */
+	-moz-osx-font-smoothing: grayscale;
+	/* Support for IE. */
+	font-feature-settings: 'liga';
+	content: "";
+	width: 1em;
+	height: 1em;
+	margin-left: .25em;
+}
+
+body.page-template-denver-page .main-navigation ul ul.sub-menu a::after {
+	font-size: 1em;
 }
 
 body.page-template-denver-page .main-navigation ul li:hover > ul,
@@ -1088,7 +1214,6 @@ body.page-template-denver-page button.dropdown-toggle {
 	background: inherit;
 	color: #00364d;
 	line-height: 1.5em;
-	padding: .4em 1em .4em .5em;
 }
 
 body.page-template-denver-page button.dropdown-toggle.hamburger {
@@ -1102,8 +1227,26 @@ body.page-template-denver-page button.dropdown-toggle.hamburger .dropdown-symbol
 
 body.page-template-denver-page button.dropdown-toggle.hamburger .dropdown-symbol::before {
 	font-family: 'Material Icons';
+	font-weight: normal;
+	font-style: normal;
+	font-size: 24px;
+	/* Preferred icon size */
+	display: inline-block;
+	line-height: 1;
+	text-transform: none;
+	letter-spacing: normal;
+	word-wrap: normal;
+	white-space: nowrap;
+	direction: ltr;
+	/* Support for all WebKit browsers. */
+	-webkit-font-smoothing: antialiased;
+	/* Support for Safari and Chrome. */
+	text-rendering: optimizeLegibility;
+	/* Support for Firefox. */
+	-moz-osx-font-smoothing: grayscale;
+	/* Support for IE. */
+	font-feature-settings: 'liga';
 	content: "";
-	display: block;
 	width: 1em;
 	height: 1em;
 	margin-right: 0;
@@ -1113,6 +1256,29 @@ body.page-template-denver-page button.dropdown-toggle.hamburger .dropdown-symbol
 	body.page-template-denver-page button.dropdown-toggle.hamburger {
 		padding: .8em .5em .8em .5em;
 	}
+}
+
+body.page-template-denver-page button.dropdown-toggle .dropdown-symbol-text {
+	font-family: 'Material Icons';
+	font-weight: normal;
+	font-style: normal;
+	font-size: 24px;
+	/* Preferred icon size */
+	display: inline-block;
+	line-height: 1;
+	text-transform: none;
+	letter-spacing: normal;
+	word-wrap: normal;
+	white-space: nowrap;
+	direction: ltr;
+	/* Support for all WebKit browsers. */
+	-webkit-font-smoothing: antialiased;
+	/* Support for Safari and Chrome. */
+	text-rendering: optimizeLegibility;
+	/* Support for Firefox. */
+	-moz-osx-font-smoothing: grayscale;
+	/* Support for IE. */
+	font-feature-settings: 'liga';
 }
 
 @media screen and (min-width: 600px) {
@@ -1142,8 +1308,26 @@ body.page-template-denver-page .menu-toggle {
 
 body.page-template-denver-page .menu-toggle::before {
 	font-family: 'Material Icons';
+	font-weight: normal;
+	font-style: normal;
+	font-size: 24px;
+	/* Preferred icon size */
+	display: inline-block;
+	line-height: 1;
+	text-transform: none;
+	letter-spacing: normal;
+	word-wrap: normal;
+	white-space: nowrap;
+	direction: ltr;
+	/* Support for all WebKit browsers. */
+	-webkit-font-smoothing: antialiased;
+	/* Support for Safari and Chrome. */
+	text-rendering: optimizeLegibility;
+	/* Support for Firefox. */
+	-moz-osx-font-smoothing: grayscale;
+	/* Support for IE. */
+	font-feature-settings: 'liga';
 	content: "";
-	display: block;
 	width: 1em;
 	height: 1em;
 	margin-right: .5em;
@@ -1562,7 +1746,7 @@ body.page-template-default .site-branding {
 
 body.page-template-default .site-branding p.show-date {
 	font-weight: 500;
-	font-size: 2.5em;
+	font-size: 2.25em;
 	text-align: center;
 	margin: .25em 0 0;
 	padding-bottom: .5em;
@@ -1825,7 +2009,7 @@ body.page-template-denver-page .site-branding {
 
 body.page-template-denver-page .site-branding p.show-date {
 	font-weight: 500;
-	font-size: 2.5em;
+	font-size: 2.25em;
 	text-align: center;
 	margin: .25em 0 0;
 	padding-bottom: .5em;
@@ -2054,6 +2238,10 @@ body.page-template-denver-page .site-description {
 
 .hentry {
 	margin: 0 0 1.5em;
+}
+
+.hentry .entry-title {
+	font-size: 2.25em;
 }
 
 .byline,
