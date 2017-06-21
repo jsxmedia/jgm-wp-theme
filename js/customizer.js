@@ -11,7 +11,7 @@
 	// Site title and description.
 	wp.customize( 'blogname', function( value ) {
 		value.bind( function( to ) {
-			$( '.site-title a' ).text( to );
+			$( '.site-title .super-title' ).text( to );
 		} );
 	} );
 	wp.customize( 'blogdescription', function( value ) {
@@ -39,4 +39,39 @@
 			}
 		} );
 	} );
+        
+        // Default Template (Tucson) Year & Dates
+        wp.customize ( 'jgm_tucson_year', function( value ) {
+            value.bind( function( to ){
+                $( '.jgm-show-year' ).text( to );
+            });
+        });
+        wp.customize( 'jgm_tucson_start', function( value ) {
+		value.bind( function( to ) {
+			$( '.jgm-show-start' ).text( to );
+		} );
+	} );
+	wp.customize( 'jgm_tucson_end', function( value ) {
+		value.bind( function( to ) {
+			$( '.jgm-show-end' ).text( to );
+		} );
+	} );
+        
+        // Denver Template Year & Dates
+        wp.customize ( 'jgm_denver_year', function( value ) {
+            value.bind( function( to ){
+                $( '.jgm-show-year' ).text( to );
+            });
+        });
+        wp.customize( 'jgm_denver_start', function( value ) {
+		value.bind( function( to ) {
+			$( '.jgm-show-start' ).text( to );
+		} );
+	} );
+	wp.customize( 'jgm_denver_end', function( value ) {
+		value.bind( function( to ) {
+			$( '.jgm-show-end' ).text( to );
+		} );
+	} );
+        
 } )( jQuery );

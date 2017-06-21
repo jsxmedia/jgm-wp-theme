@@ -14,6 +14,113 @@ function jgm2018_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
+        
+        
+        // Add Tucson Show Dates section
+        $wp_customize->add_section('jgm2018_tucson_dates_section', array(
+            'title' => __('Tucson Show Dates', 'jgm2018'),
+            'priority' => 30,
+            'description' => __('Here you can change the Tucson Show year and show dates displayed in the header.', 'jgm2018')
+         ));
+        
+        // Add Tucson Year input box
+        $wp_customize->add_setting( 'jgm_tucson_year',
+                array( 
+                    'default' => '',
+                    'transport' => 'postMessage'
+                ) 
+        );
+        $wp_customize->add_control( new WP_Customize_Control($wp_customize, 'jgm_tucson_year',
+                array(
+                    'label' => __( 'Year', 'jgm2018' ),
+                    'section' => 'jgm2018_tucson_dates_section',
+                    'settings' => 'jgm_tucson_year',
+                )
+        ) );
+        
+        // Add Tucson Start Date input box
+        $wp_customize->add_setting( 'jgm_tucson_start',
+                array(
+                    'default' => '',
+                    'transport' => 'postMessage'
+                )
+        );
+        $wp_customize->add_control( new WP_Customize_Control($wp_customize, 'jgm_tucson_start',
+                array(
+                    'label' => __( 'Start Date', 'jgm2018' ),
+                    'section' => 'jgm2018_tucson_dates_section',
+                    'settings' => 'jgm_tucson_start',
+                )
+        ) );
+        
+        // Add Tucson End Date input box
+        $wp_customize->add_setting( 'jgm_tucson_end',
+                array(
+                    'default' => '',
+                    'transport' => 'postMessage'
+                )
+        );
+        $wp_customize->add_control( new WP_Customize_Control($wp_customize, 'jgm_tucson_end',
+                array(
+                    'label' => __( 'End Date', 'jgm2018' ),
+                    'section' => 'jgm2018_tucson_dates_section',
+                    'settings' => 'jgm_tucson_end',
+                )
+        ) );
+        
+        
+        // Add Denver Show Dates section
+        $wp_customize->add_section('jgm2018_denver_dates_section', array(
+            'title' => __('Denver Show Dates', 'jgm2018'),
+            'priority' => 31,
+            'description' => __('Here you can change the Denver Show year and show dates displayed in the header.', 'jgm2018')
+         ));
+        
+        // Add Denver Year input box
+        $wp_customize->add_setting( 'jgm_denver_year',
+                array( 
+                    'default' => '',
+                    'transport' => 'postMessage'
+                ) 
+        );
+        $wp_customize->add_control( new WP_Customize_Control($wp_customize, 'jgm_denver_year',
+                array(
+                    'label' => __( 'Year', 'jgm2018' ),
+                    'section' => 'jgm2018_denver_dates_section',
+                    'settings' => 'jgm_denver_year',
+                )
+        ) );
+        
+        // Add Denver Start Date input box
+        $wp_customize->add_setting( 'jgm_denver_start',
+                array(
+                    'default' => '',
+                    'transport' => 'postMessage'
+                )
+        );
+        $wp_customize->add_control( new WP_Customize_Control($wp_customize, 'jgm_denver_start',
+                array(
+                    'label' => __( 'Start Date', 'jgm2018' ),
+                    'section' => 'jgm2018_denver_dates_section',
+                    'settings' => 'jgm_denver_start',
+                )
+        ) );
+        
+        // Add Denver End Date input box
+        $wp_customize->add_setting( 'jgm_denver_end',
+                array(
+                    'default' => '',
+                    'transport' => 'postMessage'
+                )
+        );
+        $wp_customize->add_control( new WP_Customize_Control($wp_customize, 'jgm_denver_end',
+                array(
+                    'label' => __( 'End Date', 'jgm2018' ),
+                    'section' => 'jgm2018_denver_dates_section',
+                    'settings' => 'jgm_denver_end',
+                )
+        ) );
+
 }
 add_action( 'customize_register', 'jgm2018_customize_register' );
 

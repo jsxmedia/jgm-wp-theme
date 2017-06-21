@@ -41,10 +41,10 @@
                     <div class="site-branding-text">
                         <?php
 			if ( is_front_page() && is_home() ) : ?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><span class="super-title screen-reader-text"><?php bloginfo( 'name' ); ?></span> <span class="sub-title">Tucson Show 2018</span></a></h1>
+                        <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><span class="super-title screen-reader-text"><?php bloginfo( 'name' ); ?></span> <span class="sub-title">Tucson Show <span class="jgm-show-year"><?php echo get_theme_mod('jgm_tucson_year'); ?></span></span></a></h1>
                                 
 			<?php else : ?>
-                                <p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><span class="super-title screen-reader-text"><?php bloginfo( 'name' ); ?></span> <span class="sub-title">Tucson Show 2018</span></a></p>
+                        <p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><span class="super-title screen-reader-text"><?php bloginfo( 'name' ); ?></span> <span class="sub-title">Tucson Show <span class="jgm-show-year"><?php echo get_theme_mod('jgm_tucson_year'); ?></span></span></a></p>
                                 
 			<?php
 			endif;
@@ -55,7 +55,7 @@
 			<?php
 			endif; ?>
                     </div>
-                    <p class="show-date">Jan 27 &ndash; Feb 11</p>
+                    <p class="show-date"><span class="jgm-show-start"><?php echo get_theme_mod('jgm_tucson_start'); ?></span> &ndash; <span class="jgm-show-end"><?php echo get_theme_mod('jgm_tucson_end'); ?></span></p>
 		</div><!-- .site-branding -->
             </div><!-- .brand-wrapper -->
 
