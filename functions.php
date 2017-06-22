@@ -199,6 +199,8 @@ function jgm2018_scripts() {
 		wp_enqueue_script( 'comment-reply' );
 	}
         
+        wp_enqueue_script( 'jgm2018-collapser', get_template_directory_uri() . '/js/collapser.js', array('jquery', 'jgm2018-global-functions'), '20170621', true );
+        
         wp_enqueue_script( 'jgm2018-menu-tray', get_template_directory_uri() . '/js/menu-tray.js', array('jquery', 'jgm2018-global-functions'), '20170513', true );
         
        // if ( is_page_template( './landing-page.php' ) ) {

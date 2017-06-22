@@ -2271,6 +2271,74 @@ To change this template file, choose Tools | Templates
 and open the template in the editor.
 */
 /* 
+    Created on : Jun 22, 2017, 12:36:44 AM
+    Author     : Jim Smith
+*/
+.collapser-container {
+	border-bottom: .1rem solid black;
+}
+
+.collapser-container:first-of-type {
+	border-top: .1rem solid black;
+}
+
+.collapser-container .collapser-title {
+	margin: 0;
+}
+
+.collapser-container .collapser-title .collapser-toggle {
+	position: relative;
+	background: none !important;
+	color: inherit;
+	border: none;
+	padding: 1em 0 !important;
+	font: inherit;
+	cursor: pointer;
+	width: 100%;
+	text-align: left;
+}
+
+.collapser-container .collapser-title .collapser-toggle .collapser-symbol {
+	font-family: 'Material Icons';
+	font-weight: normal;
+	font-style: normal;
+	font-size: 24px;
+	/* Preferred icon size */
+	display: inline-block;
+	line-height: 1;
+	text-transform: none;
+	letter-spacing: normal;
+	word-wrap: normal;
+	white-space: nowrap;
+	direction: ltr;
+	/* Support for all WebKit browsers. */
+	-webkit-font-smoothing: antialiased;
+	/* Support for Safari and Chrome. */
+	text-rendering: optimizeLegibility;
+	/* Support for Firefox. */
+	-moz-osx-font-smoothing: grayscale;
+	/* Support for IE. */
+	font-feature-settings: 'liga';
+	position: absolute;
+	font-size: 1.25em;
+}
+
+.collapser-container .collapser {
+	padding-bottom: 1em;
+}
+
+.collapser-container .collapser p {
+	margin: 0;
+	padding: 0;
+	margin-bottom: 1em;
+}
+
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
     Created on : May 24, 2017, 7:11:25 PM
     Author     : Jim Smith
 */
